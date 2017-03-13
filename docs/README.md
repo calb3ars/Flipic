@@ -15,10 +15,10 @@ Flipic is a full-stack web application clone of Instagram.
 
 ### Design Docs
 * [Wireframes](wireframes)
-* [React Components](components)
-* [API Endpoints](api-endpoints)
-* [Schema](schema)
-* [Sample State](state)
+* [React Components](components.md)
+* [API Endpoints](api-endpoints.md)
+* [Schema](schema.md)
+* [Sample State](state.md)
 
 ### Implementation Timeline
 ##### Phase 1: Backend DB Setup and Frontend Auth ( 2 days )
