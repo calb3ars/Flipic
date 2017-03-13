@@ -2,6 +2,8 @@
 [Flipic Live App](https://flipic.herokuapp.com/ "Flipic Live")<br /><br />
 Flipic is a full-stack web application clone of Instagram.
 
+[Trello Project Management Link](https://trello.com/b/Zc82hqa1/flipic-by-andrew-jiang)
+
 ### Minimum Viable Product MVP
 - [ ] Hosting on Heroku
 - [ ] Production README.md
