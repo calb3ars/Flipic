@@ -17,29 +17,39 @@ Root
       * ImageDetail (Component)
       * CommentIndex
         * CommentListItem
-        * Like Button
-        * CommentForm
+        * CommentLikeContainer
+          * Like Button
+          * CommentForm
 
 ### ProfileContainer
   * UserComponent
-    * UserAvatar
+    * CurrentUser Profile Image
     * Username
+    * Edit Profile Button
     * Logout Button
     * PostCount
-    * Logout
     * FollowerCount
     * FollowingCount
+    * User Firstname
   * AccountImageIndex
     * AccountImageItem
 
 ### ImageContainer
-  * Image
-  * UserAvatar (Component)
-  * Likes
-  * Timestamp
-  * Comments
-  * Like Button
-  * CommentForm
+  * ImageShowComponent (Component)
+    * LeftNav
+    * Image
+    * ImageDetailComponent (Component)
+      * UserAvatar (Component)
+      * Likes
+      * Timestamp
+      * Captionm
+      * CommentList
+        * CommentItem
+          * Delete Comment Button
+      * CommentLikeContainer
+        * Like Button
+        * CommentForm
+    * RightNav
 
 ### ImageFormContainer
   * ImageForm
