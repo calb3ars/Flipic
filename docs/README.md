@@ -1,5 +1,5 @@
 # Flipic
-[Flipic Live App](www.flipic.io "Flipic Live")<br /><br />
+[Flipic Live App](https://flipic.herokuapp.com/ "Flipic Live")<br /><br />
 Flipic is a full-stack web application clone of Instagram.
 
 ### Minimum Viable Product MVP
