@@ -1,42 +1,44 @@
 # Root
 
 ### Sign Up Page
-  * Phone Images
-    * App Slideshow
-  * SignUpForm (Component)
-    * Flipic Logo
-    * Tagline
-    * Login with Facebook (Future functionality)
-    * Email (Params) ***
-    * First Name
-    * Last Name
-    * Username
-    * Password
-    * Sign Up Button
-    * Terms & Privacy Policy
-  * Button to Log in Form
-  * App Links (Future functionality)
-    * iTunes Store Button
-    * Google Play Store Button
-  * About Us
-  * Copyright 2017 Flipic
+  * AuthFormContainer
+    * Phone Images
+      * App Slideshow
+    * SignUpForm (Component)
+      * Flipic Logo
+      * Tagline
+      * Login with Facebook (Future functionality)
+      * Email (Params) ***
+      * First Name
+      * Last Name
+      * Username
+      * Password
+      * Sign Up Button
+      * Terms & Privacy Policy
+    * Button to Log in Form
+    * App Links (Future functionality)
+      * iTunes Store Button
+      * Google Play Store Button
+    * About Us
+    * Copyright 2017 Flipic
 
 <!-- *** Consider switching order and only having username and password -->
 
 ### Sign In Page
-  * Phone Images
-    * App Slideshow
-  * SignInForm (Component)
-    * Flipic Logo
-    * Username
-    * Password
-    * Log in Button
-  * Demo Login Button
-  * App Links (Future functionality)
-    * iTunes Store Button
-    * Google Play Store Button
-  * About Us
-  * Copyright 2017 Flipic
+  * AuthFormContainer
+    * Phone Images
+      * App Slideshow
+    * SignInForm (Component)
+      * Flipic Logo
+      * Username
+      * Password
+      * Log in Button
+    * Demo Login Button
+    * App Links (Future functionality)
+      * iTunes Store Button
+      * Google Play Store Button
+    * About Us
+    * Copyright 2017 Flipic
 
 ### NavComponent
   * Homepage Button
@@ -95,3 +97,18 @@
     * Caption
     * Tags
     * Submit Button
+
+### Routes
+| Path                    | Component            |
+|-------------------------|----------------------|
+| "/sign-up"              | "AuthFormContainer"  |
+| "/sign-in"              | * AuthFormContainer  |
+| "/home"                 | "NavComponent"       |
+| "/home"                 | "HomeContainer"      |
+| "/home/stream"          | "StreamContainer"    |
+| "/profile/:id"          | "NavComponent"       |
+| "/profile/:id"          | "ProfileContainer"   |
+| "/profile:id/followers" | FollowerContainer    |
+| "/profile:id/following" | "FollowingContainer" |
+| "/profile/:photo_id     | "ImageContainer"     |
+| "/new-image             | "ImageFormContainer" |
