@@ -1,9 +1,19 @@
 ```js
 {
-  currentUser: {
-    id: 1,
-    username: "calb3ars"
-    profile_image: "app/assets/images/users/calb3ars.jpeg"
+// default state (no user logged in)
+  session: {
+    currentUser: null,
+    errors: ["Invalid login credentials"]
+  },
+
+// if user logged in
+  session: {
+    currentUser: {
+      id: 1,
+      username: "calb3ars",
+      profile_image: "app/assets/images/users/calb3ars.jpeg"
+    },
+    errors: []
   },
 
   follows: {
