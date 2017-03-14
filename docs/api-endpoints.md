@@ -11,9 +11,9 @@
   * `PATCH /api/users/:id` - Update user
 
 
-  * `GET /api/users/:id/photos` - All photos from specific user
-  * `GET /api/users/:id/followers` - All users following specified user
-  * `GET /api/users/:id/following` - All users that specified user is following
+  <!-- * `GET /api/users/:id/photos` - All photos from specific user -->
+  <!-- * `GET /api/users/:id/followers` - All users following specified user -->
+  <!-- * `GET /api/users/:id/following` - All users that specified user is following -->
 
 ##### Sessions
   * `POST / api/session` - New session
@@ -27,20 +27,23 @@
   * `DELETE /api/photos/:id` - Remove image
 
 
-  * `GET /api/photos/:id/tags` - All tags for specific image
+  <!-- * `GET /api/photos/:id/tags` - All tags for specific image
   * `GET /api/photos/:id/comments` - All comments for specific image
-  * `GET /api/photos/:id/likes` - All likes for a specific image
+  * `GET /api/photos/:id/likes` - All likes for a specific image -->
 
 ##### Likes
-  * `POST /api/photos/:photo_id/likes` - Add like to a photo
+  <!-- * `POST /api/photos/:photo_id/likes` - Add like to a photo -->
+  * `POST /api/likes` - Add like to a photo
   * `DELETE /api/likes/:id` - Remove like (also removes association with user and image)
 
 ##### Comments
-  * `POST /api/photos/:photo_id/comments` - Add comment to specific image
+  <!-- * `POST /api/photos/:photo_id/comments` - Add comment to specific image -->
+  * `POST /api/comments` - Add comment to specific image
 
 ##### Tags
   * `GET /api/tags` - All tags
-  * `POST /api/photos/:photo_id/tags` - All tags for a specific image
+  <!-- * `POST /api/photos/:photo_id/tags` - All tags for a specific image -->
+  * `POST /api/tags` - All tags for a specific image
   * `DELETE /api/tags/:id` - Deletes specified tag
   * `Get /api/tags/:id` - Retrieves specified tag
   * `GET /api/tags/:id/photos` - Returns all photos containing specified tag
