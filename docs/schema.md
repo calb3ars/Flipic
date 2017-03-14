@@ -5,7 +5,6 @@ column_name     | data_type | details
 ----------------|-----------|-----------------------
 id              | integer   | not null, primary key
 username        | string    | not null, indexed, unique
-email           | string    | not null, indexed, unique
 password_digest | string    | not null
 session_token   | string    | not null, indexed, unique
 tagline         | text      |
@@ -46,7 +45,7 @@ photo_id    | integer   | not null, foreign key (photos), indexed
 column_name | data_type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
-name        | string    | not null, unique
+name    | string    | not null, unique
 
 ## photo_tags
 column_name | data_type | details
