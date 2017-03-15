@@ -17,13 +17,13 @@ class SessionForm extends React.Component {
 
   redirectIfLoggedIn() {
     if (this.props.loggedIn) {
-      this.props.router.push("/")
+      this.props.router.push("/");
     }
   }
 
   update(field) {
     return (e) => this.setState({
-      [field] : e.target.value
+      [field] : e.currentTarget.value
     });
   }
 
@@ -37,16 +37,7 @@ class SessionForm extends React.Component {
     if (this.props.formType === "login") {
       return <Link to="/signup">Sign up instead</Link>;
     } else {
-      return <Link to="/login">Log in instead</Link>
-    }
-  }
-
-  submitText() {
-    let text = "";
-    if (this.props.formType === "login") {
-      text = "Sign in"
-    } else {
-      text = "Sign up"
+      return <Link to="/login">Log in instead</Link>;
     }
   }
 
@@ -54,7 +45,7 @@ class SessionForm extends React.Component {
     return(
       <ul>
         {this.props.errors.map((error, idx) => (
-          <li key={`error-${idx}`}>
+          <li key={`error-${idx}`} className="login-errors">
             { error }
           </li>
         ))}
@@ -66,7 +57,7 @@ class SessionForm extends React.Component {
     return(
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          <h2 className="login-header"><span className="flipic">Flipic</span></h2>
+          <h2 className="login-header">Flipic</h2>
           <p>The place to view beautiful photos</p>
           <br />
           Please {this.props.formType} or {this.navLink()}
@@ -92,7 +83,7 @@ class SessionForm extends React.Component {
               />
             </label>
             <br />
-            <input type="submit" value="Submit"></input>
+            <input type="submit" value="Submit" />
           </div>
         </form>
       </div>
