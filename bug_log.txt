@@ -1,4 +1,4 @@
-* testing window.store = configureStore(); and receiving
+1) testing window.store = configureStore(); and receiving
     error message: "Uncaught TypeError: window.configureStore is not a function
         at <anonymous>:1:8"
 
@@ -9,9 +9,14 @@
 
     solution: configureStore wasn't returning anything meaningful. Initial code had {} in function definition. Replaced with ()'s
 
-* testing window.store.dispatch(login(user)) and receiving
+2) testing window.store.dispatch(login(user)) and receiving
     error message: "window.store.getStatus()
       VM3953:1 Uncaught TypeError: Cannot read property 'getStatus' of undefined
       at <anonymous>:1:13
 
     solution: Navigation to root page and adding store (entry file) and login method(inside action file) to window
+
+3) loading localhost:3000 during routes update for SessionFormContainer
+    error message: "Uncaught Error: Module build failed: SyntaxError: Expected corresponding JSX closing tag for <Router> (15:8)"
+
+    solution: Remove self-closing JSX tag from Route (closed later after nested routes. Nested routes created need for closing </Route> tag, so original self-closing tag could be made into an opening tag)

@@ -1,0 +1,17 @@
+Getting the following view on Login page. Is "Flipic and Login or Sign up" supposed to only render on a splash page?
+
+(Removed <GreetingContainer /> from App.jsx)
+
+Flipic
+
+Login  or  Sign up
+Welcome to Flipic!
+
+
+Please login or Sign up instead
+
+Username:
+
+Password:
+
+Submit
