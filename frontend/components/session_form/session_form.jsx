@@ -53,6 +53,13 @@ class SessionForm extends React.Component {
     );
   }
 
+  componentWillReceiveProps(newProps) {
+    if (this.props.formType !== newProps.formType) {
+      this.props.clearErrors();
+      console.log("unmounted");
+    }
+  }
+
   render() {
     return(
       <div className="login-form-container">
