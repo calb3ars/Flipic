@@ -60,23 +60,25 @@ class SessionForm extends React.Component {
   }
 
   render() {
+    const submit_text =  this.props.formType === ('login') ? "Log In" : "Sign Up";
+
     return(
-      <div className="login-form-container">
-        <form onSubmit={this.handleSubmit} className="login-form-box">
-          <h2 className="login-header flipic-tagline">Flipic</h2>
-          <p className="login-tagline flipic-tagline">The place to view beautiful photos</p>
+      <div className="session-form-container col-1-3">
+        <form onSubmit={this.handleSubmit} className="session-form-box">
+          <h2 className="session-form-header flipic-text">Flipic</h2>
+          <p className="session-form-tagline flipic-tagline">The place to view beautiful photos</p>
           <br />
-          <p className="login-links">Please {this.props.formType} or {this.navLink()}</p>
+          <p className="session-form-links">Please {this.props.formType} or {this.navLink()}</p>
           {this.renderErrors()}
 
-          <div className="login-form">
+          <div className="session-form">
             <br />
             <label>Username
               <input
                 type="text"
                 value={this.state.username}
                 onChange={this.update("username")}
-                className="login-input"
+                className="session-form-input"
               />
             </label>
             <br />
@@ -85,11 +87,11 @@ class SessionForm extends React.Component {
                 type="password"
                 value={this.state.password}
                 onChange={this.update("password")}
-                className="login-input"
+                className="session-form-input"
               />
             </label>
             <br />
-            <input type="submit" value="Submit" />
+            <input type="submit" value={submit_text} className="session-form-submit" />
           </div>
         </form>
       </div>
