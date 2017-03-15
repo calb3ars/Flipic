@@ -1,13 +1,14 @@
 body {
   background: $background-gray;
   font-family: $sans-serif;
+  font-weight: 600;
   font-size: 18px;
 }
 
 .session-form-container {
   border: 1px solid $search-bar-border;
   background: white;
-  padding: 5%;
+  padding: 3%;
   border-radius: 2px;
 }
 
@@ -18,13 +19,18 @@ body {
 
 .session-form-tagline {
   color: $login-tagline;
+  line-height: 1.2em;
+  font-weight: 400;
 }
 
 .session-form-input {
   border: 1px solid $search-bar-border;
   border-radius: 3px;
+  font-weight: 200;
+  font-size: 14px;
   width: 80%;
   height: 30px;
+  padding-left: 3%;
   margin: 3px auto;
 }
 
@@ -35,4 +41,5 @@ body {
   width: 80%;
   height: 30px;
   padding: 10px;
+  margin-top: 10px;
 }
