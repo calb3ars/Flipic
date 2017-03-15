@@ -6,12 +6,19 @@ import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 
 import App from './app';
 
+const redirectIfLoggedIn = (nextState, replace) => {
+  const currentUser = store.getState().session.currentUser;
+  if (currentUser) {
+    replace('/');
+  }
+}
+
 const Root = ({ store }) => (
   <Provider store={ store }>
     <Router history={ hashHistory }>
       <Route path="/" component={ App } >
-        <Route path="/login" component={ SessionFormContainer } />
-        <Route path="/signup" component={ SessionFormContainer } />
+        <Route path="/login" component={ SessionFormContainer } onEnter={ redirectIfLoggedIn }/>
+        <Route path="/signup" component={ SessionFormContainer } onEnter={ redirectIfLoggedIn }/>
       </Route>
     </Router>
   </Provider>
