@@ -1,0 +1,10 @@
+* testing window.store = configureStore(); and receiving
+    error message: "Uncaught TypeError: window.configureStore is not a function
+        at <anonymous>:1:8"
+
+    seems to be related to:
+      Warning: Failed prop type: The prop `store` is marked as required in `Provider`, but its value is `undefined`.
+        in Provider (created by Root)
+        in Root
+
+    solution: configureStore wasn't returning anything meaningful. Initial code had {} in function definition. Replaced with ()'s
