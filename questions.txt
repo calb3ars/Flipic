@@ -1,17 +1,11 @@
-Getting the following view on Login page. Is "Flipic and Login or Sign up" supposed to only render on a splash page?
+- preloadedState not working
 
-(Removed <GreetingContainer /> from App.jsx)
+- How to handle images
+  Host on Cloudinary and seed DB with urls?
 
-Flipic
+- General Workflow
 
-Login  or  Sign up
-Welcome to Flipic!
+- How to keep working when you get stuck
+  - yesterday's bug
 
-
-Please login or Sign up instead
-
-Username:
-
-Password:
-
-Submit
+- Git tips (branching/merging, reverting back to a previous state) Where the hell am i?

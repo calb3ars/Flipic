@@ -20,3 +20,14 @@
     error message: "Uncaught Error: Module build failed: SyntaxError: Expected corresponding JSX closing tag for <Router> (15:8)"
 
     solution: Remove self-closing JSX tag from Route (closed later after nested routes. Nested routes created need for closing </Route> tag, so original self-closing tag could be made into an opening tag)
+
+4) receiving 401 errors (invalid credentials on signup and login). State looks
+   correct in React console, but server side returns errors.
+   error message: Started POST "/api/session" for ::1 at 2017-03-15 08:39:15 -0700
+   Processing by Api::SessionsController#create as JSON
+   Parameters: {"user"=>{"user"=>{"username"=>"andrew", "password"=>"[FILTERED]"}}}
+   Unpermitted parameter: user
+    User Load (0.4ms)  SELECT  "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT $1  [["LIMIT", 1]]
+    Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+  solution: user was nested. Removing { } around user in api (session) call resolved issue

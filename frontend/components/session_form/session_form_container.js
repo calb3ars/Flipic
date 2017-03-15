@@ -14,7 +14,7 @@ const mapDispatchToProps = (dispatch, { location }) => {
   return {
     processForm: user => dispatch(processForm(user)),
     formType
-  };
+  }
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(SessionForm);
