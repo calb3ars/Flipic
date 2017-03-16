@@ -76,11 +76,11 @@ class SessionForm extends React.Component {
         </div>
 
         <div className="session-form-container col-1-3">
-          <form onSubmit={this.handleSubmit} className="session-form-box">
-            <h2 className="session-form-header flipic-text">Flipic</h2>
-            <p className="session-form-tagline flipic-tagline">The place to view beautiful photos</p>
+          <h2 className="session-form-header flipic-text">Flipic</h2>
+          <p className="session-form-tagline flipic-tagline">The place to view beautiful photos</p>
+          <input type="submit" value="Demo login" className="session-form-submit demo-button" onClick={this.demoLogin}/>
 
-            <input type="submit" value="Demo login" className="session-form-submit" onClick={this.demoLogin}/>
+          <form onSubmit={this.handleSubmit} className="session-form-box">
 
             <div className="session-form">
               <input

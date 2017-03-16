@@ -15,21 +15,27 @@ class Photo < ApplicationRecord
   validates :url, :user_id, presence: true
   belongs_to :user
 
+  attr_reader :timestamp
+
+  def timestamp_seconds
+    
+  end
+
   def timestamp
     min = ((Time.now - self.created_at) / 1.minute).round
     hrs = ((Time.now - self.created_at) / 1.hour).round
     days = ((Time.now - self.created_at) / 1.day).round
 
     if days >= 7
-      result = "#{(days / 7).round}w"
+      @timestamp = "#{(days / 7).round}w"
     elsif hrs >= 24
-      result = "#{days}d"
+      @timestamp = "#{days}d"
     elsif hrs >= 1
-      result = "#{hrs}h"
+      @timestamp = "#{hrs}h"
     else
-      result = "#{min}m"
+      @timestamp = "#{min}m"
     end
 
-    result
+    @timestamp
   end
 end

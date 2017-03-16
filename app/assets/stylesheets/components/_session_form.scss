@@ -19,7 +19,8 @@ body {
 
 .session-form-container {
   background: $background-gray;
-  max-width: 50%;
+  width: 400px;
+  min-width: 300px;
   display: -webkit-flex;
   display: flex;
   flex-direction: column;
@@ -55,7 +56,7 @@ body {
   border-radius: 3px;
   font-weight: 200;
   font-size: 14px;
-  width: 100%;
+  width: 250px;
   height: 45px;
   padding-left: 3%;
   margin-bottom: 10px;
@@ -65,7 +66,7 @@ body {
   border-radius: 3px;
   background: $session-form-submit;
   color: $flipic-white;
-  width: 100%;
+  width: 250px;
   height: 40px;
   display: flex;
   align-items: center;
@@ -75,6 +76,10 @@ body {
   margin-bottom: 40px;
 }
 
+.demo-button {
+  width: 250px;
+}
+
 .session-form-submit:active {
   background: $session-form-submit-active;
 }
@@ -82,6 +87,7 @@ body {
 .session-form-toggle-link {
   font-weight: 200;
   margin-bottom: 50px;
+  font-size: 14px;
 }
 
 .link {
