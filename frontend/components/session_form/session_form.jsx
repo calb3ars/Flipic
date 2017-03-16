@@ -9,6 +9,7 @@ class SessionForm extends React.Component {
       password: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.demoLogin = this.demoLogin.bind(this);
   }
 
   componentDidUpdate() {
@@ -31,6 +32,11 @@ class SessionForm extends React.Component {
     e.preventDefault();
     const user = this.state;
     this.props.processForm({ user });
+  }
+
+  demoLogin() {
+    const demoUser = {user: {username: "demo", password: "password"}};
+    this.props.login(demoUser);
   }
 
   navLink() {
@@ -73,6 +79,8 @@ class SessionForm extends React.Component {
             <h2 className="session-form-header flipic-text">Flipic</h2>
             <p className="session-form-tagline flipic-tagline">The place to view beautiful photos</p>
 
+            <input type="submit" value="Demo login" className="session-form-submit" onClick={this.demoLogin}/>
+
             <div className="session-form">
               <input
                 type="text"
@@ -81,6 +89,8 @@ class SessionForm extends React.Component {
                 className="session-form-input"
                 placeholder="Username"
               />
+
+
 
               <input
                 type="password"

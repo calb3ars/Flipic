@@ -1,0 +1,22 @@
+.header-group {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  height: 40px;
+  display: flex;
+  padding: 20px;
+  font-family: $sans-serif;
+  font-weight: 100;
+}
+
+.header-name {
+  font-weight: 200;
+}
+
+.username {
+  font-weight: 400;
+}
+
+.header-button {
+
+}

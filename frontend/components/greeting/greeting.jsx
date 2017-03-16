@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 const personalGreeting = (currentUser, logout) => (
   <hgroup className="header-group">
     <h2 className="header-name">
-      Welcome, {currentUser.username}
+      Welcome, <span className="username">{currentUser.username}</span>
     </h2>
     <button className="header-button" onClick={logout}>
       Log Out

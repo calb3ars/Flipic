@@ -33,13 +33,6 @@ body {
   padding: 0px 30px;
 }
 
-.flipic-text {
-  width: 90%;
-  font-size: 48px;
-  font-family: $serif;
-  margin-top: 20px;
-}
-
 .session-form-tagline {
   width: 100%;
   color: $login-tagline;
@@ -47,6 +40,10 @@ body {
   font-weight: 400;
   padding-bottom: 10px;
   text-align: center;
+}
+
+.demo-login {
+  
 }
 
 .session-form {
