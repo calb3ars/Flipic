@@ -3,7 +3,7 @@ import { Provider } from 'react-redux';
 import SessionFormContainer from './session_form/session_form_container';
 //react router
 import { Router, Route, IndexRoute, hashHistory } from 'react-router';
-import App from './app';
+import App from './App';
 
 
 
