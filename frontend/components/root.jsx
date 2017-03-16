@@ -13,17 +13,18 @@ const redirectIfLoggedIn = (nextState, replace) => {
     replace('/');
   }
 }
-
-// const redirectRoot = (nextState, replace) => {
-//   if ( nextState === "/") {
-//     replace('/login');
-//   }
-// }
+const redirectIfLoggedOut = (nextState, replace) => {
+  const currentUser = store.getState().session.currentUser;
+  if (!currentUser) {
+    replace('/login');
+  }
+}
 
 const Root = ({ store }) => (
   <Provider store={ store }>
     <Router history={ hashHistory }>
-      <Route path="/" component={ App } >
+      <Route path="/" >
+        <IndexRoute component={ App } onEnter={redirectIfLoggedOut}/>
         <Route path="/login" component={ SessionFormContainer } onEnter={ redirectIfLoggedIn} />
         <Route path="/signup" component={ SessionFormContainer } onEnter={ redirectIfLoggedIn} />
       </Route>
