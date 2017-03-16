@@ -5,7 +5,6 @@ import configureStore from './store/store';
 import Root from './components/root';
 import {clearErrors} from './actions/session_actions';
 
-
 document.addEventListener('DOMContentLoaded', () => {
   let store;
   if (window.currentUser) {

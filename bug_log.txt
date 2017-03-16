@@ -1,3 +1,9 @@
+# To-Do Fixes
+- _session_form.css: User signup form: when attempting to sign up with a password that's too short, CSS changes upon error rendering. This becomes a bigger issue if you also sign up with an existing user's username (additional errors)
+
+
+
+####################################################################################
 1) testing window.store = configureStore(); and receiving
     error message: "Uncaught TypeError: window.configureStore is not a function
         at <anonymous>:1:8"

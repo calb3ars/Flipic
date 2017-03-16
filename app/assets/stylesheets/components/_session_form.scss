@@ -5,22 +5,54 @@ body {
   font-size: 18px;
 }
 
+.session-page-container {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-container {
+  width: 400px;
+}
+
 .session-form-container {
+  background: $background-gray;
+  max-width: 50%;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   border: 1px solid $search-bar-border;
   background: white;
-  padding: 3%;
   border-radius: 2px;
 }
 
+.session-form-container > * {
+  padding: 0px 30px;
+}
+
 .flipic-text {
+  width: 90%;
   font-size: 48px;
   font-family: $serif;
+  margin-top: 20px;
 }
 
 .session-form-tagline {
+  width: 100%;
   color: $login-tagline;
   line-height: 1.2em;
   font-weight: 400;
+  padding-bottom: 10px;
+}
+
+.session-form {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
 }
 
 .session-form-input {
@@ -28,18 +60,44 @@ body {
   border-radius: 3px;
   font-weight: 200;
   font-size: 14px;
-  width: 80%;
-  height: 30px;
+  width: 100%;
+  height: 45px;
   padding-left: 3%;
-  margin: 3px auto;
+  margin-bottom: 10px;
 }
 
 .session-form-submit {
   border-radius: 3px;
   background: $session-form-submit;
   color: $flipic-white;
-  width: 80%;
-  height: 30px;
-  padding: 10px;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 0;
   margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.session-form-toggle-link {
+  font-weight: 200;
+  margin-bottom: 50px;
+}
+
+.link {
+  color: $session-form-submit;
+}
+
+.form-toggle-container {
+  max-width: 80%;
+}
+.login-error {
+  width: 80%;
+  font-weight: 100;
+  font-size: 14px;
+  color: $errors;
+  margin-bottom: 50px;
+  text-align: center;
+  justify-content: center;
 }

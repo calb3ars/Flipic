@@ -35,9 +35,9 @@ class SessionForm extends React.Component {
 
   navLink() {
     if (this.props.formType === "login") {
-      return <Link to="/signup">Sign up instead</Link>;
+      return <Link to="/signup" className="link">Sign up</Link>;
     } else {
-      return <Link to="/login">Log in instead</Link>;
+      return <Link to="/login" className="link">Log in</Link>;
     }
   }
 
@@ -60,20 +60,20 @@ class SessionForm extends React.Component {
   }
 
   render() {
-    const submit_text =  this.props.formType === ('login') ? "Log In" : "Sign Up";
-
+    const submit_text =  this.props.formType === ('login') ? "Log in" : "Sign up";
+    const loginText = this.props.formType === ('login') ? "Don't have" : "Have";
     return(
-      <div className="session-form-container col-1-3">
-        <form onSubmit={this.handleSubmit} className="session-form-box">
-          <h2 className="session-form-header flipic-text">Flipic</h2>
-          <p className="session-form-tagline flipic-tagline">The place to view beautiful photos</p>
-          <br />
-          <p className="session-form-links">Please {this.props.formType} or {this.navLink()}</p>
-          {this.renderErrors()}
+      <div className="session-page-container">
+        <div className="hero-container">
+          <img className="hero" src="http://res.cloudinary.com/calb3ars/image/upload/c_scale,h_1259,q_100:420/v1489625871/hero_t1sdg3.png"/>
+        </div>
 
-          <div className="session-form">
-            <br />
-            <label>
+        <div className="session-form-container col-1-3">
+          <form onSubmit={this.handleSubmit} className="session-form-box">
+            <h2 className="session-form-header flipic-text">Flipic</h2>
+            <p className="session-form-tagline flipic-tagline">The place to view beautiful photos</p>
+
+            <div className="session-form">
               <input
                 type="text"
                 value={this.state.username}
@@ -81,21 +81,25 @@ class SessionForm extends React.Component {
                 className="session-form-input"
                 placeholder="Username"
               />
-            </label>
-            <br />
-            <label>
+
               <input
                 type="password"
                 value={this.state.password}
                 onChange={this.update("password")}
-                className="session-form-input"
+                className="session-form-input password"
                 placeholder="Password"
               />
-            </label>
-            <br />
-            <input type="submit" value={submit_text} className="session-form-submit" />
-          </div>
-        </form>
+
+              <input type="submit" value={submit_text} className="session-form-submit" />
+
+              <div className="form-toggle-container">
+                <p className="session-form-toggle-link">{`${loginText} an account? `} {this.navLink()}</p>
+                {this.renderErrors()}
+              </div>
+            </div>
+          </form>
+
+        </div>
       </div>
     );
   }
