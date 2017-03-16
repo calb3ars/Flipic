@@ -16,7 +16,7 @@ const redirectIfLoggedIn = (nextState, replace) => {
 const redirectIfLoggedOut = (nextState, replace) => {
   const currentUser = store.getState().session.currentUser;
   if (!currentUser) {
-    replace('/login');
+    replace('/signup');
   }
 }
 
