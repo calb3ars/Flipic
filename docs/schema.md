@@ -7,8 +7,8 @@ id              | integer   | not null, primary key
 username        | string    | not null, indexed, unique
 password_digest | string    | not null
 session_token   | string    | not null, indexed, unique
-tagline         | text      |
-profile_image   | string    |
+tagline         | string    |
+profile_image   | text      |
 
 ### follows
 column_name     | data_type | details
@@ -21,11 +21,14 @@ following_id    | integer   | not null, foreign key (users), indexed
 column_name | data_type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
-url         | string    | not null
-caption     | text      |
+url         | text      | not null
 user_id     | integer   | not null, foreign key (users), indexed
+caption     | string    |
+location    | string    |
+created_at  | datetime  |
+updated_at  | datetime  |
 
-## likes
+## likes 
 column_name | data_type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
@@ -45,7 +48,7 @@ photo_id    | integer   | not null, foreign key (photos), indexed
 column_name | data_type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
-name    | string    | not null, unique
+name        | string    | not null, unique
 
 ## photo_tags
 column_name | data_type | details

@@ -1,6 +1,18 @@
 # To-Do Fixes
-- _session_form.css: User signup form: when attempting to sign up with a password that's too short, CSS changes upon error rendering. This becomes a bigger issue if you also sign up with an existing user's username (additional errors)
+- _session_form.css: User signup form: when attempting to sign up with a password that's too short, CSS changes upon error rendering. This becomes a bigger issue if you also sign up with an existing user's username (additional errors).
 
+  o - Create div specifically to host errors.
+  o - Remove margin from errors styling
+  o - populate div with errors so they don't increase the size
+
+- Seed Heroku DB with users and images
+
+- Add tagline (string) and profile_image (text) columns to users table
+
+- Clean up Hero Image to shadow fades into background (especially on right next to
+  login form)
+
+- session-form page: have submit button selected by default so when user presses enter, it logs them in rather than logging in demo user
 
 
 ####################################################################################
@@ -43,3 +55,17 @@
     message
 
     During clear errors, had added dispatch(clearErrors) to signup and login actions. This was removed because SessionReducer clears errors on merge with _nullUser
+
+6) Checked out previous commit and worked on it. Committed without branching
+    changes and merging, which overwrote. Thankfully, a backup copy was made before committing and this was used to restore local.
+
+  solution: In order to reconcile remote, pulled remote and fixed small udates. Committed and pushed to remote
+
+7) Heroku returning 500 server error. Checked heroku logs using:
+      "heroku logs --tail"
+
+    this revealed that "users" table was missing
+      solution: needed to run migration for heroku server (need to seed users table first)
+
+    Ran migration using "heroku run rake db:migrate"
+    Checked with "heroku run rails c"

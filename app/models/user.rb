@@ -8,6 +8,8 @@
 #  session_token   :string           not null
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
+#  tagline         :string
+#  profile_image   :text
 #
 
 class User < ApplicationRecord
@@ -15,11 +17,12 @@ class User < ApplicationRecord
   validates :username, uniqueness: true
   validates :password, length: {minimum: 6, allow_nil: true}
 
+  has_many :photos
 
   after_initialize :ensure_session_token
   attr_reader :password
 
-  def self.find_by_credentials(username, password) 
+  def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
     return nil unless user
     user.valid_password?(password) ? user : nil

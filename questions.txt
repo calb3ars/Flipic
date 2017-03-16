@@ -3,9 +3,9 @@ Day 2
 ###################################################################################
 - How to get Login or Sign Up to hide in root....Or Redirect to Login Page?
 
-- Heroku logins not working
+- Heroku logins not working - heroku run rake db:migrate
 
-- Review timeline and schema
+o Review timeline and schema
 
 ###################################################################################
 Day 1
