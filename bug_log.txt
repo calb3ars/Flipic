@@ -69,3 +69,14 @@
 
     Ran migration using "heroku run rake db:migrate"
     Checked with "heroku run rails c"
+
+8) deletePhoto function returning promise, but not affecting DB. Server seems unable to return corresponding view (User show page, despite it existing)
+  error message: Started DELETE "/api/photos/3" for ::1 at 2017-03-17 00:03:07 -0700
+    Processing by Api::PhotosController#destroy as JSON
+      Parameters: {"id"=>"3"}
+      User Load (0.5ms)  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2  [["session_token", "UiwEm1LH2IHW3fvOgoF0hg"], ["LIMIT", 1]]
+      Photo Load (0.4ms)  SELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2  [["id", 3], ["LIMIT", 1]]
+>>   No template found for Api::PhotosController#destroy, rendering head :no_content
+    Completed 204 No Content in 44ms (ActiveRecord: 0.9ms)
+
+    solution: 

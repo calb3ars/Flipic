@@ -32,3 +32,10 @@ users = User.create([
     password: "bobaboba"
   }
 ])
+
+Photo.create({user_id: 1, url: "https://mikaelahonen.com/wp-content/uploads/2016/10/splitwise-logo-kulujen-jakaminen-mobiilisovelluksella.jpg"})
+Photo.create({user_id: 2, url: "https://mikaelahonen.com/wp-content/uploads/2016/10/splitwise-logo-kulujen-jakaminen-mobiilisovelluksella.jpg"})
+Photo.create({user_id: 3, url: "https://mikaelahonen.com/wp-content/uploads/2016/10/splitwise-logo-kulujen-jakaminen-mobiilisovelluksella.jpg"})
+Photo.create({user_id: 4, url: "https://mikaelahonen.com/wp-content/uploads/2016/10/splitwise-logo-kulujen-jakaminen-mobiilisovelluksella.jpg"})
+Photo.create({user_id: 5, url: "https://mikaelahonen.com/wp-content/uploads/2016/10/splitwise-logo-kulujen-jakaminen-mobiilisovelluksella.jpg"})
+Photo.create({user_id: 1, url: "https://mikaelahonen.com/wp-content/uploads/2016/10/splitwise-logo-kulujen-jakaminen-mobiilisovelluksella.jpg"})
