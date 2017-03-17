@@ -1,12 +1,14 @@
 ###################################################################################
 Day 3
 ###################################################################################
+
 1) Fixing Delete Method bug
 
 2) Importing PhotoFormContainer to greeting
     * Can I pass down currentUser prop from greeting?
 
-3) Need to merge deleteBug with photo_form_modal and master
+3) Need to merge master with photo_form_modal(created from previous version of master)
+
     * deletebug seems to work
         * export const deletePhoto = (id) => dispatch => (
             PhotoAPIUtil
@@ -29,6 +31,7 @@ Day 3
 
 
 
+<<<<<<< HEAD
 
 
 
@@ -41,6 +44,8 @@ Day 3
 
 
 
+=======
+>>>>>>> master
 ###################################################################################
 Day 2
 ###################################################################################
