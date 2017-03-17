@@ -1,4 +1,47 @@
 ###################################################################################
+Day 3
+###################################################################################
+1) Fixing Delete Method bug
+
+2) Importing PhotoFormContainer to greeting
+    * Can I pass down currentUser prop from greeting?
+
+3) Need to merge deleteBug with photo_form_modal and master
+    * deletebug seems to work
+        * export const deletePhoto = (id) => dispatch => (
+            PhotoAPIUtil
+              .deletePhoto(id)
+              .then(photo => dispatch(removePhoto(photo)))
+          );
+        * remove debuggers
+        * clean up API and action code
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###################################################################################
 Day 2
 ###################################################################################
 - How to get Login or Sign Up to hide in root....Or Redirect to Login Page?

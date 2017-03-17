@@ -9,10 +9,10 @@
   },
   "engines": {
     "node": "6.2.1",
-    "npm":"4.3.0"
+    "npm": "4.3.0"
   },
   "scripts": {
-    "postinstall":"webpack"
+    "postinstall": "webpack"
   },
   "repository": {
     "type": "git",
@@ -34,6 +34,7 @@
     "material-ui": "^0.17.1",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "react-modal": "^1.7.3",
     "react-redux": "^5.0.3",
     "react-router": "^3.0.2",
     "redux": "^3.6.0",

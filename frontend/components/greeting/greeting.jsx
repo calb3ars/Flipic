@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import PhotoFormContainer from '../photo_form/photo_form_container';
 
 const personalGreeting = (currentUser, logout) => (
   <hgroup className="header-group">
@@ -7,7 +8,7 @@ const personalGreeting = (currentUser, logout) => (
       Welcome, <span className="username">{currentUser.username}</span>
     </h2>
 
-    <button className="add-photo icon-button"><i className="fa fa-camera-retro" aria-hidden="true"></i></button>
+    <PhotoFormContainer />
 
     <button className="header-button session-button" onClick={logout}>
       Log Out
