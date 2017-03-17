@@ -11,7 +11,6 @@ const PhotosReducer = (oldState = {}, action) => {
         [action.photo.id]: action.photo
       });
     case REMOVE_PHOTO:
-      debugger
       let newState = merge({}, oldState);
       delete(newState[action.id]);
       return newState;

@@ -5,7 +5,7 @@ import configureStore from './store/store';
 import Root from './components/root';
 import {clearErrors} from './actions/session_actions';
 
-import { fetchStreamPhotos, fetchPhoto, createPhoto, updatePhoto, removePhoto } from './actions/photo_actions';
+import { fetchStreamPhotos, fetchPhoto, createPhoto, updatePhoto, deletePhoto } from './actions/photo_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.fetchPhoto = fetchPhoto;
   window.createPhoto = createPhoto;
   window.updatePhoto = updatePhoto;
-  window.removePhoto = removePhoto;
+  window.deletePhoto = deletePhoto;
 
   window.store = store;
   ReactDOM.render(<Root store={ store } />, root);

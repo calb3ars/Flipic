@@ -43,8 +43,8 @@ export const updatePhoto = (photo) => dispatch => (
     .then(photo => dispatch(receivePhoto(photo)))
 );
 
-export const deletePhoto = (photo) => dispatch => (
+export const deletePhoto = (id) => dispatch => (
   PhotoAPIUtil
-    .deletePhoto(photo)()
-    .then((id) => dispatch(removePhoto(id)))
+    .deletePhoto(id)
+    .then((photo) => dispatch(removePhoto(photo)))
 );
