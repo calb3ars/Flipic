@@ -1,23 +1,20 @@
 import { RECEIVE_STREAM_PHOTOS, RECEIVE_PHOTO, REMOVE_PHOTO } from '../actions/photo_actions';
 import merge from 'lodash/merge'
 
-const PhotosReducer = (oldState = {photo: {
-                          url: "",
-                          caption: "",
-                          user_id: this.props.currentUser
-                        }
-  }, action) => {
+const excludePhoto = (photo, action) => {
+  return photo !== action.photo
+}
+
+const PhotosReducer = (oldState = [], action) => {
   Object.freeze(oldState);
   switch(action.type) {
     case RECEIVE_STREAM_PHOTOS:
-      return merge({}, action.photos);
+      return [...action.photos];
     case RECEIVE_PHOTO:
-      return merge({}, oldState, {
-        [action.photo.id]: action.photo
-      });
+      return [action.photo,...oldState];
     case REMOVE_PHOTO:
-      let newState = merge({}, oldState);
-      delete(newState[action.id]);
+      let newState = [...oldState];
+      newState.filter(excludePhoto, action)
       return newState;
     default:
       return oldState;

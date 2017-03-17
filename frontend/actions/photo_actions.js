@@ -4,8 +4,8 @@ export const RECEIVE_STREAM_PHOTOS = "RECEIVE_STREAM_PHOTOS";
 export const RECEIVE_PHOTO = "RECEIVE_PHOTO";
 export const REMOVE_PHOTO = "REMOVE_PHOTO"
 
-export const receiveStreamPhotos = (photos) => ({
-  type: RECEIVE_STREAM_PHOTOS,
+export const receivePhotos = (photos) => ({
+  type: RECEIVE_PHOTOS,
   photos
 });
 
@@ -21,7 +21,12 @@ export const removePhoto = (id) => ({
 
 export const fetchStreamPhotos = () => dispatch => (
   PhotoAPIUtil.fetchStreamPhotos()
-    .then(photos => dispatch(receiveStreamPhotos(photos)))
+    .then(photos => dispatch(receivePhotos(photos)))
+);
+
+export const fetchUserPhotos = () => dispatch => (
+  PhotoAPIUtil.fetchUserPhotos()
+    .then(photos => dispatch(receivePhotos(photos)))
 );
 
 export const fetchPhoto = (id) => dispatch => {

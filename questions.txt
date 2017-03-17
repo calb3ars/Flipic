@@ -19,7 +19,8 @@ Day 3
         * clean up API and action code
 
 
-
+photo form that works
+profile components
 
 
 
