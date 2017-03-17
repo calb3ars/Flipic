@@ -7,7 +7,7 @@ const CLOUDINARY_UPLOAD_URL = 'https://api.cloudinary.com/v1_1/calb3ars/image/up
 
 class PhotoForm extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state= {
       modalOpen: false,
@@ -16,18 +16,22 @@ class PhotoForm extends React.Component {
     };
 
     this.closeModal = this.closeModal.bind(this);
-    this.openMOdal = this.openModal.bind(this);
+    this.openModal = this.openModal.bind(this);
 
     this.update = this.update.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   closeModal() {
-    this.setState({ modalOpen: false });
+    this.setState({
+      modalOpen: false
+    });
   }
 
   openModal() {
-    this.setState({ modalOpen: true });
+    return this.setState({
+      modalOpen: true
+    });
   }
 
   onImageDrop(files) {
@@ -74,6 +78,7 @@ class PhotoForm extends React.Component {
         caption
       }
     );
+    this.closeModal();
   }
 
   render() {
@@ -81,9 +86,14 @@ class PhotoForm extends React.Component {
       <div>
         <button onClick={this.openModal}
           className="add-photo icon-button">
-            <i className="fa fa-camera-retro" aria-hidden="true"></i>
+            <i className="fa fa-camera-retro"></i>
         </button>
 
+        <Modal
+          contentLabel="Modal"
+          isOpen = {this.state.modalOpen}
+          onRequestClose={this.closeModal}
+        >
           <form onSubmit={this.handleSubmit}>
             <input
               type="hidden"
@@ -97,7 +107,7 @@ class PhotoForm extends React.Component {
                   <img src={this.state.url} />
                 </div>}
             </div>
-
+            <br />
             <div>
               <Dropzone
                 multiple={false}
@@ -108,6 +118,8 @@ class PhotoForm extends React.Component {
                 <p>Drop an image or click to select a file to upload.</p>
               </Dropzone>
             </div>
+            <br />
+            <br />
 
             <input
               type="text"
@@ -115,16 +127,17 @@ class PhotoForm extends React.Component {
               value={this.state.caption}
               onChange={this.update("caption")}
             />
-
+            <br />
+            <br />
             <input
             type="submit"
             value="Upload"
             />
 
           </form>
-
+        </Modal>
       </div>
-    )
+    );
   }
 }
 
