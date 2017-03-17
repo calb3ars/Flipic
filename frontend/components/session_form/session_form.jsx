@@ -78,7 +78,7 @@ class SessionForm extends React.Component {
         <div className="session-form-container col-1-3">
           <h2 className="session-form-header flipic-text">Flipic</h2>
           <p className="session-form-tagline flipic-tagline">The place to view beautiful photos</p>
-          <input type="submit" value="Demo login" className="session-form-submit demo-button" onClick={this.demoLogin}/>
+          <input type="submit" value="Demo login" className="session-form-submit demo-button session-button" onClick={this.demoLogin}/>
 
           <form onSubmit={this.handleSubmit} className="session-form-box">
 
@@ -101,7 +101,7 @@ class SessionForm extends React.Component {
                 placeholder="Password"
               />
 
-              <input type="submit" value={submit_text} className="session-form-submit" />
+              <input type="submit" value={submit_text} className="session-form-submit session-button" />
 
               <div className="form-toggle-container">
                 <p className="session-form-toggle-link">{`${loginText} an account? `} {this.navLink()}</p>

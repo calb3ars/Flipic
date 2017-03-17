@@ -1,16 +1,35 @@
 .header-group {
+  background: $flipic-white;
   width: 100%;
   position: fixed;
   top: 0;
-  height: 40px;
+  height: 30px;
   display: flex;
+  flex-direction: row;
+  align-items: center;
   padding: 20px;
   font-family: $sans-serif;
   font-weight: 100;
+  border-bottom: 1px solid $instagram-maroon;
 }
 
 .header-name {
   font-weight: 200;
+}
+
+.icon-button {
+  height: 40px;
+  border: 1px solid $border-gray;
+  font-size: 14px;
+  font-weight: 200;
+  padding: 0px 20px;
+}
+
+.fa-camera-retro {
+  height: 20px;
+  width: 20px;
+  color: $border-gray;
+  font-size: 12px;
 }
 
 .username {
@@ -18,5 +37,8 @@
 }
 
 .header-button {
-
+  height: 40px;
+  padding: 0px 20px;
+  font-size: 14px;
+  font-weight: 200;
 }

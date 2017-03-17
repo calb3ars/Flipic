@@ -6,7 +6,10 @@ const personalGreeting = (currentUser, logout) => (
     <h2 className="header-name">
       Welcome, <span className="username">{currentUser.username}</span>
     </h2>
-    <button className="header-button" onClick={logout}>
+
+    <button className="add-photo icon-button"><i className="fa fa-camera-retro" aria-hidden="true"></i></button>
+
+    <button className="header-button session-button" onClick={logout}>
       Log Out
     </button>
   </hgroup>
