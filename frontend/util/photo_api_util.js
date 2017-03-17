@@ -1,13 +1,13 @@
 export const fetchStreamPhotos = () => (
   $.ajax({
-    method: "GET"
+    method: "GET",
     url: "/api/photos"
   })
 );
 
 export const fetchPhoto = (id) => (
   $.ajax({
-    method: "GET",;
+    method: "GET",
     url: `/api/photos/${id}`
   })
 );

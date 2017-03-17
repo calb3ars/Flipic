@@ -5,6 +5,8 @@ import configureStore from './store/store';
 import Root from './components/root';
 import {clearErrors} from './actions/session_actions';
 
+import { fetchStreamPhotos, fetchPhoto, createPhoto, updatePhoto, removePhoto } from './actions/photo_actions';
+
 document.addEventListener('DOMContentLoaded', () => {
   let store;
   if (window.currentUser) {
@@ -14,6 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
     store = configureStore();
   }
   const root = document.getElementById('root')
+
+  window.updatePhoto = updatePhoto;
+
   window.store = store;
   ReactDOM.render(<Root store={ store } />, root);
 });
