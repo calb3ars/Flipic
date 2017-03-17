@@ -38,6 +38,7 @@ class Api::PhotosController < ApplicationController
   def destroy
     @user = current_user
     @photo = Photo.find(params[:id])
+    debugger
     if @photo.user_id == @user.id
       @photo.destroy
       render "api/users/show"

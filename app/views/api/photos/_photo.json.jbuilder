@@ -1,2 +1,2 @@
-json.extract! photo, :url, :user_id, :caption
+json.extract! photo, :id, :url, :user_id, :caption
 # , :location, :timestamp
