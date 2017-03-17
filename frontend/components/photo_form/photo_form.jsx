@@ -16,6 +16,7 @@ class PhotoForm extends React.Component {
 
     this.closeModal = this.closeModal.bind(this);
     this.openModal = this.openModal.bind(this);
+    this.update = this.update.bind(this);
   }
 
   closeModal() {
@@ -26,13 +27,15 @@ class PhotoForm extends React.Component {
     this.setState({ modalOpen: true })
   }
 
-  // update(field) {
-  //   return (e) => {
-  //     this.setState({
-  //       photo[field] : e.target.value
-  //     })
-  //   }
-  // }
+  update(field) {
+    return (e) => {
+      this.setState({
+        photo: {
+          photo[field]: e.target.value
+        }
+      })
+    }
+  }
 
   handleSubmit(e) {
     e.preventDefault();

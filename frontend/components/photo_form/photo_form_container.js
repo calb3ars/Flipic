@@ -3,7 +3,8 @@ import { createPhoto } from '../../actions/photo_actions';
 import PhotoForm from './photo_form';
 
 const mapStateToProps = (state, ownProps) => ({
-  currentUser: state.session.currentUser
+  currentUser: state.session.currentUser,
+  photos: state.photos
 });
 
 const mapDispatchToProps = dispatch => ({

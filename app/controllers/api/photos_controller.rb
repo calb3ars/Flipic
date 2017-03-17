@@ -1,6 +1,6 @@
 class Api::PhotosController < ApplicationController
   before_action :require_logged_in, except: [:show]
-  before_action :require_user_owns_photo!, only: [:update, :delete]
+  # before_action :require_user_owns_photo!, only: [:update, :delete]
 
   def index
     @photos = []
@@ -40,7 +40,7 @@ class Api::PhotosController < ApplicationController
     @photo = Photo.find(params[:id])
     if @photo.user_id == @user.id
       @photo.destroy
-      render "api/users/show"
+      render json: @photo
     end
   end
 
