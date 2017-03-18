@@ -1,19 +1,27 @@
 import React from 'react';
-
+import Modael from 'react-modal';
 
 class UserProfileDetail extends React.Component {
   constructor(props) {
     super(props);
-    let user = this.props.user;
+    let username = this.props.params.username;
     this.state = {
-      username: user.username,
-      profile_image: user.profile_image,
-      tagline: user.tagline
+      username: username,
+      profile_image: username.image_url,
+      tagline: username.tagline
     };
   }
 
   componentDidMount() {
     this.props.fetchUser(this.props.userId);
+  }
+
+  componentWillReceiveProps(newProps) {
+    if (newProps.username !== this.state.username) {
+      return this.setState({
+        username: newProps.params.username
+      });
+    }
   }
 
   openModal() {
@@ -50,6 +58,9 @@ class UserProfileDetail extends React.Component {
 
           </div>
         </div>
-    )
+      </div>
+    );
   }
 }
+
+export default UserProfileDetail;

@@ -30,9 +30,7 @@ const Root = ({ store }) => (
         <IndexRoute component={ StreamContainer } onEnter={redirectIfLoggedOut}/>
         <Route path="/login" component={ SessionFormContainer } onEnter={ redirectIfLoggedIn} />
         <Route path="/signup" component={ SessionFormContainer } onEnter={ redirectIfLoggedIn} />
-        <Route path="/users">
-          <Route path="/users/:userId" component={ UserShowContainer } />
-        </Route>
+        <Route path=":username" component={ UserShowContainer } />
       </Route>
     </Router>
   </Provider>

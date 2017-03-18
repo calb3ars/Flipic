@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import { fetchUser } from '../../actions/user_actions';
+import { fetchUserPhotos, createPhoto } from '../../actions/photo_actions';
 import { logout } from '../../actions/session_actions';
 import UserProfileDetail from './user_profile_detail';
 

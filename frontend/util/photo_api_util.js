@@ -5,10 +5,10 @@ export const fetchStreamPhotos = () => (
   })
 );
 
-export const fetchUserPhotos = (userId) => (
+export const fetchUserPhotos = (username) => (
   $.ajax({
     method: "GET",
-    url: `/api/${userId}`
+    url: `/api/${username}`
   })
 )
 

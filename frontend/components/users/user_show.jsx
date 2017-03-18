@@ -1,6 +1,6 @@
 import React from 'react';
-import UserProfileShowContainer from './user_profile_show_container';
-import UserImagesContainer from './user_images_container';
+import UserProfileDetailContainer from './user_profile_detail_container';
+import UserShowContainer from "./user_show_container";
 
 class UserShow extends React.Component {
 
@@ -9,8 +9,10 @@ class UserShow extends React.Component {
       <div>
         <UserProfileDetailContainer props={this.props}/>
         <br />
-        <UserImagesContainer props={this.props}/>
+
       </div>
     );
   }
 }
+
+export default UserShow;

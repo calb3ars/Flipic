@@ -1,4 +1,5 @@
 import { RECEIVE_STREAM_PHOTOS, RECEIVE_PHOTO, REMOVE_PHOTO } from '../actions/photo_actions';
+
 import merge from 'lodash/merge';
 
 const excludePhoto = (photo, action) => {
