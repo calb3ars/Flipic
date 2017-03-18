@@ -8,7 +8,7 @@
   * `POST /api/users` - Create new user
   * `GET /api/users` - Load all users
   * `GET /api/users/:id` - Retrieve specific user
-  * `PATCH /api/users/:id` - Update user
+  <!-- * `PATCH /api/users/:id` - Update user -->
 
 
   <!-- * `GET /api/users/:id/photos` - All photos from specific user -->
@@ -43,7 +43,7 @@
 ##### Tags
   * `GET /api/tags` - All tags
   <!-- * `POST /api/photos/:photo_id/tags` - All tags for a specific image -->
-  * `POST /api/tags` - All tags for a specific image
+  * `POST /api/tags` - Create tag
   * `DELETE /api/tags/:id` - Deletes specified tag
-  * `Get /api/tags/:id` - Retrieves specified tag
+  * `GET /api/tags/:id` - Retrieves specified tag
   * `GET /api/tags/:id/photos` - Returns all photos containing specified tag

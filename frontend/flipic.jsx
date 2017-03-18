@@ -7,6 +7,7 @@ import Root from './components/root';
 import {clearErrors} from './actions/session_actions';
 
 import { fetchStreamPhotos, fetchPhoto, createPhoto, updatePhoto, deletePhoto } from './actions/photo_actions';
+import { fetchUser } from './actions/user_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -19,6 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root')
   Modal.setAppElement(document.body);
 
+
+  window.fetchUser = fetchUser;
   window.fetchPhoto = fetchPhoto;
   window.createPhoto = createPhoto;
   window.updatePhoto = updatePhoto;

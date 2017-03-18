@@ -1,0 +1,70 @@
+import PhotoShowContainer from '../photos/photo_show_container';
+
+state: {
+  username: this.props.currentUser.username,
+  user_id: this.props.currentUser.user_id,
+  photos: []
+}
+<div className="user-profile-container">
+  <div className="user-info">
+    <div className="user-info user-info-first-row">
+      <img className="user-profile-image"/>
+      <p>{this.state.username}</p>
+
+      <div className="current-user-buttons">
+        <!-- Hide unless current user === this.props.params.userId -->
+        <button to=`/users/${this.props.user_id}/edit` value="Edit Profile"/>
+        <button onClick={this.openModal}>Logout Button</button>
+          <Modal>
+            <button onClick={this.props.logout}>Logout</button>
+             <!-- requires session information -->
+            <button onClick={this.closeModal}>Cancel</button>
+          </Modal>
+        </button>
+      </div>
+
+      <div className="other-user-buttons">
+        <button onClick={this.createFollow} value="this.state.followStatus" className="follow-button"/>
+        <!-- Extras: Button to message user -->
+        <!-- Button to block user -->
+      </div>
+
+    </div>
+
+    <div className="user-info user-info-second-row">
+      <div className="post-count">56</div>
+      <button className="followers" onClick={this.openModal}>{436,890} followers</button>
+        <Modal>
+          <FollowersContainer />
+        </Modal>
+      <button className="following" onClick={this.openModal}>{339,249} following</button>
+      <Modal>
+        <FollowingContainer />
+      </Modal>
+
+    </div>
+  </div>
+
+  <ul className="images-container">
+    {this.props.photos.map( photo => (
+      return <li><img src=`${photo.url}`/></li>
+      <li onClick={this.openModal} className="photo-data-overlay"
+      >{photo.likes}{heart}{photo.comments}{speech bubble}</li>
+      <!-- Check Reddit for counts -->
+      <Modal>
+        <PhotoShowContainer />
+      </Modal>
+      ))
+  </ul>
+  <button onClick={this.props.fetchUserPhotos}>Load more</button>
+  </div>
+  <div>Copyright 2017 Flipic</div>
+</div>
+
+DB:
+photos:
+Count photo's Likes
+Count photo's comments
+
+users:
+on user show view, return user information + array of photos

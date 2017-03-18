@@ -1,9 +1,9 @@
 import { RECEIVE_STREAM_PHOTOS, RECEIVE_PHOTO, REMOVE_PHOTO } from '../actions/photo_actions';
-import merge from 'lodash/merge'
+import merge from 'lodash/merge';
 
 const excludePhoto = (photo, action) => {
-  return photo !== action.photo
-}
+  return photo !== action.photo;
+};
 
 const PhotosReducer = (oldState = [], action) => {
   Object.freeze(oldState);
@@ -14,7 +14,7 @@ const PhotosReducer = (oldState = [], action) => {
       return [action.photo,...oldState];
     case REMOVE_PHOTO:
       let newState = [...oldState];
-      newState.filter(excludePhoto, action)
+      newState.filter(excludePhoto, action);
       return newState;
     default:
       return oldState;

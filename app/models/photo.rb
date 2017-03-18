@@ -15,10 +15,10 @@ class Photo < ApplicationRecord
   validates :url, :user_id, presence: true
   belongs_to :user
 
-  attr_reader :timestamp
+  attr_reader :timestamp, :seconds, :likes, :comments
 
   def timestamp_seconds
-    
+    @seconds = Time.now - self.created_at
   end
 
   def timestamp
@@ -37,5 +37,13 @@ class Photo < ApplicationRecord
     end
 
     @timestamp
+  end
+
+  def likes
+    @likes = self.likes.length
+  end
+
+  def comments
+    @comments = self.comments.length
   end
 end

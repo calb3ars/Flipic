@@ -29,7 +29,7 @@ class PhotoForm extends React.Component {
   }
 
   openModal() {
-    return this.setState({
+    this.setState({
       modalOpen: true
     });
   }

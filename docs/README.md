@@ -25,7 +25,7 @@ Flipic is a full-stack web application clone of Instagram.
 ### Implementation Timeline
 ##### Phase 1: Backend DB Setup and Frontend Auth ( 2 days )
 **Objective**: Rails backend setup with frontend authentication
-##### Phase 2: Image Creation and Deletion ( 1 day )
+##### Phase 2: Image Creation ( 1 day )
 **Objective**: Images can be created and deleted through API
 ##### Phase 3: User Profile Page (2 days)
 **Objective**: User profile page renders posted images and pertinent information (followers, following). Users can follow and unfollow users.
