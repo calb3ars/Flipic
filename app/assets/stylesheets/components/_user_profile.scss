@@ -1,0 +1,28 @@
+.profile-image {
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+}
+
+.icon-button {
+  height: 40px;
+  width: 100px;
+  border: 1px solid $border-gray;
+  font-size: 14px;
+  font-weight: 200;
+  padding: 0px 20px;
+}
+
+.icon-ellipsis-horizontal {
+  height: 20px;
+  width: 20px;
+  color: $border-gray;
+  font-size: 12px;
+}
+
+.tagline {
+  font-family: $serif;
+  font-weight: 50;
+  font-size: 12px;
+  color: $login-tagline;
+}

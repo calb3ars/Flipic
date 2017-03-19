@@ -1,6 +1,7 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import SessionFormContainer from './session_form/session_form_container';
+import UserProfileContainer from './users/user_profile_container';
 //react router
 import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 import App from './App';
@@ -24,10 +25,10 @@ const redirectIfLoggedOut = (nextState, replace) => {
 const Root = ({ store }) => (
   <Provider store={ store }>
     <Router history={ hashHistory }>
-      <Route path="/" >
-        <IndexRoute component={ App } onEnter={redirectIfLoggedOut}/>
+      <Route path="/" component={ App }>
         <Route path="/login" component={ SessionFormContainer } onEnter={ redirectIfLoggedIn} />
         <Route path="/signup" component={ SessionFormContainer } onEnter={ redirectIfLoggedIn} />
+        <Route path="users/:userId" component={ UserProfileContainer } onEnter={redirectIfLoggedOut}/>
       </Route>
     </Router>
   </Provider>

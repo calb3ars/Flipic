@@ -79,4 +79,4 @@
 >>   No template found for Api::PhotosController#destroy, rendering head :no_content
     Completed 204 No Content in 44ms (ActiveRecord: 0.9ms)
 
-    solution: 
+    solution: .then function not being called in console
