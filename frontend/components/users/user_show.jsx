@@ -19,8 +19,8 @@ class UserShow extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchUser(this.props.user.username);
-    this.props.fetchUserPhotos(this.props.user.username);
+    this.props.fetchUser(this.props.params.username);
+    this.props.fetchUserPhotos(this.props.params.username);
   }
 
   componentWillReceiveProps(newProps) {
