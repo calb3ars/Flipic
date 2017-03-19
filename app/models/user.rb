@@ -43,6 +43,10 @@ class User < ApplicationRecord
     self.session_token
   end
 
+  def to_param
+    username
+  end
+
   private
 
   def ensure_session_token

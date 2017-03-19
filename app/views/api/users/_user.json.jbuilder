@@ -1,3 +1,3 @@
-json.username user.username
 json.id user.id
-json.profile_image user.profile_image
+json.username user.username
+json.photos user.photos

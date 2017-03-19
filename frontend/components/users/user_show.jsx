@@ -19,8 +19,8 @@ class UserShow extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchUser(this.props.params.username);
-    this.props.fetchUserPhotos(this.props.params.username);
+    this.props.fetchUser(this.props.user.username);
+    this.props.fetchUserPhotos(this.props.user.username);
   }
 
   componentWillReceiveProps(newProps) {
@@ -102,7 +102,8 @@ class UserShow extends React.Component {
   render() {
     return (
         <div className="user-profile-container">
-
+          <UserDetail user={this.props.user}/>
+          <UserPhotos user={this.props.user.photos}/>
         </div>
       )
   }
