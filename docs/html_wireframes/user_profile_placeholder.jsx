@@ -1,5 +1,5 @@
 import React from 'react';
-import Model from 'react-modal';
+import Modael from 'react-modal';
 
 class UserProfileDetail extends React.Component {
   constructor(props) {

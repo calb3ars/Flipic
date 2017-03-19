@@ -83,10 +83,10 @@ class PhotoForm extends React.Component {
 
   render() {
     return(
-      <div>
+      <div className="photo-form-button">
         <button onClick={this.openModal}
           className="add-photo icon-button">
-            <i className="fa fa-camera-retro"></i>
+            <i className="fa fa-camera"></i>
         </button>
 
         <Modal

@@ -1,9 +1,9 @@
 import PhotoShowContainer from '../photos/photo_show_container';
 
 state: {
-  username: this.props.currentUser.username,
-  user_id: this.props.currentUser.user_id,
-  photos: []
+  username: username,
+  profile_image: username.image_url,
+  tagline: username.tagline
 }
 <div className="user-profile-container">
   <div className="user-info">
@@ -13,7 +13,18 @@ state: {
 
       <div className="current-user-buttons">
         <!-- Hide unless current user === this.props.params.userId -->
-        <button to=`/users/${this.props.user_id}/edit` value="Edit Profile"/>
+        <button onClick={this.openModal}>Edit Profile</button>
+          <Modal>
+            <form onSubmit={this.handleSubmit}>
+              <input
+              <!-- change profile photo -->
+              value="tagline"
+              onChange={this.update("tagline")}>
+              <input type="submit" value="Save Changes"/>
+            </form>
+          </Modal>
+        </button>
+
         <button onClick={this.openModal}>Logout Button</button>
           <Modal>
             <button onClick={this.props.logout}>Logout</button>

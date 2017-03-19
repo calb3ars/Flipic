@@ -1,4 +1,10 @@
 # To-Do Fixes
+- Create Photo Component
+- Separate out Detail info from Images
+
+
+
+
 - _session_form.css: User signup form: when attempting to sign up with a password that's too short, CSS changes upon error rendering. This becomes a bigger issue if you also sign up with an existing user's username (additional errors).
 
   o - Create div specifically to host errors.
@@ -7,11 +13,25 @@
 
 - Seed Heroku DB with users and images
 
+- PhotoForm: Move preview into upload ternary statement
+
+- Styling for PhotoForm
+
 - Add tagline (string) and profile_image (text) columns to users table
+
+Rename UserShow Component to ProfileView
+
+- Rename PhotoForm to uploadForm since it's the only upload modal. This should match the state in the UserShow component(rename to Profile)
 
 - Clean up Hero Image to shadow fades into background (especially on right next to
   login form)
 
+- Put images on window in root.html.erb or remove window.images from file**
+
+
+
+
+*** Fixed ***
 - session-form page: have submit button selected by default so when user presses enter, it logs them in rather than logging in demo user
 
 
@@ -79,4 +99,4 @@
 >>   No template found for Api::PhotosController#destroy, rendering head :no_content
     Completed 204 No Content in 44ms (ActiveRecord: 0.9ms)
 
-    solution: 
+    solution:

@@ -10,7 +10,21 @@ class Api::UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
-    render "api/users/show"
+    @user = User.find_by(username: params[:username])
+    if @user
+      render "api/users/show"
+    else
+      render json: ["User doesn't exist"], status: 422
+    end
   end
+
+  def update
+    @user = User.find_by(username: params[:username])
+    if @user.update(user_params)
+      render "api/users/show"
+    else
+      render json: ["Unable to update user. Check form inputs"], status: 422
+    end
+  end
+
 end
