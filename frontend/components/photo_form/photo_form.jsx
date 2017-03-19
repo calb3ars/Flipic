@@ -100,22 +100,19 @@ class PhotoForm extends React.Component {
               value={this.state.url}
               onChange={this.update("url")}
             />
-
-            <div>
-              { this.state.url === '' ? null :
-                <div>
-                  <img src={this.state.url} />
-                </div>}
-            </div>
-            <br />
-            <div>
+          <div className="dropzone-preview">
               <Dropzone
                 multiple={false}
                 accept="image/*"
                 className="image-form-dropzone"
                 onDrop={this.onImageDrop.bind(this)}
               >
-                <p>Drop an image or click to select a file to upload.</p>
+              <div>
+                { this.state.url === '' ? <p>Drop an image or click to select a file to upload.</p> :
+                  <div>
+                    <img src={this.state.url} />
+                  </div>}
+              </div>
               </Dropzone>
             </div>
             <br />
