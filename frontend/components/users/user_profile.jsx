@@ -23,7 +23,7 @@ class UserProfile extends Component {
           <div className="profile-details">
             <ul className="profile-row profile-row-1">
               <li className="profile-username">{profile.username}</li>
-              <li className="profile-edit-follow-button"><button className="follow-edit-button" onclick="">Edit/Following</button></li>
+              <li className="profile-edit-follow-button"><button className="follow-edit-button" onClick="">Edit/Following</button></li>
               <li className="profile-ellipsis"><button className="icon-button ellipsis">o&nbsp;&nbsp;o&nbsp;&nbsp;o</button></li>
             </ul>
 
