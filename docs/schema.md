@@ -28,12 +28,14 @@ location    | string    |
 created_at  | datetime  |
 updated_at  | datetime  |
 
-## likes 
+## likes
 column_name | data_type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
 user_id     | integer   | not null, foreign key (users), indexed, unique (photo_id)
 photo_id    | integer   | not null, foreign key (photos), indexed
+created_at  | datetime  |
+updated_at  | datetime  |
 
 ## comments
 column_name | data_type | details
@@ -42,6 +44,8 @@ id          | integer   | not null, primary key
 body        | text      | not null
 user_id     | integer   | not null, foreign key (users), indexed
 photo_id    | integer   | not null, foreign key (photos), indexed
+created_at  | datetime  |
+updated_at  | datetime  |
 
 
 ## tags
