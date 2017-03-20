@@ -4,13 +4,12 @@ import PhotoFormContainer from '../photo_form/photo_form_container';
 
 const personalGreeting = (currentUser, logout) => (
   <hgroup className="header-group">
-    <h2 className="header-name">
-      Welcome, <span className="username">{currentUser.username}</span>
-    </h2>
+
+    <h2 className="flipic-text nav-flipic-text">Flipic</h2>
 
     <PhotoFormContainer />
 
-    <button className="header-button session-button" onClick={logout}>
+    <button className="header-button session-button logout-button" onClick={logout}>
       Log Out
     </button>
   </hgroup>
