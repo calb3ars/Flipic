@@ -3,17 +3,17 @@ class Api::PhotosController < ApplicationController
   # before_action :require_user_owns_photo!, only: [:update, :delete]
 
   def index
-    @photos = Photo.all
     # @photos = []
     # current_user.followers.each do |follower|
     #   @photos.concat(follower.photos)
     # end
+    @photos = Photo.all
     return @photos.sort! {|a,b| b.created_at <=> a.created_at }
   end
 
   def show
     @photo = Photo.find(params[:id])
-  end
+  endgit
 
   def create
     @photo = Photo.new(photo_params)

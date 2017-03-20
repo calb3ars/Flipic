@@ -25,10 +25,10 @@ const redirectIfLoggedOut = (nextState, replace) => {
 const Root = ({ store }) => (
   <Provider store={ store }>
     <Router history={ hashHistory }>
-      <Route path="/" component={ App }>
-        <Route path="/login" component={ SessionFormContainer } onEnter={ redirectIfLoggedIn} />
-        <Route path="/signup" component={ SessionFormContainer } onEnter={ redirectIfLoggedIn} />
-        <Route path="users/:userId" component={ UserProfileContainer } onEnter={redirectIfLoggedOut}/>
+      <Route path="/login" component={ SessionFormContainer } onEnter={ redirectIfLoggedIn} />
+      <Route path="/signup" component={ SessionFormContainer } onEnter={ redirectIfLoggedIn} />
+      <Route path="/" component={ App } onEnter={redirectIfLoggedOut}>
+        <Route path="users/:userId" component={ UserProfileContainer } />
       </Route>
     </Router>
   </Provider>

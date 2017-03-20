@@ -17,10 +17,6 @@ class Photo < ApplicationRecord
 
   attr_reader :timestamp
 
-  def timestamp_seconds
-    
-  end
-
   def timestamp
     min = ((Time.now - self.created_at) / 1.minute).round
     hrs = ((Time.now - self.created_at) / 1.hour).round
