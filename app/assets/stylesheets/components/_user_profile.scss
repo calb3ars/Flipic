@@ -8,16 +8,17 @@
 
 .user-profile {
   width: 40%;
-  margin: 100px auto;
+  margin: 75px auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
-
 .profile-image-container {
+  height: 100%;
   width: 25%;
+  min-width: 100px;
 }
 
 .profile-image {
@@ -25,7 +26,6 @@
   width: 150px;
   border-radius: 75px;
   border: 1px solid $search-bar-border;
-  margin-right: 40px;
 }
 
 .profile-image:hover {
@@ -33,12 +33,11 @@
 }
 
 .profile-details {
-  margin-top: 80px;
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin-left: 12%;
 }
-
 
 .profile-row {
   display: flex;
@@ -82,19 +81,33 @@
   font-weight: 200;
 }
 
-.icon-ellipsis-horizontal {
-  height: 20px;
-  width: 20px;
+.profile-ellipsis {
+  display: flex;
+  flex-direction: row;
+  justify: center;
+  align-items: center;
+}
+
+// .ellipsis:hover {
+//   background: -webkit-linear-gradient($instagram-orange, $instagram-red-orange);
+// }
+
+.ellipsis {
   color: $border-gray;
-  font-size: 12px;
+  font-size: 8px;
 }
 
 .profile-row-2 {
   font-weight: 200;
+  font-size: 16px;
 }
 
 .profile-number {
   font-weight: 600;
+}
+
+.profile-posts {
+  margin-right: -50px;
 }
 
 .tagline {
@@ -102,4 +115,18 @@
   font-size: 20px;
   font-weight: 200;
   color: $login-tagline;
+}
+
+.profile-photos {
+  width: 60%;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.profile-photos > li {
+  width: 250px;
+  height: 250px;
+  margin: 12px;
 }

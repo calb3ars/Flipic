@@ -24,13 +24,13 @@ class UserProfile extends Component {
             <ul className="profile-row profile-row-1">
               <li className="profile-username">{profile.username}</li>
               <li className="profile-edit-follow-button"><button className="follow-edit-button" onclick="">Edit/Following</button></li>
-              <li><button className="icon-button"><i className="icon-ellipsis-horizontal profile-options"></i></button></li>
+              <li className="profile-ellipsis"><button className="icon-button ellipsis">o&nbsp;&nbsp;o&nbsp;&nbsp;o</button></li>
             </ul>
 
             <ul className="profile-row profile-row-2">
-              <li><span className="profile-number">{profile.photo_count}</span> posts</li>
-              <li><span className="profile-number">99</span> followers</li>
-              <li><span className="profile-number">99</span> following</li>
+              <li className="profile-posts"><span className="profile-number">{profile.photo_count}</span> posts</li>
+              <li className="profile-followers follower-following"><span className="profile-number">99</span> followers</li>
+              <li className="profile-following follower-following"><span className="profile-number">99</span> following</li>
             </ul>
 
             <p className="profile-row profile-row-3 tagline">
@@ -39,17 +39,15 @@ class UserProfile extends Component {
         </div>
       </div>
 
-        <section className="profile-photos">
-          <ul>
-            { this.props.profile.photos.map( (photo) => (
-              <li>
-                <img src={$`{photo.url}`} alt={`${photo.caption}`}/>
-              </li>
-            ))
+      <ul className="profile-photos">
+        { this.props.profile.photos.map( (photo) => (
+          <li>
+            <img src={$`{photo.url}`} alt={`${photo.caption}`}/>
+          </li>
+        ))
 
-            }
-          </ul>
-        </section>
+        }
+      </ul>
       </div>
     );
   }
