@@ -1,15 +1,19 @@
 ###################################################################################
 Day 4
-###################################################################################
-1) Due Date (hearing both Thursday and Friday)
+##################################################################################
+
+
+
+#
+1) Due Date (Friday 4pm)
 
 2) Pace/tracking
 
 3) Next Steps:
 
-3A) Priorities: Stream vs. Likes and Comments vs. Follows
+*3A) Priorities: 1) Stream vs. 3) Likes and Comments vs. 2) Follows
 
-4) Photo rendering issue
+*4) Photo rendering issue
 
 
 ###################################################################################

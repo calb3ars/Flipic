@@ -8,12 +8,12 @@ class Api::PhotosController < ApplicationController
     #   @photos.concat(follower.photos)
     # end
     @photos = Photo.all
-    return @photos.sort! {|a,b| b.created_at <=> a.created_at }
+    # return @photos.sort! {|a,b| b.created_at <=> a.created_at }
   end
 
   def show
     @photo = Photo.find(params[:id])
-  endgit
+  end
 
   def create
     @photo = Photo.new(photo_params)

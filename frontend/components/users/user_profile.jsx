@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class UserProfile extends Component {
+class UserProfile extends React.Component {
   componentDidMount() {
     this.props.fetchUser(this.props.params.userId);
   }

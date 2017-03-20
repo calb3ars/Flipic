@@ -1,3 +1,1 @@
-json.array! @photos do |photo|
-  json.partial! "api/photos/photo"
-end
+json.array! @photos, :id, :url, :user, :caption , :location, :timestamp

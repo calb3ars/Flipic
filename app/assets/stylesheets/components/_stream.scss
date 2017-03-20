@@ -1,0 +1,28 @@
+.stream-container {
+  margin-top:75px;
+  background: $background-gray;
+  padding-top: 40px;
+}
+
+.stream {
+  background: $flipic-white;
+  box-sizing: border-box;
+  width: 60%;
+  margin: 20px auto;
+}
+
+.photo-container {
+  border: 1px solid $session-border-gray;
+  border-radius: 3px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.user-avatar {
+  display: flex;
+  flex-direction: row;
+  justify: center;
+  align-items: center;
+  padding-left: 20px;
+}

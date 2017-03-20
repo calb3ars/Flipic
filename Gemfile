@@ -47,6 +47,10 @@ group :development do
   gem 'binding_of_caller'
   gem 'pry-rails'
   gem 'annotate'
+  gem "guard", ">= 2.2.2", :require => false
+   gem "guard-livereload",  :require => false
+   gem "rack-livereload"
+   gem "rb-fsevent",        :require => false
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '~> 3.0.5'

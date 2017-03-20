@@ -34,9 +34,6 @@
       * Password
       * Log in Button
     * Demo Login Button
-    * App Links (Future functionality)
-      * iTunes Store Button
-      * Google Play Store Button
     * About Us
     * Copyright 2017 Flipic
 

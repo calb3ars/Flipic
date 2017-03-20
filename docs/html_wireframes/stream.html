@@ -1,0 +1,73 @@
+<!-- mapState -->
+user
+photos
+
+<!-- mapDispatch -->
+fetchStreamPhotos
+createComment
+deleteComment
+createLike
+deleteLike
+
+constructor(props) {
+  super(props);
+  this.state: {
+    photos: []
+  }
+
+}
+
+componentDidMount() {
+  fetchStreamPhotos()
+}
+
+
+
+
+<div className="stream-container">
+  <!-- map over  -->
+  <!-- Photo Component to track likes and comments -->
+  <ul>
+  {this.state.photos.map( photo => (
+    <li className="photo-container">
+      <ul className="photo-content">
+        <li className="user-avatar">
+          <div>
+            <p>{photo.user.username}</p>
+            <p>{photo.timestamp}</p>
+          </div>
+        </li>
+
+        <li className="photo-display">
+          <img src={`${photo.url}`}/>
+            <div className="photo-detail-modal"></div>
+        </li>
+
+        <li className="photo-info">
+          <ul>
+        <li>121 likes</li>
+
+            <li>
+              {photo.comments.map( comment => (
+              <ul>
+                <li>{comment.user.username}</li>
+                <li>{comment.body}</li>
+              </ul>
+                ))}
+            </li>
+          </ul>
+        </li>
+
+        <!-- Break into comment Component photo={photo} user={currentUser}-->
+        <li>
+          <button onClick={this.toggleLike}>Heart Icon</button>
+          <form onSubmit={this.handleSubmit}>
+            <input onChange={this.update('body')} placeholder="Add a comment..." value={this.state.body} />
+          </form>
+          <button onClick={this.openModal}>o o o<button>
+        </li>
+      </ul>
+    </li>
+    ))}
+  </ul>
+</div>
