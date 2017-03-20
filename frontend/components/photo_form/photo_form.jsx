@@ -1,5 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
+import ModalStyle from './modal_style';
 import Dropzone from 'react-dropzone';
 import request from 'superagent';
 const CLOUDINARY_UPLOAD_PRESET = 'Flipic_image_upload';
@@ -29,7 +30,7 @@ class PhotoForm extends React.Component {
   }
 
   openModal() {
-    return this.setState({
+    this.setState({
       modalOpen: true
     });
   }
@@ -83,10 +84,10 @@ class PhotoForm extends React.Component {
 
   render() {
     return(
-      <div>
+      <div className="photo-form-button">
         <button onClick={this.openModal}
           className="add-photo icon-button">
-            <i className="fa fa-camera-retro"></i>
+            <i className="fa fa-camera"></i>
         </button>
 
         <Modal
@@ -100,22 +101,19 @@ class PhotoForm extends React.Component {
               value={this.state.url}
               onChange={this.update("url")}
             />
-
-            <div>
-              { this.state.url === '' ? null :
-                <div>
-                  <img src={this.state.url} />
-                </div>}
-            </div>
-            <br />
-            <div>
+          <div className="dropzone-preview">
               <Dropzone
                 multiple={false}
                 accept="image/*"
                 className="image-form-dropzone"
                 onDrop={this.onImageDrop.bind(this)}
               >
-                <p>Drop an image or click to select a file to upload.</p>
+              <div>
+                { this.state.url === '' ? <p>Drop an image or click to select a file to upload.</p> :
+                  <div>
+                    <img src={this.state.url} />
+                  </div>}
+              </div>
               </Dropzone>
             </div>
             <br />
