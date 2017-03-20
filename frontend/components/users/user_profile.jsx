@@ -42,7 +42,7 @@ class UserProfile extends Component {
       <ul className="profile-photos">
         { photos.map( photo => (
 
-          <li><img src={`${photo.url}`}/></li>
+          <li key={photo.id}><img src={`${photo.url}`}/></li>
 
         ))
         }
