@@ -14,15 +14,38 @@
 .photo-container {
   border: 1px solid $session-border-gray;
   border-radius: 3px;
-  padding-top: 20px;
+  padding-top: 15px;
   padding-bottom: 10px;
   margin-bottom: 20px;
+}
+
+.photo-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .user-avatar {
   display: flex;
   flex-direction: row;
-  justify: center;
   align-items: center;
   padding-left: 20px;
+
+  align-self: flex-start;
+}
+
+.user-avatar-username {
+  text-transform: lowercase;
+  font-size: 15px;
+}
+
+.user-avatar > img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.timestamp {
+  align-self: center;
 }

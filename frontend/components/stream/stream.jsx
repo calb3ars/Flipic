@@ -24,8 +24,13 @@ class Stream extends React.Component {
             <li  key={photo.id} className="photo-container">
               <ul className="photo-content">
                 <li className="user-avatar">
-                  <button to={`/users/${photo.user.id}`}><p>{photo.user.username}</p></button>
-                  <p>{photo.timestamp}</p>
+                  <div className="photo-header">
+                    <Link className="user-avatar" to={`/users/${photo.user.id}`}>
+                      <img className="user-avatar-pic" src={`${photo.user.profile_image}`} />
+                      <p className="user-avatar-username">{photo.user.username}</p>
+                    </Link>
+                    <p className="timestamp">{photo.timestamp}</p>
+                  </div>
                 </li>
 
                 <li key={photo.id}>
