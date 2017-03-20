@@ -3,42 +3,51 @@
   width: 100%;
   position: fixed;
   top: 0;
-  height: 30px;
+  height: 75px;
   display: flex;
   flex-direction: row;
+  justify-content: center;
   align-items: center;
-  padding: 20px;
   font-family: $sans-serif;
   font-weight: 100;
   border-bottom: 1px solid $instagram-maroon;
+  box-sizing: border-box;
 }
 
-.header-name {
-  font-weight: 200;
+.nav-flipic-text {
+  font-size: 28px;
+  font-weight: 100;
+  align-self: flex-center;
+  margin-right: 5%;
 }
 
 .icon-button {
   height: 40px;
-  border: 1px solid $border-gray;
-  font-size: 14px;
-  font-weight: 200;
-  padding: 0px 20px;
+  width: 40px;
 }
 
-.fa-camera-retro {
+.photo-form-button {
+  margin-right: 30%;
+}
+
+.fa-camera {
   height: 20px;
   width: 20px;
+  margin-top: 5px;
   color: $border-gray;
-  font-size: 12px;
-}
-
-.username {
-  font-weight: 400;
+  font-size: 25px;
+  font-weight: 200;
+  text-align: center;
 }
 
 .header-button {
+  color: $border-gray;
+  border: 1px solid $border-gray;
+  background: $flipic-white;
   height: 40px;
-  padding: 0px 20px;
+  width: 200px;
+  padding: 10px;
   font-size: 14px;
   font-weight: 200;
+  margin-right: 15%;
 }
