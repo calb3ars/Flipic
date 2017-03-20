@@ -80,3 +80,13 @@
     Completed 204 No Content in 44ms (ActiveRecord: 0.9ms)
 
     solution: .then function not being called in console
+
+9) When creating Profile page, able to retrieve User profile information and display onto page. Also able to display number of posts (photos) a user has. However, unable to map through Photos array and render images. Receiving 404 error and server attempting [GET] request to "/[object%20Object]"): (which isn't supposed to exist)
+  error message: Started GET "/api/users/1" for ::1 at 2017-03-20 01:01:24 -0700
+Processing by Api::UsersController#show as JSON
+Started GET "/[object%20Object]" for ::1 at 2017-03-20 01:01:24 -0700
+  Parameters: {"id"=>"1"}
+
+ActionController::RoutingError (No route matches [GET] "/[object%20Object]"):
+
+  solution: When mapping through Photos array, need to save Photos as a variable outside the render's return function. Then you can access the photo elements this way.
