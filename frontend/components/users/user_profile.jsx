@@ -13,7 +13,6 @@ class UserProfile extends Component {
 
   render() {
     const { profile } = this.props;
-    const photos = profile.photos;
     return(
       <div className="user-profile-container">
         <div className="user-profile">
@@ -40,7 +39,7 @@ class UserProfile extends Component {
       </div>
 
       <ul className="profile-photos">
-        { photos.map( photo => (
+        { profile.photos.map( photo => (
 
           <li key={photo.id}><img src={`${photo.url}`}/></li>
 
