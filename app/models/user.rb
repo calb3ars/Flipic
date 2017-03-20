@@ -22,6 +22,7 @@ class User < ApplicationRecord
   after_initialize :ensure_session_token
   attr_reader :password
 
+
   def photo_count
     self.photos.count
   end

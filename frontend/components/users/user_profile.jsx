@@ -13,6 +13,7 @@ class UserProfile extends Component {
 
   render() {
     const { profile } = this.props;
+
     return(
       <div className="user-profile-container">
         <div className="user-profile">
@@ -22,7 +23,7 @@ class UserProfile extends Component {
           <div className="profile-details">
             <ul className="profile-row profile-row-1">
               <li className="profile-username">{profile.username}</li>
-              <li className="profile-edit-follow-button"><button className="follow-edit-button" onClick="">Edit/Following</button></li>
+              <li className="profile-edit-follow-button"><button className="follow-edit-button" onclick="">Edit/Following</button></li>
               <li className="profile-ellipsis"><button className="icon-button ellipsis">o&nbsp;&nbsp;o&nbsp;&nbsp;o</button></li>
             </ul>
 
@@ -39,11 +40,12 @@ class UserProfile extends Component {
       </div>
 
       <ul className="profile-photos">
-        { profile.photos.map( photo => (
-
-          <li key={photo.id}><img src={`${photo.url}`}/></li>
-
+        { this.props.profile.photos.map( (photo) => (
+          <li>
+            <img src={`${photo.url}`} alt={`${photo.caption}`}/>
+          </li>
         ))
+
         }
       </ul>
       </div>
