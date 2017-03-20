@@ -1,20 +1,19 @@
 # == Schema Information
 #
-# Table name: likes
+# Table name: comments
 #
 #  id         :integer          not null, primary key
+#  body       :text             not null
 #  user_id    :integer          not null
 #  photo_id   :integer          not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+require 'test_helper'
 
-one:
-  user_id: 1
-  photo_id: 1
-
-two:
-  user_id: 1
-  photo_id: 1
+class CommentTest < ActiveSupport::TestCase
+  # test "the truth" do
+  #   assert true
+  # end
+end
