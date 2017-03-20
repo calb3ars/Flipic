@@ -18,6 +18,21 @@ class User < ApplicationRecord
   validates :password, length: {minimum: 6, allow_nil: true}
 
   has_many :photos
+  has_many :followers_follows,
+    class_name: "Follow",
+    foreign_key: :follower_id
+
+  has_many :following_follows,
+    class_name: "Follow",
+    foreign_key: :following_id
+
+  has_many :followers,
+    through: :followers_follows,
+    source: :follower
+
+  has_many :following,
+    through: :following_follows,
+    source: :user
 
   after_initialize :ensure_session_token
   attr_reader :password

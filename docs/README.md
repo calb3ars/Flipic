@@ -29,13 +29,12 @@ Flipic is a full-stack web application clone of Instagram.
 **Objective**: Images can be created and deleted through API
 ##### Phase 3: User Profile Page (2 days)
 **Objective**: User profile page renders posted images and pertinent information (followers, following). Users can follow and unfollow users.
-##### Phase 4: Stream Page (1 day)
+##### Phase 4: Stream Page & Follows (2 days)
 **Objective**: Home stream populates with images from following accounts
-##### Phase 5: Comments ( 1 day )
+##### Phase 5: Comments & Likes( 2 days )
 **Objective**: Comments can be added to images and render when an image is displayed
-##### Phase 6: Likes ( 1 day )
 **Objective**: Users can like images. Image's like count updates immediately
-##### Phase 7: CSS Cleanup and data ( 1 day )
+##### Phase 7: CSS Cleanup and data ( 2 days )
 **Objective**: Clean up feature performance and format components
 
 ### Additional Features to be implemented, time-permitting:
