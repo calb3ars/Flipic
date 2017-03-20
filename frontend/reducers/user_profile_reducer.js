@@ -1,4 +1,4 @@
-import { RECEIVE_USER } from '../actions/user_actions';
+import { RECEIVE_USER, RECEIVE_USER_PHOTOS } from '../actions/user_actions';
 import merge from 'lodash/merge';
 
 const defaultUser = {
@@ -13,6 +13,10 @@ const UserProfileReducer = (oldState = defaultUser, action) => {
   switch(action.type) {
     case RECEIVE_USER:
       return merge({}, action.user);
+    case RECEIVE_USER_PHOTOS:
+      return merge({}, {
+        photos: action.photos
+      });
     default:
       return oldState;
   }

@@ -1,16 +1,85 @@
+.user-profile-container {
+  width: 100%;
+  margin-top: 71px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.user-profile {
+  width: 40%;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.profile-image-container {
+  width: 25%;
+}
+
 .profile-image {
-  height: 100px;
-  width: 100px;
-  border-radius: 50px;
+  height: 150px;
+  width: 150px;
+  border-radius: 75px;
+  border: 1px solid $search-bar-border;
+  margin-right: 40px;
+}
+
+.profile-image:hover {
+  border: 1px solid $instagram-purple-violet;
+}
+
+.profile-details {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+
+.profile-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  // justify: center;
+  // align-items: center;
+  width: 600px;
+  margin-bottom: 20px;
+  align-items: center;
+  justify: center;
+}
+
+.profile-row > * {
+  width: 25%;
+}
+
+.profile-username {
+  font-size: 36px;
+  font-weight: 200;
+  margin-right: 5px;
+}
+
+.profile-edit-follow-button {
+
+  margin-right: 20px;
+}
+
+.follow-edit-button {
+  height: 40px;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid $search-bar-border;
 }
 
 .icon-button {
   height: 40px;
   width: 100px;
-  border: 1px solid $border-gray;
+  border: 1px solid $search-bar-border;
   font-size: 14px;
   font-weight: 200;
-  padding: 0px 20px;
 }
 
 .icon-ellipsis-horizontal {
@@ -20,9 +89,17 @@
   font-size: 12px;
 }
 
+.profile-row-2 {
+  font-weight: 200;
+}
+
+.profile-number {
+  font-weight: 600;
+}
+
 .tagline {
-  font-family: $serif;
-  font-weight: 50;
-  font-size: 12px;
+  font-family: $sans-serif;
+  font-size: 20px;
+  font-weight: 200;
   color: $login-tagline;
 }

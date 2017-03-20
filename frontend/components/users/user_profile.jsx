@@ -15,36 +15,36 @@ class UserProfile extends Component {
     const { profile } = this.props;
 
     return(
-      <div className="user-profile">
-        <div className="profile-details">
-          <img src={`${profile.profile_image}`} className="profile-image" />
-
-          <section className="profile-row profile-first-row">
-            <ul>
-              <li>{profile.username}</li>
-              <li><button>Following</button></li>
+      <div className="user-profile-container">
+        <div className="user-profile">
+          <div className="profile-image-container">
+            <img src={`${profile.profile_image}`} className="profile-image" />
+          </div>
+          <div className="profile-details">
+            <ul className="profile-row profile-row-1">
+              <li className="profile-username">{profile.username}</li>
+              <li className="profile-edit-follow-button"><button className="follow-edit-button" onclick="">Edit/Following</button></li>
               <li><button className="icon-button"><i className="icon-ellipsis-horizontal profile-options"></i></button></li>
             </ul>
-          </section>
 
-          <section className="profile-row profile-second-row">
-            <ul>
-              <li>{profile.photo_count} posts</li>
-              <li> followers</li>
-              <li>following</li>
+            <ul className="profile-row profile-row-2">
+              <li><span className="profile-number">{profile.photo_count}</span> posts</li>
+              <li><span className="profile-number">99</span> followers</li>
+              <li><span className="profile-number">99</span> following</li>
             </ul>
-          </section>
-          <section className="profile-row profile-third-row">
-            <p className="tagline">
+
+            <p className="profile-row profile-row-3 tagline">
               {profile.tagline}
             </p>
-          </section>
         </div>
+      </div>
 
-        <section className="profile-images">
+        <section className="profile-photos">
           <ul>
             { this.props.profile.photos.map( (photo) => (
-              <img src={$`{photo.url}`} alt={`${photo.caption}`}/>
+              <li>
+                <img src={$`{photo.url}`} alt={`${photo.caption}`}/>
+              </li>
             ))
 
             }
