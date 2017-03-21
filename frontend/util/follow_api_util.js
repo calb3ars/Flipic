@@ -1,21 +1,23 @@
-export const createFollow = following_id => {
+export const createFollow = leader_id => {
   return $.ajax({
     method: "POST",
     url: "/api/follows",
-    data: { follow: {following_id}}
+    data: { follow: {leader_id}}
   });
 };
 
-export const fetchFollow = following_id => {
-  return $.ajax({
-    method: "GET",
-    url: `/api/search?q=${following_id}`
-  });
-};
-
-export const deleteFollow = id => {
+export const deleteFollow = leader_id => {
   return $.ajax({
     method: "DELETE",
-    url: `/api/follows/${id}`
+    url: `/api/follows/${leader_id}`,
+    data: { follow: {leader_id}}
   });
 };
+
+export const fetchFollow = leader_id => {
+  return $.ajax({
+    method: "GET",
+    url: `/api/follows/${leader_id}`,
+    data: { follow: {leader_id}}
+  })
+}

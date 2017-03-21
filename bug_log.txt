@@ -5,6 +5,9 @@
   o - Remove margin from errors styling
   o - populate div with errors so they don't increase the size
 
+- Profile Photos thumbnail: interpolate `${c_thumb,h_250,w_250/v1490083354}` into urls
+http://res.cloudinary.com/calb3ars/image/upload/c_thumb,h_250,w_250/v1490083354/brooke-cagle-157923_stxunw.jpg
+
 - Seed Heroku DB with users and images
 
 - Add tagline (string) and profile_image (text) columns to users table

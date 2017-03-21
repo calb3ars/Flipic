@@ -10,7 +10,7 @@ const defaultUser = {
   profile_image:'',
   photos: [],
   followToggle: false,
-  follow_id: 0
+  followId: 0
 };
 
 const UserProfileReducer = (oldState = defaultUser, action) => {
@@ -19,8 +19,9 @@ const UserProfileReducer = (oldState = defaultUser, action) => {
     case RECEIVE_USER:
       return merge({}, action.user);
     case RECEIVE_FOLLOWER:
+      debugger
       return Object.assign({}, oldState, {
-        followToggle: false
+        followToggle: Boolean(action.followId)
       });
     case REMOVE_FOLLOWER:
       return Object.assign({}, oldState, {
@@ -28,7 +29,7 @@ const UserProfileReducer = (oldState = defaultUser, action) => {
       });
     case RECEIVE_FOLLOW_ID:
       return Object.assign({}, oldState, {
-        follow_id: action.id
+        followId: action.followId
       });
     default:
       return oldState;

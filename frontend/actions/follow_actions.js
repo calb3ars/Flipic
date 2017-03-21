@@ -2,45 +2,34 @@ import * as FollowAPIUtil from '../util/follow_api_util';
 
 export const RECEIVE_FOLLOWER = "RECEIVE_FOLLOWER";
 export const REMOVE_FOLLOWER = "REMOVE_FOLLOWER";
-export const RECEIVE_FOLLOWER_ID = "RECEIVE_FOLLOWER_ID";
-export const RECEIVE_FOLLOWING_ID = "RECEIVE_FOLLOWING_ID";
-export const REMOVE_FOLLOWER_ID = "REMOVE_FOLLOWER_ID";
-export const REMOVE_FOLLOWING_ID = "REMOVE_FOLLOWING_ID";
-export const RECEIVE_FOLLOW = "RECEIVE_FOLLOW";
 export const RECEIVE_FOLLOW_ID = "RECEIVE_FOLLOW_ID";
 
-
-export const receiveFollower = (follower) => ({
+export const receiveFollower = (followId) => ({
   type: RECEIVE_FOLLOWER,
-  follower
+  followId
 });
 
-export const removeFollower = (follower) => ({
+export const removeFollower = (followId) => ({
   type: REMOVE_FOLLOWER,
-  follower
+  followId
 });
 
-export const receiveFollow = (follow) => ({
-  type: RECEIVE_FOLLOW,
-  follow
-});
-
-export const receiveFollowId = (id) => ({
+export const receiveFollowId = (followId) => ({
   type: RECEIVE_FOLLOW_ID,
-  id
+  followId
 });
 
-export const createFollow = following_id => dispatch => (
-  FollowAPIUtil.createFollow(following_id)
-    .then(follow => dispatch(receiveFollow(follow)))
+export const createFollow = leader_id => dispatch => (
+  FollowAPIUtil.createFollow(leader_id)
+    .then(follower => dispatch(receiveFollower(follower)))
 );
 
-export const deleteFollow = id => dispatch => (
-  FollowAPIUtil.deleteFollow(id)
-    .then(id => dispatch(removeFollow(id)))
+export const deleteFollow = leader_id => dispatch => (
+  FollowAPIUtil.deleteFollow(leader_id)
+    .then(followId => dispatch(removeFollower(followId)))
 );
 
-export const fetchFollow = following_id => dispatch => (
-  FollowAPIUtil.fetchFollow(following_id)
-    .then(id => dispatch(receiveFollow(id)))
+export const fetchFollow = leader_id => dispatch => (
+  FollowAPIUtil.fetchFollow(leader_id)
+    .then(follow_id => dispatch(receiveFollowId(follow_id)))
 );

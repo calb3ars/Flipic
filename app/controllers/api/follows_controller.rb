@@ -5,19 +5,28 @@ class Api::FollowsController < ApplicationController
     @follow.follower_id = current_user.id
     debugger
     if @follow.save
-      debugger
-      @follower = User.find(current_user.id)
       render "api/follows/show"
     else
-      debugger
       render json: @follow.errors.full_messages, status: 422
     end
   end
 
+  def show
+    @follows = Follow.where(follower_id: current_user.id)
+    @follow = Follow.find_by(leader_id: params[:id])
+    if @follow
+      render "api/follows/show"
+    else
+      render "api/follows/show"
+    end
+  end
+
   def destroy
-    @follow = Follow.find_by(following_id: params[:id], follower_id: current_user.id)
+    debugger
+    @follows = Follow.where(follower_id: current_user.id)
+    @follow = Follow.find_by(leader_id: params[:id])
+    debugger
     if @follow.destroy
-      @follower = User.find(current_user.id)
       render "api/follows/show"
     else
       render json: @follow.errors.full_messages, status: 422
@@ -26,6 +35,6 @@ class Api::FollowsController < ApplicationController
 
   private
   def follow_params
-    params.require(:follow).permit(:following_id, :follower_id)
+    params.require(:follow).permit(:leader_id, :follower_id)
   end
 end

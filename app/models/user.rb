@@ -19,24 +19,24 @@ class User < ApplicationRecord
 
   has_many :photos
 
-  has_many :followers_follows,
+  has_many :follower_instances,
     class_name: "Follow",
     foreign_key: :follower_id
 
-  has_many :following_follows,
+    has_many :followers,
+      through: :follower_instances,
+      source: :follower
+
+  has_many :leader_instances,
     class_name: "Follow",
-    foreign_key: :following_id
+    foreign_key: :leader_id
 
-  has_many :followers,
-    through: :followers_follows,
-    source: :follower
-
-  has_many :following,
-    through: :following_follows,
-    source: :user
+    has_many :leaders,
+      through: :leader_instances,
+      source: :leader
 
   after_initialize :ensure_session_token
-  attr_reader :password
+  attr_reader :password, :leader_count, :follower_count
 
 
   def photo_count
@@ -44,11 +44,17 @@ class User < ApplicationRecord
   end
 
   def follower_count
-    self.followers.count
+    @follower_count = self.followers.count
   end
 
-  def following_count
-    self.following.count
+  def leader_count
+    @leader_count = self.leaders.count
+  end
+
+  def leader_ids
+    @leader_ids = self.leaders.map do |leader|
+      leader.id
+    end
   end
 
   def self.find_by_credentials(username, password)
