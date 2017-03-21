@@ -23,7 +23,7 @@ class Stream extends React.Component {
           { this.props.photos.map( photo => (
             <li  key={photo.id} className="photo-container">
               <ul className="photo-content">
-                <li className="user-avatar">
+                <li className="user-avatar-container">
                   <div className="photo-header">
 
                     <Link className="user-avatar" to={`/users/${photo.user.id}`}>
@@ -41,24 +41,32 @@ class Stream extends React.Component {
 
                 <li className="photo-info">
                   <ul>
-                    <li>121 likes</li>
+                    <li><span className="photo-info-bold">{photo.user.username}</span>
+                     {photo.caption}</li>
+
+                    <li className="like"><span className="photo-info-bold">121 likes</span></li>
 
                     <li className="comment-container">
                       <ul className="comment">
-                        <li className="comment-username">comment.username</li>
-                        <li className="comment-body">comment.body</li>
+                        <li className="comment-username"><span className="photo-info-bold">username</span></li>
+
+                        <li className="comment-body">body</li>
+                      </ul>
+                      <ul className="comment">
+                        <li className="comment-username"><span className="photo-info-bold">username2</span></li>
+                        <li className="comment-body">Lorem ipsum dolor sit amet, magna assum omnium te pri, vix ei diam esse graeci. </li>
                       </ul>
                     </li>
 
                   </ul>
                 </li>
-                <hr></hr>
+
                 <li className="comment-like-form">
-                  <button onClick=""><i className="fa fa-heart-o" aria-hidden="true"></i></button>
-                  <form>
+                  <img className="header-icon icon" src="http://res.cloudinary.com/calb3ars/image/upload/v1490072576/heart_bvqek2.svg" alt="following"/>
+                  <form className="comment-form">
                     <input type="string" placeholder="Add a comment..."></input>
                   </form>
-                  <button className="profile-ellipsis icon-button ellipsis">o&nbsp;&nbsp;o&nbsp;&nbsp;o</button>
+                  <button className="profile-ellipsis-stream icon-button ellipsis">o&nbsp;&nbsp;o&nbsp;&nbsp;o</button>
                 </li>
 
               </ul>

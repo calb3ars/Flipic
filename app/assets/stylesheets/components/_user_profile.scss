@@ -4,6 +4,8 @@
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+  align-items: center;
+  justify: center;
 }
 
 .user-profile {
@@ -94,7 +96,7 @@
 
 .ellipsis {
   color: $border-gray;
-  font-size: 8px;
+  font-size: 7px;
 }
 
 .profile-row-2 {
@@ -119,12 +121,13 @@
 
 .profile-photos {
   width: 70%;
+  max-width: 850px;
+  align-self: center;
   margin: 20px auto;
   display: flex;
   flex-direction: row;
-  justify-content: start;
+  justify-content: flex-start;
   flex-wrap: wrap;
-  align-items: center;
 }
 .profile-photos > li {
   // width: 33%;
