@@ -36,12 +36,12 @@ class Stream extends React.Component {
                 </li>
 
                 <li key={photo.id}>
-                  <img src={`${photo.url}`} />
+                  <img className="stream-photo" src={`${photo.url}`} />
                 </li>
 
                 <li className="photo-info">
                   <ul>
-                    <li><span className="photo-info-bold">{photo.user.username}</span>
+                    <li><span className="photo-info-bold">{photo.user.username} </span> 
                      {photo.caption}</li>
 
                     <li className="like"><span className="photo-info-bold">121 likes</span></li>

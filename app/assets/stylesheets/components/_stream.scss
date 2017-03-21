@@ -60,6 +60,10 @@
   color: $timestamp-gray;
 }
 
+.stream-photo {
+  max-height: 500px;
+}
+
 .photo-info {
   padding: 15px 20px;
   font-weight: 200;
