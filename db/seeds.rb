@@ -430,20 +430,339 @@ users = User.create([
 ])
 
 
-Photo.create({user_id: 1, url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg"})
-Photo.create({user_id: 1, url: "https://mikaelahonen.com/wp-content/uploads/2016/10/splitwise-logo-kulujen-jakaminen-mobiilisovelluksella.jpg"})
-Photo.create({user_id: 1, url: "https://mikaelahonen.com/wp-content/uploads/2016/10/splitwise-logo-kulujen-jakaminen-mobiilisovelluksella.jpg"})
-Photo.create({user_id: 1, url: "https://mikaelahonen.com/wp-content/uploads/2016/10/splitwise-logo-kulujen-jakaminen-mobiilisovelluksella.jpg"})
-Photo.create({user_id: 1, url: "https://mikaelahonen.com/wp-content/uploads/2016/10/splitwise-logo-kulujen-jakaminen-mobiilisovelluksella.jpg"})
-Photo.create({user_id: 1, url: "https://mikaelahonen.com/wp-content/uploads/2016/10/splitwise-logo-kulujen-jakaminen-mobiilisovelluksella.jpg"})
-Photo.create({user_id: 1, url: "https://mikaelahonen.com/wp-content/uploads/2016/10/splitwise-logo-kulujen-jakaminen-mobiilisovelluksella.jpg"})
-Photo.create({user_id: 1, url: "https://mikaelahonen.com/wp-content/uploads/2016/10/splitwise-logo-kulujen-jakaminen-mobiilisovelluksella.jpg"})
-Photo.create({user_id: 1, url: "https://mikaelahonen.com/wp-content/uploads/2016/10/splitwise-logo-kulujen-jakaminen-mobiilisovelluksella.jpg"})
-Photo.create({user_id: 1, url: "https://mikaelahonen.com/wp-content/uploads/2016/10/splitwise-logo-kulujen-jakaminen-mobiilisovelluksella.jpg"})
-Photo.create({user_id: 1, url: "https://mikaelahonen.com/wp-content/uploads/2016/10/splitwise-logo-kulujen-jakaminen-mobiilisovelluksella.jpg"})
-Photo.create({user_id: 1, url: "https://mikaelahonen.com/wp-content/uploads/2016/10/splitwise-logo-kulujen-jakaminen-mobiilisovelluksella.jpg"})
-Photo.create({user_id: 2, url: "https://mikaelahonen.com/wp-content/uploads/2016/10/splitwise-logo-kulujen-jakaminen-mobiilisovelluksella.jpg"})
-Photo.create({user_id: 3, url: "https://mikaelahonen.com/wp-content/uploads/2016/10/splitwise-logo-kulujen-jakaminen-mobiilisovelluksella.jpg"})
-Photo.create({user_id: 4, url: "https://mikaelahonen.com/wp-content/uploads/2016/10/splitwise-logo-kulujen-jakaminen-mobiilisovelluksella.jpg"})
-Photo.create({user_id: 5, url: "https://mikaelahonen.com/wp-content/uploads/2016/10/splitwise-logo-kulujen-jakaminen-mobiilisovelluksella.jpg"})
-Photo.create({user_id: 1, url: "https://mikaelahonen.com/wp-content/uploads/2016/10/splitwise-logo-kulujen-jakaminen-mobiilisovelluksella.jpg"})
+Photo.create({
+  user_id: 2,
+  url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
+  caption: "Adventure is out there!",
+  location: "App Academy"
+  })
+Photo.create({
+  user_id: 2,
+  url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
+  caption: "Adventure is out there!",
+  location: "App Academy"
+  })
+Photo.create({
+  user_id: 2,
+  url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
+  caption: "Adventure is out there!",
+  location: "App Academy"
+  })
+Photo.create({
+  user_id: 2,
+  url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
+  caption: "Adventure is out there!",
+  location: "App Academy"
+  })
+Photo.create({
+  user_id: 2,
+  url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
+  caption: "Adventure is out there!",
+  location: "App Academy"
+  })
+Photo.create({
+  user_id: 2,
+  url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
+  caption: "Adventure is out there!",
+  location: "App Academy"
+  })
+Photo.create({
+  user_id: 2,
+  url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
+  caption: "Adventure is out there!",
+  location: "App Academy"
+  })
+Photo.create({
+  user_id: 2,
+  url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
+  caption: "Adventure is out there!",
+  location: "App Academy"
+  })
+Photo.create({
+  user_id: 2,
+  url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
+  caption: "Adventure is out there!",
+  location: "App Academy"
+  })
+Photo.create({
+  user_id: 2,
+  url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
+  caption: "Adventure is out there!",
+  location: "App Academy"
+  })
+Photo.create({
+  user_id: 2,
+  url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
+  caption: "Adventure is out there!",
+  location: "App Academy"
+  })
+Photo.create({
+  user_id: 2,
+  url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
+  caption: "Adventure is out there!",
+  location: "App Academy"
+  })
+Photo.create({
+  user_id: 2,
+  url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
+  caption: "Adventure is out there!",
+  location: "App Academy"
+  })
+Photo.create({
+  user_id: 2,
+  url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
+  caption: "Adventure is out there!",
+  location: "App Academy"
+  })
+Photo.create({
+  user_id: 2,
+  url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
+  caption: "Adventure is out there!",
+  location: "App Academy"
+  })
+Photo.create({
+  user_id: 2,
+  url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
+  caption: "Adventure is out there!",
+  location: "App Academy"
+  })
+Photo.create({
+  user_id: 2,
+  url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
+  caption: "Adventure is out there!",
+  location: "App Academy"
+  })
+Photo.create({
+  user_id: 2,
+  url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
+  caption: "Adventure is out there!",
+  location: "App Academy"
+  })
+Photo.create({
+  user_id: 2,
+  url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
+  caption: "Adventure is out there!",
+  location: "App Academy"
+  })
+Photo.create({
+  user_id: 2,
+  url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
+  caption: "Adventure is out there!",
+  location: "App Academy"
+  })
+Photo.create({
+  user_id: 2,
+  url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
+  caption: "Adventure is out there!",
+  location: "App Academy"
+  })
+Photo.create({
+  user_id: 2,
+  url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
+  caption: "Adventure is out there!",
+  location: "App Academy"
+  })
+Photo.create({
+  user_id: 2,
+  url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
+  caption: "Adventure is out there!",
+  location: "App Academy"
+  })
+Photo.create({
+  user_id: 2,
+  url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
+  caption: "Adventure is out there!",
+  location: "App Academy"
+  })
+Photo.create({
+  user_id: 2,
+  url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
+  caption: "Adventure is out there!",
+  location: "App Academy"
+  })
+Photo.create({
+  user_id: 2,
+  url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
+  caption: "Adventure is out there!",
+  location: "App Academy"
+  })
+Photo.create({
+  user_id: 2,
+  url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
+  caption: "Adventure is out there!",
+  location: "App Academy"
+  })
+Photo.create({
+  user_id: 2,
+  url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
+  caption: "Adventure is out there!",
+  location: "App Academy"
+  })
+Photo.create({
+  user_id: 2,
+  url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
+  caption: "Adventure is out there!",
+  location: "App Academy"
+  })
+Photo.create({
+  user_id: 2,
+  url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
+  caption: "Adventure is out there!",
+  location: "App Academy"
+  })
+Photo.create({
+  user_id: 2,
+  url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
+  caption: "Adventure is out there!",
+  location: "App Academy"
+  })
+Photo.create({
+  user_id: 2,
+  url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
+  caption: "Adventure is out there!",
+  location: "App Academy"
+  })
+Photo.create({
+  user_id: 2,
+  url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
+  caption: "Adventure is out there!",
+  location: "App Academy"
+  })
+Photo.create({
+  user_id: 2,
+  url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
+  caption: "Adventure is out there!",
+  location: "App Academy"
+  })
+Photo.create({
+  user_id: 2,
+  url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
+  caption: "Adventure is out there!",
+  location: "App Academy"
+  })
+Photo.create({
+  user_id: 2,
+  url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
+  caption: "Adventure is out there!",
+  location: "App Academy"
+  })
+Photo.create({
+  user_id: 2,
+  url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
+  caption: "Adventure is out there!",
+  location: "App Academy"
+  })
+Photo.create({
+  user_id: 2,
+  url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
+  caption: "Adventure is out there!",
+  location: "App Academy"
+  })
+Photo.create({
+  user_id: 2,
+  url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
+  caption: "Adventure is out there!",
+  location: "App Academy"
+  })
+Photo.create({
+  user_id: 2,
+  url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
+  caption: "Adventure is out there!",
+  location: "App Academy"
+  })
+Photo.create({
+  user_id: 2,
+  url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
+  caption: "Adventure is out there!",
+  location: "App Academy"
+  })
+Photo.create({
+  user_id: 2,
+  url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
+  caption: "Adventure is out there!",
+  location: "App Academy"
+  })
+Photo.create({
+  user_id: 2,
+  url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
+  caption: "Adventure is out there!",
+  location: "App Academy"
+  })
+Photo.create({
+  user_id: 2,
+  url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
+  caption: "Adventure is out there!",
+  location: "App Academy"
+  })
+Photo.create({
+  user_id: 2,
+  url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
+  caption: "Adventure is out there!",
+  location: "App Academy"
+  })
+Photo.create({
+  user_id: 2,
+  url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
+  caption: "Adventure is out there!",
+  location: "App Academy"
+  })
+Photo.create({
+  user_id: 2,
+  url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
+  caption: "Adventure is out there!",
+  location: "App Academy"
+  })
+Photo.create({
+  user_id: 2,
+  url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
+  caption: "Adventure is out there!",
+  location: "App Academy"
+  })
+Photo.create({
+  user_id: 2,
+  url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
+  caption: "Adventure is out there!",
+  location: "App Academy"
+  })
+Photo.create({
+  user_id: 2,
+  url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
+  caption: "Adventure is out there!",
+  location: "App Academy"
+  })
+Photo.create({
+  user_id: 2,
+  url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
+  caption: "Adventure is out there!",
+  location: "App Academy"
+  })
+Photo.create({
+  user_id: 2,
+  url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
+  caption: "Adventure is out there!",
+  location: "App Academy"
+  })
+Photo.create({
+  user_id: 2,
+  url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
+  caption: "Adventure is out there!",
+  location: "App Academy"
+  })
+Photo.create({
+  user_id: 2,
+  url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
+  caption: "Adventure is out there!",
+  location: "App Academy"
+  })
+Photo.create({
+  user_id: 2,
+  url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
+  caption: "Adventure is out there!",
+  location: "App Academy"
+  })
+Photo.create({
+  user_id: 2,
+  url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
+  caption: "Adventure is out there!",
+  location: "App Academy"
+  })
