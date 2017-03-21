@@ -9,7 +9,6 @@ class UserProfile extends React.Component {
       followerCount: this.props.profile.follower_count,
       followingCount: this.props.profile.following_count,
       followToggle: this.props.profile.followToggle
-
     };
 
     this.renderEditFollowButton = this.renderEditFollowButton.bind(this);
@@ -18,6 +17,7 @@ class UserProfile extends React.Component {
 
   componentDidMount() {
     this.props.fetchUser(this.props.params.userId);
+    this.props.receiveFollowId(this.props.profile.id);
   }
 
   componentWillReceiveProps(newProps) {
@@ -28,30 +28,32 @@ class UserProfile extends React.Component {
 
   followToggle(e) {
     e.preventDefault();
-    const following_id = this.props.profile.id; 
+    const following_id = this.props.profile.id;
       if(this.state.followToggle) {
-        this.props.deleteFollow(following_id);
+        debugger
+        this.props.deleteFollow(follow_id);
         this.setState({
           followToggle: false,
           followingCount: this.state.followingCount--
         });
       } else {
+        debugger
         this.props.createFollow(following_id);
         this.setState({
           followToggle: true,
           followingCount: this.state.followingCount++
-        })
+        });
+        this.props.receiveFollowId(this.props.profile.id);
       }
     }
 
   renderEditFollowButton() {
-    if (this.props.currentUser .id === this.props.profile.id) {
+    if (this.props.currentUser.id === this.props.profile.id) {
       return(
         <button className="follow-edit-button" onClick="">Edit</button>
       );
     } else {
       const following_id = this.props.params.id;
-      debugger
       return (
           <button onClick={this.followToggle}>{ this.state.followToggle ? "Following" : "Follow" }
         </button>

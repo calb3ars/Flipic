@@ -1,13 +1,15 @@
 class Api::FollowsController < ApplicationController
   before_action :require_logged_in
   def create
-    debugger
     @follow = Follow.new(follow_params)
     @follow.follower_id = current_user.id
+    debugger
     if @follow.save
+      debugger
       @follower = User.find(current_user.id)
       render "api/follows/show"
     else
+      debugger
       render json: @follow.errors.full_messages, status: 422
     end
   end

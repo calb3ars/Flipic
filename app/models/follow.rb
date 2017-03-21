@@ -18,4 +18,8 @@ class Follow < ApplicationRecord
   belongs_to :follower,
     class_name: "User",
     foreign_key: :follower_id
+
+  def self.find_follow_by(follower_id, following_id)
+    self.class.find_by({follower_id: follower_id, following_id: following_id})
+  end
 end
