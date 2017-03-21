@@ -18,6 +18,7 @@ class User < ApplicationRecord
   validates :password, length: {minimum: 6, allow_nil: true}
 
   has_many :photos
+  
   has_many :followers_follows,
     class_name: "Follow",
     foreign_key: :follower_id

@@ -10,6 +10,8 @@
 #
 
 class Follow < ApplicationRecord
+  validates :following_id, uniqueness: { scope: :follower_id }
+
   belongs_to :user,
     class_name: "User",
     foreign_key: :following_id

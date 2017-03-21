@@ -31,6 +31,11 @@
   * `GET /api/photos/:id/comments` - All comments for specific image
   * `GET /api/photos/:id/likes` - All likes for a specific image -->
 
+##### Follow
+  <!-- * `POST /api/photos/:photo_id/likes` - Add like to a photo -->
+  * `POST /api/follows` - Add follow to a photo
+  * `DELETE /api/follows/:id` - Remove follow
+
 ##### Likes
   <!-- * `POST /api/photos/:photo_id/likes` - Add like to a photo -->
   * `POST /api/likes` - Add like to a photo
