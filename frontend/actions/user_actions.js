@@ -3,10 +3,11 @@ import { hashHistory } from 'react-router';
 
 export const RECEIVE_USER = "RECEIVE_USER";
 
-export const receiveUser = user => ({
-  type: RECEIVE_USER,
-  user
-});
+export const receiveUser = user => {
+  debugger
+  return {type: RECEIVE_USER,
+  user}
+};
 
 export const fetchUser = (id) => dispatch => {
   return UserAPIUtil.fetchUser(id)

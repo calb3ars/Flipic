@@ -24,7 +24,7 @@ class User < ApplicationRecord
     foreign_key: :follower_id
 
     has_many :followers,
-      through: :follower_instances,
+      through: :leader_instances,
       source: :follower
 
   has_many :leader_instances,
@@ -32,7 +32,7 @@ class User < ApplicationRecord
     foreign_key: :leader_id
 
     has_many :leaders,
-      through: :leader_instances,
+      through: :follower_instances,
       source: :leader
 
   after_initialize :ensure_session_token

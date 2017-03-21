@@ -14,7 +14,6 @@ const personalGreeting = (currentUser, logout) => (
       <img className="header-icon icon" src="http://res.cloudinary.com/calb3ars/image/upload/v1490072576/heart_bvqek2.svg" alt="following"/>
       <Link to={`users/${currentUser.id}`}>
         <img className="header-icon icon" src="http://res.cloudinary.com/calb3ars/image/upload/v1490072576/user_lvb0uf.svg" alt="account"/>
-
       </Link>
     </div>
   </hgroup>

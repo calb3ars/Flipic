@@ -29,18 +29,10 @@ class UserProfile extends React.Component {
   followToggle(e) {
     e.preventDefault();
     const leader_id = this.props.profile.id;
-      if(this.state.followToggle) {
+      if(this.props.profile.followToggle) {
         this.props.deleteFollow(leader_id);
-        this.setState({
-          followToggle: false,
-          followingCount: this.state.followingCount--
-        });
       } else {
         this.props.createFollow(leader_id);
-        this.setState({
-          followToggle: true,
-          followingCount: this.state.followingCount++
-        });
       }
   }
 
@@ -51,8 +43,9 @@ class UserProfile extends React.Component {
       );
     } else {
       const following_id = this.props.params.id;
+      console.log(this.props.profile.followToggle);
       return (
-          <button className="follow-edit-button" onClick={this.followToggle}>{ this.state.followToggle === true ? "Following" : "Follow" }
+          <button className="follow-edit-button" onClick={this.followToggle}>{ this.props.profile.followToggle === true ? "Following" : "Follow" }
         </button>
       )
     }

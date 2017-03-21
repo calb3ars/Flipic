@@ -6,7 +6,7 @@
   height: 75px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   font-family: $sans-serif;
   font-weight: 100;
@@ -15,10 +15,9 @@
 }
 
 .nav-flipic-text {
+  margin-left: 25%;
   font-size: 28px;
   font-weight: 100;
-  align-self: flex-center;
-  margin-right: 5%;
 }
 
 .icon-button {
@@ -27,9 +26,9 @@
 }
 
 .header-icon-container {
-  margin-right: 20%;
   display: flex;
   flex-direction: row;
+  margin-right: 25%;
 }
 
 .heart:hover {
@@ -39,11 +38,9 @@
 .header-icon {
   height: 40px;
   width: 40px;
-  margin: 0px 5px;
 }
 
 .photo-form-button {
-  margin-right: 20%;
 }
 
 .fa-camera {
