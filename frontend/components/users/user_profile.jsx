@@ -1,6 +1,21 @@
 import React from 'react';
+import Modal from 'react-modal';
 
 class UserProfile extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      tagline: "",
+      followerCount: this.props.profile.follower_count,
+      followingCount: this.props.profile.following_count,
+      followToggle: this.props.profile.followToggle
+
+    };
+
+    this.renderEditFollowButton = this.renderEditFollowButton.bind(this);
+    this.followToggle = this.followToggle.bind(this);
+  }
+
   componentDidMount() {
     this.props.fetchUser(this.props.params.userId);
   }
@@ -8,6 +23,39 @@ class UserProfile extends React.Component {
   componentWillReceiveProps(newProps) {
     if (this.props.params.userId !== newProps.params.userId) {
       this.props.fetchUser(newProps.params.userId);
+    }
+  }
+
+  followToggle(e) {
+    e.preventDefault();
+    const following_id = this.props.profile.id; 
+      if(this.state.followToggle) {
+        this.props.deleteFollow(following_id);
+        this.setState({
+          followToggle: false,
+          followingCount: this.state.followingCount--
+        });
+      } else {
+        this.props.createFollow(following_id);
+        this.setState({
+          followToggle: true,
+          followingCount: this.state.followingCount++
+        })
+      }
+    }
+
+  renderEditFollowButton() {
+    if (this.props.currentUser .id === this.props.profile.id) {
+      return(
+        <button className="follow-edit-button" onClick="">Edit</button>
+      );
+    } else {
+      const following_id = this.props.params.id;
+      debugger
+      return (
+          <button onClick={this.followToggle}>{ this.state.followToggle ? "Following" : "Follow" }
+        </button>
+      )
     }
   }
 
@@ -23,7 +71,7 @@ class UserProfile extends React.Component {
           <div className="profile-details">
             <ul className="profile-row profile-row-1">
               <li className="profile-username">{profile.username}</li>
-              <li className="profile-edit-follow-button"><button className="follow-edit-button" onclick="">Edit/Following</button></li>
+              <li className="profile-edit-follow-button">{ this.renderEditFollowButton() }</li>
               <li className="profile-ellipsis"><button className="icon-button ellipsis">o&nbsp;&nbsp;o&nbsp;&nbsp;o</button></li>
             </ul>
 
@@ -41,7 +89,7 @@ class UserProfile extends React.Component {
 
       <ul className="profile-photos">
         { this.props.profile.photos.map( (photo) => (
-          <li>
+          <li key={photo.id}>
             <img src={`${photo.url}`} alt={`${photo.caption}`}/>
           </li>
         ))

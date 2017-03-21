@@ -18,7 +18,7 @@ class User < ApplicationRecord
   validates :password, length: {minimum: 6, allow_nil: true}
 
   has_many :photos
-  
+
   has_many :followers_follows,
     class_name: "Follow",
     foreign_key: :follower_id
@@ -41,6 +41,14 @@ class User < ApplicationRecord
 
   def photo_count
     self.photos.count
+  end
+
+  def follower_count
+    self.followers.count
+  end
+
+  def following_count
+    self.following.count
   end
 
   def self.find_by_credentials(username, password)
