@@ -7,7 +7,7 @@ export const receiveUser = user => {
   return {
     type: RECEIVE_USER,
     user
-  }
+  };
 };
 
 export const fetchUser = (id) => dispatch => {
