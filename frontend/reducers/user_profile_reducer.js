@@ -9,8 +9,7 @@ const defaultUser = {
   followingCount: 0,
   profile_image:'',
   photos: [],
-  followToggle: false,
-  followId: 0
+  followToggle: false
 };
 
 const UserProfileReducer = (oldState = defaultUser, action) => {
@@ -20,7 +19,7 @@ const UserProfileReducer = (oldState = defaultUser, action) => {
       console.log(action.user);
       return merge({}, action.user);
     case RECEIVE_FOLLOWER:
-      
+
       return Object.assign({}, oldState, {
         followToggle: Boolean(action.followId)
       });
