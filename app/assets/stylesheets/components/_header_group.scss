@@ -26,8 +26,24 @@
   width: 40px;
 }
 
+.header-icon-container {
+  margin-right: 10%;
+  display: flex;
+  flex-direction: row;
+}
+
+.heart:hover {
+  color: red;
+}
+
+.header-icon {
+  height: 40px;
+  width: 40px;
+  margin: 0px 15px;
+}
+
 .photo-form-button {
-  margin-right: 30%;
+  margin-right: 20%;
 }
 
 .fa-camera {
@@ -49,5 +65,5 @@
   padding: 10px;
   font-size: 14px;
   font-weight: 200;
-  margin-right: 15%;
+
 }

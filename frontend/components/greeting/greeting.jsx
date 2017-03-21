@@ -5,13 +5,18 @@ import PhotoFormContainer from '../photo_form/photo_form_container';
 const personalGreeting = (currentUser, logout) => (
   <hgroup className="header-group">
 
-    <h2 className="flipic-text nav-flipic-text">Flipic</h2>
+    <h2 className="flipic-text nav-flipic-text"><Link to="/">Flipic</Link></h2>
 
     <PhotoFormContainer />
 
-    <button className="header-button session-button logout-button" onClick={logout}>
-      Log Out
-    </button>
+    <div to="" className="header-icon-container">
+      <img className="header-icon icon" src="http://res.cloudinary.com/calb3ars/image/upload/v1490072576/compass_rtf9rr.svg" alt="discover"/>
+      <img className="header-icon icon" src="http://res.cloudinary.com/calb3ars/image/upload/v1490072576/heart_bvqek2.svg" alt="following"/>
+      <Link to={`users/${currentUser.id}`}>
+        <img className="header-icon icon" src="http://res.cloudinary.com/calb3ars/image/upload/v1490072576/user_lvb0uf.svg" alt="account"/>
+
+      </Link>
+    </div>
   </hgroup>
 );
 
