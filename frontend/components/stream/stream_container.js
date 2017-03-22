@@ -1,10 +1,12 @@
 import { connect } from 'react-redux';
 import Stream from './stream';
 import { fetchStreamPhotos } from '../../actions/photo_actions';
+import { createLike, deleteLike } from '../../actions/like_actions';
 
-const mapStateToProps = ({ session, photos }) => ({
+const mapStateToProps = ({ session, stream }) => ({
   user: session.currentUser,
-  photos
+  photos: stream.photos,
+  selectedPhoto: stream.selectedPhoto
 });
 
 const mapDispatchToProps = (dispatch) => ({

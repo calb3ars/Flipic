@@ -5,7 +5,7 @@ import PhotosReducer from './photos_reducer';
 const rootReducer = combineReducers({
   session: SessionReducer,
   profile: UserProfileReducer,
-  photos: PhotosReducer
+  stream: PhotosReducer
 });
 
 export default rootReducer;

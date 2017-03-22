@@ -16,10 +16,8 @@ const UserProfileReducer = (oldState = defaultUser, action) => {
   Object.freeze(oldState);
   switch(action.type) {
     case RECEIVE_USER:
-      console.log(action.user);
       return merge({}, action.user);
     case RECEIVE_FOLLOWER:
-
       return Object.assign({}, oldState, {
         followToggle: Boolean(action.followId)
       });

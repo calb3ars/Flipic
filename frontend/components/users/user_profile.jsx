@@ -43,7 +43,6 @@ class UserProfile extends React.Component {
       );
     } else {
       const following_id = this.props.params.id;
-      console.log(this.props.profile.followToggle);
       return (
           <button className="follow-edit-button" onClick={this.followToggle}>{ this.props.profile.followToggle === true ? "Following" : "Follow" }
         </button>
