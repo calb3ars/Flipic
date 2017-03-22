@@ -11,8 +11,7 @@ class Api::FollowsController < ApplicationController
   end
 
   def show
-    @follows = Follow.where(follower_id: current_user.id)
-    @follow = Follow.find_by(leader_id: params[:id])
+    @follow = Follow.find_by(follower_id: current_user.id, leader_id: params[:id])
     if @follow
       render "api/follows/show"
     else
@@ -21,8 +20,7 @@ class Api::FollowsController < ApplicationController
   end
 
   def destroy
-    @follows = Follow.where(follower_id: current_user.id)
-    @follow = Follow.find_by(leader_id: params[:id])
+    @follow = Follow.find_by(follower_id: current_user.id, leader_id: params[:id])
     if @follow.destroy
       render "api/follows/show"
     else

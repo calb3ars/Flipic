@@ -3,7 +3,7 @@ class Api::PhotosController < ApplicationController
   # before_action :require_user_owns_photo!, only: [:update, :delete]
 
   def index
-    if (current_user.followers)
+    if (current_user.followers.length > 3)
       @photos = current_user.stream_photos.order('created_at DESC')
     else
       @photos = Photo.all

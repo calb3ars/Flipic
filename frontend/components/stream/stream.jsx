@@ -41,7 +41,7 @@ class Stream extends React.Component {
 
                 <li className="photo-info">
                   <ul>
-                    <li><span className="photo-info-bold">{photo.user.username} </span> 
+                    <li><span className="photo-info-bold">{photo.user.username} </span>
                      {photo.caption}</li>
 
                     <li className="like"><span className="photo-info-bold">121 likes</span></li>

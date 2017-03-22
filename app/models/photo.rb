@@ -25,6 +25,10 @@ class Photo < ApplicationRecord
 
   # scope :of_following_users, -> (leaders) { where user_id: leader_id}
 
+  def likes_count
+    self.likes.count
+  end
+
   def timestamp
     min = ((Time.now - self.created_at) / 1.minute).round
     hrs = ((Time.now - self.created_at) / 1.hour).round

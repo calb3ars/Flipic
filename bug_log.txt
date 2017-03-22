@@ -1,4 +1,8 @@
 # To-Do Fixes
+- how to add new users if no following (new user)
+
+- filter out current_user photos from feed (when less than 3 followers)
+
 - _session_form.css: User signup form: when attempting to sign up with a password that's too short, CSS changes upon error rendering. This becomes a bigger issue if you also sign up with an existing user's username (additional errors).
 
   o - Create div specifically to host errors.
@@ -95,5 +99,3 @@ ActionController::RoutingError (No route matches [GET] "/[object%20Object]"):
   solution: When mapping through Photos array, need to save Photos as a variable outside the render's return function. Then you can access the photo elements this way.git
 
 10) Server making extraneous requests when searching for followToggle. This is apparent when placing a debugger in the json jrender else statement for followToggle
-
-  
