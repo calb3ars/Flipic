@@ -8,6 +8,7 @@ class Stream extends React.Component {
   constructor(props) {
     super(props);
 
+    this.renderLikeButton = this.renderLikeButton.bind(this);
     this.handleLike = this.handleLike.bind(this);
     this.createLike = this.createLike.bind(this);
     this.deleteLike = this.deleteLike.bind(this);
@@ -17,8 +18,26 @@ class Stream extends React.Component {
     this.props.fetchStreamPhotos();
   }
 
-  handleLike(photoId) {
+  renderLikeButton(photo) {
+    if (photo.likeToggle === true) {
+      return (
+        <img onClick={this.handleLike(photo)} src="http://res.cloudinary.com/calb3ars/image/upload/v1490209541/red_heart_vqbooo.png"/>
+      );
+    } else {
+      return (
+        <img onClick={this.handleLike(photo)} src="http://res.cloudinary.com/calb3ars/image/upload/v1490072576/heart_bvqek2.png"/>
+      );
+    }
+  }
 
+  handleLike(photo) {
+    return (e) => {
+      if (photo.likeToggle === true) {
+        this.deleteLike(photo.id);
+      } else {
+        this.createLike(photo.id);
+      }
+    };
   }
 
   createLike(photoId) {
@@ -80,7 +99,7 @@ class Stream extends React.Component {
                 </li>
 
                 <li className="comment-like-form">
-                  <img className="header-icon icon" src="http://res.cloudinary.com/calb3ars/image/upload/v1490072576/heart_bvqek2.svg" alt="following"/>
+                  {this.renderLikeButton(photo)}
                   <form className="comment-form">
                     <input type="string" placeholder="Add a comment..."></input>
                   </form>

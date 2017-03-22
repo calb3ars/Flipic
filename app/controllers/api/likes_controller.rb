@@ -1,7 +1,7 @@
 class Api::LikesController < ApplicationController
   before_action :require_logged_in
   def create
-    @like = Like.new(like_params)
+    @like = Like.new(photo_id: like_params[:photo_id].to_i)
     @like.user_id = current_user.id
     if @like.save
       render "api/likes/show"
@@ -11,7 +11,8 @@ class Api::LikesController < ApplicationController
   end
 
   def destroy
-    @like = Like.find_by(user_id: current_user.id, photo_id: params[:id])
+    @like = Like.find_by(user_id: current_user.id, photo_id: like_params[:photo_id])
+    debugger
     if @like.destroy
       render "api/likes/show"
     else

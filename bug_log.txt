@@ -21,6 +21,9 @@ http://res.cloudinary.com/calb3ars/image/upload/c_thumb,h_250,w_250/v1490083354/
 
 - Add tagline (string) and profile_image (text) columns to users table
 
+
+- streamline font-awesome (camera icon) + streamline Google fonts if not using
+
 - Clean up Hero Image to shadow fades into background (especially on right next to
   login form)
 
