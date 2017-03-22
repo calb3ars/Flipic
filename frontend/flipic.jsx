@@ -8,6 +8,7 @@ import {clearErrors} from './actions/session_actions';
 
 import { fetchStreamPhotos, fetchPhoto, createPhoto, updatePhoto, deletePhoto } from './actions/photo_actions';
 import { createFollow, deleteFollow } from './actions/follow_actions';
+import { createLike, deleteLike } from './actions/like_actions';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -27,6 +28,8 @@ document.addEventListener('DOMContentLoaded', () => {
   window.deletePhoto = deletePhoto;
   window.createFollow = createFollow;
   window.deleteFollow = deleteFollow;
+  window.createLike = createLike;
+  window.deleteLike = deleteLike;
 
 
   window.store = store;

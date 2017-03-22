@@ -4,9 +4,9 @@ class Api::PhotosController < ApplicationController
 
   def index
     if (current_user.followers.length > 2)
-      @filtered_photos = current_user.stream_photos.order('created_at DESC')
+      @filtered_photos = current_user.stream_photos.order('created_at DESC').includes(:likes, :user, :user_likes)
     else
-      @filtered_photos = Photo.all
+      @filtered_photos = Photo.all.includes(:likes, :user, :user_likes)
     end
 
     @photos = current_user_liked(@filtered_photos)

@@ -17,7 +17,9 @@ class Stream extends React.Component {
     this.props.fetchStreamPhotos();
   }
 
-  handleLike(photoId) {}
+  handleLike(photoId) {
+
+  }
 
   createLike(photoId) {
     this.props.createLike(photoId)

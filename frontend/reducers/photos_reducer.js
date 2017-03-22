@@ -26,18 +26,21 @@ const PhotosReducer = (oldState = null_photos, action) => {
       return { photos: newState};
 
     case RECEIVE_LIKE:
-      let newStatePhotos = oldState.images.slice();
-      let likedPhotoIndex = newStatePhotos.indexOf(action.like.photoId);
+      let newStatePhotos = oldState.photos.slice();
+      debugger
+      let likedPhotoIndex = newStatePhotos.indexOf(action.like.photo_id);
+      debugger
       let likedPhoto = newStatePhotos[likedPhotoIndex];
-      likedPhoto.likes.push(action.like.userId);
+      debugger
+      likedPhoto.likes.push(action.like.user_id);
       return Object.assign({}, oldState, {
         photos: newStatePhotos
       });
 
     case REMOVE_LIKE:
-      let statePhotos = oldState.images.slice();
-      let unlikedPhotoIndex = statePhotos.indexOf(action.like.photoId);
-      let removedLikeIndex = statePhotos[unlikedPhotoIndex].likes.indexOf(action.like.userId);
+      let statePhotos = oldState.photos.slice();
+      let unlikedPhotoIndex = statePhotos.indexOf(action.like.photo_id);
+      let removedLikeIndex = statePhotos[unlikedPhotoIndex].likes.indexOf(action.like.user_id);
       statePhotos[unlikedPhotoIndex].likes.splice(removedLikeIndex, 1);
       return Object.assign({}, oldState, {
         photos: statePhotos
