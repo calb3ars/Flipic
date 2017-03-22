@@ -1,7 +1,12 @@
-Follows Likes
+Heroku Dyno
+Likes in the morning, Comments
 
 Tomorrow
-Comments form, Photo Detail
+Photo Detail
+
+Friday
+Styling
+
 
 Photos thumbnail: interpolate `${c_thumb,h_250,w_250/v1490083354}` into urls
 http://res.cloudinary.com/calb3ars/image/upload/c_thumb,h_250,w_250/v1490083354/brooke-cagle-157923_stxunw.jpg

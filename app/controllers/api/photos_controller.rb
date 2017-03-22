@@ -3,11 +3,27 @@ class Api::PhotosController < ApplicationController
   # before_action :require_user_owns_photo!, only: [:update, :delete]
 
   def index
-    if (current_user.followers.length > 3)
-      @photos = current_user.stream_photos.order('created_at DESC')
+    if (current_user.followers.length > 2)
+      @filtered_photos = current_user.stream_photos.order('created_at DESC')
     else
-      @photos = Photo.all
+      @filtered_photos = Photo.all
     end
+
+    @photos = current_user_liked(@filtered_photos)
+  end
+
+  def current_user_liked(photos)
+    liked_photos = []
+    photos.map do |photo|
+      photo.likes.map do |like|
+
+        if like.user_id == current_user.id
+          photo.current_user_liked = true
+        end
+      end
+      liked_photos << photo
+    end
+    liked_photos
   end
 
   def show

@@ -7,13 +7,24 @@ import Modal from 'react-modal';
 class Stream extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      photos: []
-    };
+
+    this.handleLike = this.handleLike.bind(this);
+    this.createLike = this.createLike.bind(this);
+    this.deleteLike = this.deleteLike.bind(this);
   }
 
   componentDidMount() {
     this.props.fetchStreamPhotos();
+  }
+
+  handleLike(photoId) {}
+
+  createLike(photoId) {
+    this.props.createLike(photoId)
+  }
+
+  deleteLike(photoId) {
+    this.props.deleteLike(photoId)
   }
 
   render() {
@@ -41,14 +52,19 @@ class Stream extends React.Component {
 
                 <li className="photo-info">
                   <ul>
-                    <li><span className="photo-info-bold">{photo.user.username} </span>
-                     {photo.caption}</li>
+                    <li>
+                      <Link to={`/users/${photo.user.id}`}>
+                        <span className="photo-info-bold">{photo.user.username}
+                        </span>
+                      </Link>&nbsp;
+                      {photo.caption}
+                    </li>
 
-                    <li className="like"><span className="photo-info-bold">121 likes</span></li>
+                    <li className="like"><span className="photo-info-bold">{photo.likes_count} likes</span></li>
 
                     <li className="comment-container">
                       <ul className="comment">
-                        <li className="comment-username"><span className="photo-info-bold">username</span></li>
+                        <li className="comment-username"><Link to={`/users/${photo.user.id}`}><span className="photo-info-bold">username</span></Link></li>
 
                         <li className="comment-body">body</li>
                       </ul>

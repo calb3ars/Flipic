@@ -15,9 +15,9 @@ const personalGreeting = (currentUser, logout) => (
       <Link to={`users/${currentUser.id}`}>
         <img className="header-icon icon" src="http://res.cloudinary.com/calb3ars/image/upload/v1490072576/user_lvb0uf.svg" alt="account"/>
       </Link>
-      <button className="header-button" onClick={logout}>
+      <Link to={`/login`} className="header-button" onClick={logout}>
         Log Out
-      </button>
+      </Link>
     </div>
   </hgroup>
 );

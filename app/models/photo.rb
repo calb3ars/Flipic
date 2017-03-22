@@ -2,13 +2,14 @@
 #
 # Table name: photos
 #
-#  id         :integer          not null, primary key
-#  url        :text             not null
-#  user_id    :integer          not null
-#  caption    :string
-#  location   :string
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  id                 :integer          not null, primary key
+#  url                :text             not null
+#  user_id            :integer          not null
+#  caption            :string
+#  location           :string
+#  created_at         :datetime         not null
+#  updated_at         :datetime         not null
+#  current_user_liked :boolean
 #
 
 class Photo < ApplicationRecord
@@ -22,11 +23,10 @@ class Photo < ApplicationRecord
     source: :user
 
   attr_reader :timestamp
-
-  # scope :of_following_users, -> (leaders) { where user_id: leader_id}
+  attr_accessor :current_user_liked
 
   def likes_count
-    self.likes.count
+    self.likes.length
   end
 
   def timestamp

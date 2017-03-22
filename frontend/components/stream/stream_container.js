@@ -10,7 +10,9 @@ const mapStateToProps = ({ session, stream }) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  fetchStreamPhotos: () => dispatch(fetchStreamPhotos())
+  fetchStreamPhotos: () => dispatch(fetchStreamPhotos()),
+  createLike: (photoId) => dispatch(createLike(photoId)),
+  deleteLike: (photoId) => dispatch(deleteLike(photoId))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Stream);
