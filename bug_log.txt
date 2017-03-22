@@ -1,4 +1,6 @@
 # To-Do Fixes
+- Change links for comments user in stream
+
 - remove selectedPhoto if not using at the end***
 
 - how to add new users if no following (new user)

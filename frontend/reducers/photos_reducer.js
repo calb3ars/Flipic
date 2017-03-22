@@ -39,8 +39,7 @@ const PhotosReducer = (oldState = null_photos, action) => {
       let likedPhotoIndex = findPhotoIndex(newStatePhotos, "id", action.like.photo_id);
       let likedPhoto = newStatePhotos[likedPhotoIndex];
       likedPhoto.likeToggle = true;
-      likedPhoto.likes_count = likedPhoto.likes_count += 1
-      // debugger
+      likedPhoto.likes_count = likedPhoto.likes_count += 1;
       return Object.assign({}, oldState, {
         photos: newStatePhotos
       });
@@ -51,8 +50,6 @@ const PhotosReducer = (oldState = null_photos, action) => {
       let unLikedPhoto = statePhotos[unlikedPhotoIndex];
       unLikedPhoto.likeToggle = false;
       unLikedPhoto.likes_count = unLikedPhoto.likes_count -= 1
-      // updating count, do we need to push like to user.likes?
-      // debugger
       return Object.assign({}, oldState, {
         photos: statePhotos
       });

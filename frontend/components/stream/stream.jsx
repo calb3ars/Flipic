@@ -49,6 +49,7 @@ class Stream extends React.Component {
   }
 
   render() {
+
     return (
       <div className="stream-container">
         <ul className="stream">
@@ -81,7 +82,7 @@ class Stream extends React.Component {
                       {photo.caption}
                     </li>
 
-                    <li className="like"><span className="photo-info-bold">{photo.likes_count} likes</span></li>
+                    <li className="like"><span className="photo-info-bold">{photo.likes_count} { (photo.likes_count === 1 ? "like" : "likes")}</span></li>
 
                     <li className="comment-container">
                       <ul className="comment">
