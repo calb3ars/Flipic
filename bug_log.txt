@@ -93,3 +93,7 @@ Started GET "/[object%20Object]" for ::1 at 2017-03-20 01:01:24 -0700
 ActionController::RoutingError (No route matches [GET] "/[object%20Object]"):
 
   solution: When mapping through Photos array, need to save Photos as a variable outside the render's return function. Then you can access the photo elements this way.git
+
+10) Server making extraneous requests when searching for followToggle. This is apparent when placing a debugger in the json jrender else statement for followToggle
+
+  

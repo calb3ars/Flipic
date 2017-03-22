@@ -3,12 +3,11 @@ class Api::PhotosController < ApplicationController
   # before_action :require_user_owns_photo!, only: [:update, :delete]
 
   def index
-    # @photos = []
-    # current_user.followers.each do |follower|
-    #   @photos.concat(follower.photos)
-    # end
-    @photos = Photo.all
-    # return @photos.sort! {|a,b| b.created_at <=> a.created_at }
+    if (current_user.followers)
+      @photos = current_user.stream_photos.order('created_at DESC')
+    else
+      @photos = Photo.all
+    end
   end
 
   def show

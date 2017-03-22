@@ -40,6 +40,10 @@ class User < ApplicationRecord
     through: :likes,
     source: :photo
 
+  has_many :stream_photos,
+    through: :leaders,
+    source: :photos
+
   after_initialize :ensure_session_token
   attr_reader :password, :leader_count, :follower_count
 

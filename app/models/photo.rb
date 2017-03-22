@@ -23,6 +23,8 @@ class Photo < ApplicationRecord
 
   attr_reader :timestamp
 
+  # scope :of_following_users, -> (leaders) { where user_id: leader_id}
+
   def timestamp
     min = ((Time.now - self.created_at) / 1.minute).round
     hrs = ((Time.now - self.created_at) / 1.hour).round
