@@ -430,153 +430,6 @@ users = User.create([
 ])
 
 Photo.create({
-  user_id: 2,
-  url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
-  caption: "Enjoy the journey. The path to the top is full of growth",
-  location: "San Francisco, CA"
-  })
-
-Photo.create({
-  user_id: 2,
-  url: "http://res.cloudinary.com/calb3ars/image/upload/v1490083596/todd-diemer-181900_ebv5ep.jpg",
-  caption: "If there's a fork in the road, pick it up",
-  location: "New York, NY"
-  })
-
-Photo.create({
-  user_id: 2,
-  url: "http://res.cloudinary.com/calb3ars/image/upload/v1490083595/web-agency-29200_ujz8ky.jpg",
-  caption: "Beauty is everywhere",
-  location: "Middle of Nowhere"
-  })
-
-Photo.create({
-  user_id: 2,
-  url: "http://res.cloudinary.com/calb3ars/image/upload/v1490083595/vaida-tamosauskaite-85608_vn26bh.jpg",
-  caption: "Everywhere to go and nowhere to be",
-  location: "Egypt"
-  })
-
-Photo.create({
-  user_id: 2,
-  url: "http://res.cloudinary.com/calb3ars/image/upload/v1490083595/tomasz-frankowski-198764_dnrgq4.jpg",
-  caption: "Never too busy to snap a photo",
-  location: "Berlin, Germany"
-  })
-
-Photo.create({
-  user_id: 2,
-  url: "http://res.cloudinary.com/calb3ars/image/upload/v1490083593/toa-heftiba-205007_zr5iop.jpg",
-  caption: "Life is good when you travel",
-  location: "Unknown"
-  })
-
-Photo.create({
-  user_id: 2,
-  url: "http://res.cloudinary.com/calb3ars/image/upload/v1490083590/tim-stief-169203_x4uvpl.jpg",
-  caption: "Snow-topped mountains are my type of mountains",
-  location: "Colorado, CO"
-  })
-
-Photo.create({
-  user_id: 2,
-  url: "http://res.cloudinary.com/calb3ars/image/upload/v1490083588/tim-gouw-142876_wnh2uc.jpg",
-  caption: "New York Subway",
-  location: "New York, NY"
-  })
-
-Photo.create({
-  user_id: 2,
-  url: "http://res.cloudinary.com/calb3ars/image/upload/v1490083588/sergey-pesterev-222162_rpbwlj.jpg",
-  caption: "Missing the Sahara",
-  location: "San Francisco, CA"
-  })
-
-Photo.create({
-  user_id: 2,
-  url: "http://res.cloudinary.com/calb3ars/image/upload/v1490083588/thomas-somme-220647_syasya.jpg",
-  caption: "Adventure is out there!",
-  location: "Paradise Falls"
-  })
-
-Photo.create({
-  user_id: 2,
-  url: "http://res.cloudinary.com/calb3ars/image/upload/v1490083588/scott-walsh-208707_x3twcs.jpg",
-  caption: "Hard work persists, rain or shine, night and day",
-  location: "Long Branch, NJ"
-  })
-
-Photo.create({
-  user_id: 2,
-  url: "http://res.cloudinary.com/calb3ars/image/upload/v1490083585/steven-lewis-342_suzkgp.jpg",
-  caption: "Somewhere out there...",
-  location: "Taipei, Taiwan"
-  })
-
-Photo.create({
-  user_id: 2,
-  url: "http://res.cloudinary.com/calb3ars/image/upload/v1490083584/shupin-zeng-98407_tejzdm.jpg",
-  caption: "Love is beautiful in every language",
-  location: "Taipei, Taiwan"
-  })
-
-Photo.create({
-  user_id: 2,
-  url: "http://res.cloudinary.com/calb3ars/image/upload/v1490083578/pura-comunicacao-78218_pwwhbd.jpg",
-  caption: "Blue waters ahead",
-  location: "the sea"
-  })
-
-Photo.create({
-  user_id: 2,
-  url: "http://res.cloudinary.com/calb3ars/image/upload/v1490083583/rawpixel-com-211022_lq9dby.jpg",
-  caption: "Planning the next adventure!",
-  location: "San Francisco, CA"
-  })
-
-Photo.create({
-  user_id: 2,
-  url: "http://res.cloudinary.com/calb3ars/image/upload/v1490083577/por7o-419_xrvcoe.jpg",
-  caption: "Beautiful old town transportation",
-  location: "Carreira, Spain"
-  })
-
-Photo.create({
-  user_id: 2,
-  url: "http://res.cloudinary.com/calb3ars/image/upload/v1490083569/jeremy-goldberg-38462_j8rrcu.jpg",
-  caption: "Somewhere over the rainbow",
-  location: "Paradise Falls"
-  })
-
-Photo.create({
-  user_id: 2,
-  url: "http://res.cloudinary.com/calb3ars/image/upload/v1490083567/kychan-130805_jwlryo.jpg",
-  caption: "On to the next adventure!",
-  location: "Bangkok, Thailand"
-  })
-
-Photo.create({
-  user_id: 2,
-  url: "http://res.cloudinary.com/calb3ars/image/upload/v1490083571/nishan-joomun-4329_gxkdgr.jpg",
-  caption: "Painting the sunset",
-  location: "Maui, HI"
-  })
-
-Photo.create({
-  user_id: 2,
-  url: "http://res.cloudinary.com/calb3ars/image/upload/v1490083575/pablo-garcia-saldana-37212_qlz0xl.jpg",
-  caption: "A little bit of alone time",
-  location: "Fiji"
-  })
-
-Photo.create({
-  user_id: 2,
-  url: "http://res.cloudinary.com/calb3ars/image/upload/v1490083573/mike-wilson-201853_ucqi2o.jpg",
-  caption: "ABT: Always be traveling",
-  location: "Up in the Air"
-  })
-
-Photo.create({
   user_id: 1,
   url: "http://res.cloudinary.com/calb3ars/image/upload/v1490083548/eva-darron-214170_dwno3y.jpg",
   caption: "Chasing the sun so the day never ends",
@@ -954,3 +807,150 @@ Photo.create({
   caption: "Devil's in the Details",
   location: ""
   })
+
+  Photo.create({
+    user_id: 2,
+    url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
+    caption: "Enjoy the journey. The path to the top is full of growth",
+    location: "San Francisco, CA"
+    })
+
+  Photo.create({
+    user_id: 2,
+    url: "http://res.cloudinary.com/calb3ars/image/upload/v1490083596/todd-diemer-181900_ebv5ep.jpg",
+    caption: "If there's a fork in the road, pick it up",
+    location: "New York, NY"
+    })
+
+  Photo.create({
+    user_id: 2,
+    url: "http://res.cloudinary.com/calb3ars/image/upload/v1490083595/web-agency-29200_ujz8ky.jpg",
+    caption: "Beauty is everywhere",
+    location: "Middle of Nowhere"
+    })
+
+  Photo.create({
+    user_id: 2,
+    url: "http://res.cloudinary.com/calb3ars/image/upload/v1490083595/vaida-tamosauskaite-85608_vn26bh.jpg",
+    caption: "Everywhere to go and nowhere to be",
+    location: "Egypt"
+    })
+
+  Photo.create({
+    user_id: 2,
+    url: "http://res.cloudinary.com/calb3ars/image/upload/v1490083595/tomasz-frankowski-198764_dnrgq4.jpg",
+    caption: "Never too busy to snap a photo",
+    location: "Berlin, Germany"
+    })
+
+  Photo.create({
+    user_id: 2,
+    url: "http://res.cloudinary.com/calb3ars/image/upload/v1490083593/toa-heftiba-205007_zr5iop.jpg",
+    caption: "Life is good when you travel",
+    location: "Unknown"
+    })
+
+  Photo.create({
+    user_id: 2,
+    url: "http://res.cloudinary.com/calb3ars/image/upload/v1490083590/tim-stief-169203_x4uvpl.jpg",
+    caption: "Snow-topped mountains are my type of mountains",
+    location: "Colorado, CO"
+    })
+
+  Photo.create({
+    user_id: 2,
+    url: "http://res.cloudinary.com/calb3ars/image/upload/v1490083588/tim-gouw-142876_wnh2uc.jpg",
+    caption: "New York Subway",
+    location: "New York, NY"
+    })
+
+  Photo.create({
+    user_id: 2,
+    url: "http://res.cloudinary.com/calb3ars/image/upload/v1490083588/sergey-pesterev-222162_rpbwlj.jpg",
+    caption: "Missing the Sahara",
+    location: "San Francisco, CA"
+    })
+
+  Photo.create({
+    user_id: 2,
+    url: "http://res.cloudinary.com/calb3ars/image/upload/v1490083588/thomas-somme-220647_syasya.jpg",
+    caption: "Adventure is out there!",
+    location: "Paradise Falls"
+    })
+
+  Photo.create({
+    user_id: 2,
+    url: "http://res.cloudinary.com/calb3ars/image/upload/v1490083588/scott-walsh-208707_x3twcs.jpg",
+    caption: "Hard work persists, rain or shine, night and day",
+    location: "Long Branch, NJ"
+    })
+
+  Photo.create({
+    user_id: 2,
+    url: "http://res.cloudinary.com/calb3ars/image/upload/v1490083585/steven-lewis-342_suzkgp.jpg",
+    caption: "Somewhere out there...",
+    location: "Taipei, Taiwan"
+    })
+
+  Photo.create({
+    user_id: 2,
+    url: "http://res.cloudinary.com/calb3ars/image/upload/v1490083584/shupin-zeng-98407_tejzdm.jpg",
+    caption: "Love is beautiful in every language",
+    location: "Taipei, Taiwan"
+    })
+
+  Photo.create({
+    user_id: 2,
+    url: "http://res.cloudinary.com/calb3ars/image/upload/v1490083578/pura-comunicacao-78218_pwwhbd.jpg",
+    caption: "Blue waters ahead",
+    location: "the sea"
+    })
+
+  Photo.create({
+    user_id: 2,
+    url: "http://res.cloudinary.com/calb3ars/image/upload/v1490083583/rawpixel-com-211022_lq9dby.jpg",
+    caption: "Planning the next adventure!",
+    location: "San Francisco, CA"
+    })
+
+  Photo.create({
+    user_id: 2,
+    url: "http://res.cloudinary.com/calb3ars/image/upload/v1490083577/por7o-419_xrvcoe.jpg",
+    caption: "Beautiful old town transportation",
+    location: "Carreira, Spain"
+    })
+
+  Photo.create({
+    user_id: 2,
+    url: "http://res.cloudinary.com/calb3ars/image/upload/v1490083569/jeremy-goldberg-38462_j8rrcu.jpg",
+    caption: "Somewhere over the rainbow",
+    location: "Paradise Falls"
+    })
+
+  Photo.create({
+    user_id: 2,
+    url: "http://res.cloudinary.com/calb3ars/image/upload/v1490083567/kychan-130805_jwlryo.jpg",
+    caption: "On to the next adventure!",
+    location: "Bangkok, Thailand"
+    })
+
+  Photo.create({
+    user_id: 2,
+    url: "http://res.cloudinary.com/calb3ars/image/upload/v1490083571/nishan-joomun-4329_gxkdgr.jpg",
+    caption: "Painting the sunset",
+    location: "Maui, HI"
+    })
+
+  Photo.create({
+    user_id: 2,
+    url: "http://res.cloudinary.com/calb3ars/image/upload/v1490083575/pablo-garcia-saldana-37212_qlz0xl.jpg",
+    caption: "A little bit of alone time",
+    location: "Fiji"
+    })
+
+  Photo.create({
+    user_id: 2,
+    url: "http://res.cloudinary.com/calb3ars/image/upload/v1490083573/mike-wilson-201853_ucqi2o.jpg",
+    caption: "ABT: Always be traveling",
+    location: "Up in the Air"
+    })
