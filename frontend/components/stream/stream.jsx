@@ -21,11 +21,11 @@ class Stream extends React.Component {
   renderLikeButton(photo) {
     if (photo.likeToggle === true) {
       return (
-        <img onClick={this.handleLike(photo)} src="http://res.cloudinary.com/calb3ars/image/upload/v1490209541/red_heart_vqbooo.png"/>
+        <img onClick={this.handleLike(photo)} src="http://res.cloudinary.com/calb3ars/image/upload/v1490209541/red_heart_vqbooo.svg"/>
       );
     } else {
       return (
-        <img onClick={this.handleLike(photo)} src="http://res.cloudinary.com/calb3ars/image/upload/v1490072576/heart_bvqek2.png"/>
+        <img onClick={this.handleLike(photo)} src="http://res.cloudinary.com/calb3ars/image/upload/v1490072576/heart_bvqek2.svg"/>
       );
     }
   }

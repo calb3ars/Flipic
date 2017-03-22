@@ -11,8 +11,7 @@ class Api::LikesController < ApplicationController
   end
 
   def destroy
-    @like = Like.find_by(user_id: current_user.id, photo_id: like_params[:photo_id])
-    debugger
+    @like = Like.find_by(user_id: current_user.id, photo_id: like_params[:photo_id].to_i)
     if @like.destroy
       render "api/likes/show"
     else
