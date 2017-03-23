@@ -10,7 +10,7 @@ const defaultUser = {
   profile_image:'',
   photos: [],
   followToggle: false,
-  selectedProfilePhoto: []
+  viewPhoto: {}
 };
 
 const UserProfileReducer = (oldState = defaultUser, action) => {
@@ -19,7 +19,7 @@ const UserProfileReducer = (oldState = defaultUser, action) => {
     case RECEIVE_USER:
       return merge({}, action.user);
     case RECEIVE_USER_PHOTO:
-      return Object.merge({}, oldState, { selectedProfilePhoto: [action.photo]});
+      return Object.merge({}, oldState, { viewPhoto: action.photo});
     case RECEIVE_FOLLOWER:
       return Object.assign({}, oldState, {
         followToggle: true

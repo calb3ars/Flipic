@@ -5,7 +5,7 @@ import { merge } from 'lodash/merge';
 
 const null_photos = {
   photos : [],
-  selectedPhoto: null
+  selectedPhoto: {}
 };
 
 // Find an object within an array using its id (from action)

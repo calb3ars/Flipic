@@ -10,11 +10,18 @@ class UserProfile extends React.Component {
       followerCount: this.props.profile.follower_count,
       followingCount: this.props.profile.following_count,
       followToggle: this.props.profile.followToggle,
-      following: this.props.following
+      following: this.props.following,
+      photoViewModalOpen: false,
+      viewPhoto: this.props.profile.viewPhoto
     };
 
     this.renderEditFollowButton = this.renderEditFollowButton.bind(this);
     this.followToggle = this.followToggle.bind(this);
+
+    this.openPhotoViewModal = this.openPhotoViewModal.bind(this);
+    this.closePhotoViewModal = this.closePhotoViewModal.bind(this);
+
+    this.viewPhoto = this.viewPhoto.bind(this);
   }
 
   componentDidMount() {
@@ -47,8 +54,24 @@ class UserProfile extends React.Component {
       return (
           <button className="follow-edit-button" onClick={this.followToggle}>{ this.props.profile.followToggle === true ? "Following" : "Follow" }
         </button>
-      )
+      );
     }
+  }
+
+  openPhotoViewModal() {
+    this.setState({
+      photoViewModalOpen: true
+    });
+  }
+
+  closePhotoViewModal() {
+    this.setState({
+      photoViewModalOpen: false
+    });
+  }
+
+  viewPhoto(photoId) {
+    this.props.receiveUserPhoto(photoId);
   }
 
   render() {
@@ -69,8 +92,8 @@ class UserProfile extends React.Component {
 
             <ul className="profile-row profile-row-2">
               <li className="profile-posts"><span className="profile-number">{profile.photo_count}</span> posts</li>
-              <li className="profile-followers follower-following"><span className="profile-number">99</span> followers</li>
-              <li className="profile-following follower-following"><span className="profile-number">99</span> following</li>
+              <li className="profile-followers follower-following"><span className="profile-number">{profile.follower_count}</span> followers</li>
+              <li className="profile-following follower-following"><span className="profile-number">{profile.leader_count}</span> following</li>
             </ul>
 
             <p className="profile-row profile-row-3 tagline">
@@ -84,8 +107,11 @@ class UserProfile extends React.Component {
           <li key={photo.id}>
             <img src={`${photo.url}`} alt={`${photo.caption}`}/>
 
-            <Modal>
-              <PhotoView photo={photo}/>
+            <Modal contentLabel="Modal"
+              isOpen = {this.state.photoViewModalOpen}
+              onRequestClose = {this.closePhotoViewModal}
+              photo={this.state.viewPhoto}>
+              <PhotoView photo={this.state.viewPhoto}/>
             </Modal>
 
 

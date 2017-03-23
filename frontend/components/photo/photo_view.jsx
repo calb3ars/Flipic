@@ -54,3 +54,5 @@ class PhotoView extends React.Component {
     </li>
   }
 }
+
+export default PhotoView;

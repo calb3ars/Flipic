@@ -6,7 +6,7 @@ import configureStore from './store/store';
 import Root from './components/root';
 import {clearErrors} from './actions/session_actions';
 
-import { fetchStreamPhotos, fetchPhoto, createPhoto, updatePhoto, deletePhoto } from './actions/photo_actions';
+import { fetchStreamPhotos, fetchPhoto, fetchUserPhoto, createPhoto, updatePhoto, deletePhoto } from './actions/photo_actions';
 import { createFollow, deleteFollow } from './actions/follow_actions';
 import { createLike, deleteLike } from './actions/like_actions';
 import { createComment, deleteComment } from './actions/comment_actions';
@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
   Modal.setAppElement(document.body);
 
   window.fetchPhoto = fetchPhoto;
+  window.fetchUserPhoto = fetchUserPhoto;
   window.createPhoto = createPhoto;
   window.updatePhoto = updatePhoto;
   window.deletePhoto = deletePhoto;
