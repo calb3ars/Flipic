@@ -48,6 +48,8 @@ class Stream extends React.Component {
     this.props.deleteLike(photoId)
   }
 
+
+
   render() {
 
     return (
