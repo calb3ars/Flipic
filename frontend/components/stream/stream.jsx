@@ -87,11 +87,7 @@ class Stream extends React.Component {
                     <li className="like"><span className="photo-info-bold">{photo.likes_count} { (photo.likes_count === 1 ? "like" : "likes")}</span></li>
 
                     <li className="comment-container">
-                      <ul className="comment">
-                        <li className="comment-username"><Link to={`/users/${photo.user.id}`}><span className="photo-info-bold">username</span></Link></li>
 
-                        <li className="comment-body">body</li>
-                      </ul>
                       <ul className="comment">
                         <li className="comment-username"><span className="photo-info-bold">username2</span></li>
                         <li className="comment-body">Lorem ipsum dolor sit amet, magna assum omnium te pri, vix ei diam esse graeci. </li>

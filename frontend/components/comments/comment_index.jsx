@@ -20,6 +20,6 @@ class CommentIndex extends React.Component {
 
         <CommentFormContainer photo={this.props.photo} />
       </div>
-    )
+    );
   }
 }

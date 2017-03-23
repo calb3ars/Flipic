@@ -14,7 +14,7 @@ class Api::CommentsController < ApplicationController
     @comment = Comment.find(params[:id])
     if @comment.author.id == current_user.id
       if @comment.destroy
-        render "api/follows/show"
+        render "api/comments/show"
       else
         render json: @comment.errors.full_messages,
         status: 422
