@@ -11,8 +11,7 @@ class UserProfile extends React.Component {
       followingCount: this.props.profile.following_count,
       followToggle: this.props.profile.followToggle,
       following: this.props.following,
-      photoViewModalOpen: false,
-      viewPhoto: this.props.profile.viewPhoto
+      photoViewModalOpen: false
     };
 
     this.renderEditFollowButton = this.renderEditFollowButton.bind(this);
@@ -58,10 +57,13 @@ class UserProfile extends React.Component {
     }
   }
 
-  openPhotoViewModal() {
-    this.setState({
-      photoViewModalOpen: true
-    });
+  openPhotoViewModal(id) {
+    return () => {this.props.fetchUserPhoto(id)
+      .then(
+        this.setState({
+          photoViewModalOpen: true
+        })
+      )}
   }
 
   closePhotoViewModal() {
@@ -105,21 +107,21 @@ class UserProfile extends React.Component {
       <ul className="profile-photos">
         { this.props.profile.photos.map( (photo) => (
           <li key={photo.id}>
-            <img src={`${photo.url}`} alt={`${photo.caption}`}/>
-
-            <Modal contentLabel="Modal"
-              isOpen = {this.state.photoViewModalOpen}
-              onRequestClose = {this.closePhotoViewModal}
-              photo={this.state.viewPhoto}>
-              <PhotoView photo={this.state.viewPhoto}/>
-            </Modal>
-
+            <img src={`${photo.url}`} alt={`${photo.caption}`} onClick={this.openPhotoViewModal(photo.id)}/>
 
           </li>
         ))
 
         }
       </ul>
+
+      <Modal contentLabel="Modal"
+        isOpen = {this.state.photoViewModalOpen}
+        onRequestClose = {this.closePhotoViewModal}
+        photo={this.state.viewPhoto}>
+        <PhotoView photo={this.props.viewPhoto}/>
+      </Modal>
+
       </div>
     );
   }

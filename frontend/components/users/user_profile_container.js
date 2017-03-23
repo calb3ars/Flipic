@@ -5,10 +5,11 @@ import { fetchUserPhoto } from '../../actions/photo_actions';
 import { createFollow, deleteFollow, fetchFollow } from '../../actions/follow_actions';
 
 
-const mapStateToProps = ({ profile, session }) => ({
+const mapStateToProps = ({ profile, session, stream }) => ({
   profile,
   currentUser: session.currentUser,
-  following: profile.followId
+  following: profile.followId,
+  viewPhoto: stream.viewPhoto
 });
 
 const mapDispatchToProps = dispatch => ({

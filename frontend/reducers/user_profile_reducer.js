@@ -1,4 +1,4 @@
-import { RECEIVE_USER, RECEIVE_USER_PHOTOS, RECEIVE_USER_PHOTO } from '../actions/user_actions';
+import { RECEIVE_USER, RECEIVE_USER_PHOTOS } from '../actions/user_actions';
 import { RECEIVE_FOLLOWER, REMOVE_FOLLOWER, RECEIVE_FOLLOW, RECEIVE_FOLLOW_ID } from '../actions/follow_actions';
 import merge from 'lodash/merge';
 
@@ -9,8 +9,7 @@ const defaultUser = {
   followingCount: 0,
   profile_image:'',
   photos: [],
-  followToggle: false,
-  viewPhoto: {}
+  followToggle: false
 };
 
 const UserProfileReducer = (oldState = defaultUser, action) => {
@@ -18,8 +17,6 @@ const UserProfileReducer = (oldState = defaultUser, action) => {
   switch(action.type) {
     case RECEIVE_USER:
       return merge({}, action.user);
-    case RECEIVE_USER_PHOTO:
-      return Object.merge({}, oldState, { viewPhoto: action.photo});
     case RECEIVE_FOLLOWER:
       return Object.assign({}, oldState, {
         followToggle: true

@@ -12,46 +12,47 @@ import CommentFormContainer from '../comments/comment_form_container';
 class PhotoView extends React.Component {
   render() {
     const photo = this.props.photo;
+    return(
+      <div  className="view-photo-container photo-container">
+        <ul className="photo-content">
 
-    <li  className="view-photo-container photo-container">
-      <ul className="photo-content">
-
-        <li className="">
-          <img className="view-photo photo-image" src={`${photo.url}`} />
-        </li>
-        <li>
-          <li className="user-avatar-container">
-            <div className="photo-header">
-              <UserAvatar photo={photo} />
-              <Timestamp photo={photo}/>
-            </div>
+          <li className="">
+            <img className="view-photo photo-image" src={`${photo.url}`} />
           </li>
-
-
-
-          <li className="photo-info">
-            <ul>
-
-              <Caption photo={photo} />
-
-              <Likes photo={photo} />
-
-            <li  className="comment-container">
-              <CommentIndex
-                className=""
-                photo={photo} />
+          <li>
+            <li className="user-avatar-container">
+              <div className="photo-header">
+                <UserAvatar photo={photo} />
+                <Timestamp photo={photo}/>
+              </div>
             </li>
 
-            </ul>
-          </li>
 
-          <div className="comment-like-form">
-            <LikeButtonContainer photo={photo} />
-            <CommentFormContainer photo={photo} />
-          </div>
-        </li>
-      </ul>
-    </li>
+
+            <li className="photo-info">
+              <ul>
+
+                <Caption photo={photo} />
+
+                <Likes photo={photo} />
+
+              <li  className="comment-container">
+                <CommentIndex
+                  className=""
+                  photo={photo} />
+              </li>
+
+              </ul>
+            </li>
+
+            <div className="comment-like-form">
+              <LikeButtonContainer photo={photo} />
+              <CommentFormContainer photo={photo} />
+            </div>
+          </li>
+        </ul>
+      </div>
+    );
   }
 }
 

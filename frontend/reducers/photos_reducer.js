@@ -1,4 +1,4 @@
-import { RECEIVE_STREAM_PHOTOS, RECEIVE_PHOTO, REMOVE_PHOTO } from '../actions/photo_actions';
+import { RECEIVE_STREAM_PHOTOS, RECEIVE_PHOTO, RECEIVE_USER_PHOTO, REMOVE_PHOTO } from '../actions/photo_actions';
 import { RECEIVE_LIKE, REMOVE_LIKE } from '../actions/like_actions';
 import { RECEIVE_COMMENT, REMOVE_COMMENT } from '../actions/comment_actions';
 import { merge } from 'lodash/merge';
@@ -33,6 +33,9 @@ const PhotosReducer = (oldState = null_photos, action) => {
       let removedPhoto = findObjectIndex(removedPhotoState, "id", action.photo.id);
       removedPhotoState.splice(removedPhoto, 1);
       return { photos: removedPhotoState};
+
+    case RECEIVE_USER_PHOTO:
+      return Object.assign({}, oldState, { viewPhoto: action.photo});
 
     case RECEIVE_LIKE:
       let newLikePhotos = oldState.photos.slice();
