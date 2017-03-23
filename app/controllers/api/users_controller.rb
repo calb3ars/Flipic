@@ -12,6 +12,6 @@ class Api::UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    @user = User.includes(:photos, :likes, :followers, :leaders, :comments).find(params[:id])
   end
 end

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link, hashHistory } from 'react-router';
 
 class CommentIndexItem extends React.Comment {
   render() {
@@ -14,7 +13,7 @@ class CommentIndexItem extends React.Comment {
 
         <li className="comment-body">{comment.body}</li>
       </ul>
-    )
+    );
   }
 }
 

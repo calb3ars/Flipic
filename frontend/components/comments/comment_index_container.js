@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import CommentIndex from './comment_index';
-import { deleteComment } from '../../../actions/comment_actions';
+import { deleteComment } from '../../actions/comment_actions';
 
 const mapStateToProps = state => ({
   currentUser: state.session.currentUser

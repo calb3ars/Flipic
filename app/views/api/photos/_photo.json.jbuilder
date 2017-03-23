@@ -2,10 +2,9 @@ json.id photo.id
 json.user photo.user
 json.url photo.url
 json.caption photo.caption
-json.location photo.caption
+json.location photo.location
 json.timestamp photo.timestamp
 json.likes_count photo.likes_count
-# May not need Likes on frontend
 json.likes photo.likes
 json.comments photo.comments do |comment|
   json.set! comment.id

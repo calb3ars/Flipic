@@ -1,25 +1,19 @@
 import React from 'react';
-import CommentIndexItem from './comment_index_item';
-import CommentIndexFormContainer from './comment_index_form_container';
+import LikeButtonContainer from '../likes/like_button_container';
+import CommentFormContainer from '../comments/comment_form_container';
 
 class CommentIndex extends React.Component {
   render() {
     return (
       <div>
-        <ul>
-          {
-            this.props.photo.comments.map( comment => (
-              <CommentIndexItem
-                key={comment.id}
-                deleteComment={this.props.deleteComment(comment.id)}
-                comment={comment}
-              />
-            ))
-          }
-        </ul>
-
-        <CommentFormContainer photo={this.props.photo} />
+        <li className="comment-like-form">
+          <LikeButtonContainer photo={this.props.photo} />
+          <CommentFormContainer photo={this.props.photo} />
+          <button className="profile-ellipsis-stream icon-button ellipsis">o&nbsp;&nbsp;o&nbsp;&nbsp;o</button>
+        </li>
       </div>
     );
   }
 }
+
+export default CommentIndex;
