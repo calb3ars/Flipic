@@ -5,7 +5,7 @@
 
 - remove selectedPhoto if not using at the end***
 
-- how to add new users if no following (new user)
+- add more seed users with images uploaded - solves how to add new users if no following (new user)
 
 - filter out current_user photos from feed (when less than 3 followers)
 
@@ -111,3 +111,13 @@ ActionController::RoutingError (No route matches [GET] "/[object%20Object]"):
   solution: When mapping through Photos array, need to save Photos as a variable outside the render's return function. Then you can access the photo elements this way.git
 
 10) Server making extraneous requests when searching for followToggle. This is apparent when placing a debugger in the json jrender else statement for followToggle
+
+  solution: Additional associations created N + 1 requests. This was solved by adding .includes(:follows) to the usersController. The result was a query for the user and all the user's followers at once rather than once for each follow instance.
+
+11) Likes not deleting due to "dispatch is not a function"
+
+  error message:  TypeError: dispatch is not a function
+    at Object.deleteLike (http://localhost:3000/assets/bundle.self-0b75e686aa76445c98e47347db15958c486fb203d8b23f0b487d15f655e5cc57.js?body=1:37813:14)
+    at LikeButton.deleteLike (http://localhost:3000/assets/bundle.self-0b75e686aa76445c98e47347db15958c486fb203d8b23f0b487d15f655e5cc57.js?body=1:37768:18)
+
+    solution: Passing in currentUser from state and setting up toggle of state resolved

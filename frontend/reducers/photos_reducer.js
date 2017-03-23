@@ -58,7 +58,7 @@ const PhotosReducer = (oldState = null_photos, action) => {
       let newCommentPhotos = oldState.photos.slice();
       let commentedPhotoIndex = findObjectIndex(newCommentPhotos, "id", action.comment.photo_id);
       let commentedPhoto = newCommentPhotos[commentedPhotoIndex];
-      commentedPhoto.comments.concat(action.comment);
+      commentedPhoto.comments.push(action.comment);
       return Object.assign({}, oldState, {
         photos: newCommentPhotos
       });

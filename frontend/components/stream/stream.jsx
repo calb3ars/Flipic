@@ -68,6 +68,7 @@ class Stream extends React.Component {
                 <div className="comment-like-form">
                   <LikeButtonContainer photo={photo} />
                   <CommentFormContainer photo={photo} />
+                  <button className="profile-ellipsis-stream icon-button ellipsis">o&nbsp;&nbsp;o&nbsp;&nbsp;o</button>
                 </div>
 
               </ul>
