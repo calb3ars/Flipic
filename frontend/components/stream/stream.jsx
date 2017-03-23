@@ -6,6 +6,8 @@ import CommentIndex from '../comments/comment_index';
 import UserAvatar from '../photo/user_avatar';
 import Timestamp from '../photo/timestamp';
 import LikeButtonContainer from '../likes/like_button_container';
+import Caption from '../photo/caption';
+import Likes from '../photo/likes';
 
 
 class Stream extends React.Component {
@@ -27,8 +29,6 @@ class Stream extends React.Component {
                     <UserAvatar photo={photo} />
                     <Timestamp photo={photo}/>
                   </div>
-                  <div>
-                  </div>
                 </li>
 
                 <li key={photo.id}>
@@ -37,15 +37,10 @@ class Stream extends React.Component {
 
                 <li className="photo-info">
                   <ul>
-                    <li>
-                      <Link to={`/users/${photo.user.id}`}>
-                        <span className="photo-info-bold">{photo.user.username}
-                        </span>
-                      </Link>&nbsp;
-                      {photo.caption}
-                    </li>
 
-                    <li className="like"><span className="photo-info-bold">{photo.likes_count} { (photo.likes_count === 1 ? "like" : "likes")}</span></li>
+                    <Caption photo={photo} />
+
+                    <Likes photo={photo} />
 
                   <li  className="comment-container">
                     <CommentIndex
