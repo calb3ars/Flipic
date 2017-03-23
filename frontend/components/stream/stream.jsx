@@ -24,10 +24,8 @@ class Stream extends React.Component {
 
                 <li className="user-avatar-container">
                   <div className="photo-header">
-
                     <UserAvatar photo={photo} />
                     <Timestamp photo={photo}/>
-
                   </div>
                   <div>
                   </div>

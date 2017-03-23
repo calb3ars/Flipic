@@ -6,8 +6,8 @@ json.location photo.location
 json.timestamp photo.timestamp
 json.likes_count photo.likes_count
 json.likes photo.likes
-json.comments photo.comments.reverse do |comment|
-  json.set! comment.id
+json.comments photo.comments do |comment|
+  json.id comment.id
   json.body comment.body
   json.author do
     json.extract! comment.author, :username, :id

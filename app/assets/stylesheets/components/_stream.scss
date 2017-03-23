@@ -84,7 +84,14 @@
 .comment {
   display: flex;
   flex-direction: row;
-  margin-top: 5px
+  margin-top: 5px;
+  align-items: center;
+}
+
+.comment-username-body {
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start;
 }
 
 .comment-username {
@@ -92,6 +99,10 @@
 }
 
 .comment-body {
+}
+
+.comment-delete {
+  align-self: flex-end;
 }
 
 .comment-like-form {

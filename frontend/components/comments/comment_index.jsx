@@ -1,5 +1,5 @@
 import React from 'react';
-import CommentIndexItem from '../comments/comment_index_item';
+import CommentIndexItemContainer from '../comments/comment_index_item_container';
 
 class CommentIndex extends React.Component {
   render() {
@@ -7,7 +7,7 @@ class CommentIndex extends React.Component {
       <ul className="comment-index">
         {
           this.props.photo.comments.map( (comment, idx) => (
-            <CommentIndexItem key={idx} comment={comment} />
+            <CommentIndexItemContainer key={idx} comment={comment} />
           ))
         }
       </ul>
