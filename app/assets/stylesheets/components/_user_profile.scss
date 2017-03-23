@@ -10,17 +10,18 @@
 
 .user-profile {
   width: 40%;
-  margin: 75px auto;
+  margin: 70px auto;
+  margin-bottom: 30px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
 .profile-image-container {
   height: 100%;
   width: 25%;
-  min-width: 100px;
+  min-width: 150px;
 }
 
 .profile-image {
@@ -30,15 +31,14 @@
   border: 1px solid $search-bar-border;
 }
 
-.profile-image:hover {
-  border: 1px solid $instagram-purple-violet;
-}
+// .profile-image:hover {
+//   border: 1px solid $instagram-purple-violet;
+// }
 
 .profile-details {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  margin-left: 12%;
+  width: 75%;
 }
 
 .profile-row {
@@ -53,8 +53,10 @@
   justify: center;
 }
 
-.profile-row > * {
-  width: 25%;
+.profile-row-1 {
+  display: flex;
+  justify-content: space-between;
+
 }
 
 .profile-username {
@@ -69,7 +71,7 @@
   // margin-right: -20px;
   border: 1px solid $search-bar-border;
   border-radius: 3px;
-  text-align: center;
+  margin-right: 150px;
   max-width: 100px;
 }
 
@@ -100,6 +102,7 @@
 // }
 
 .ellipsis {
+  display: none;
   color: $border-gray;
   font-size: 7px;
 }
@@ -107,6 +110,10 @@
 .profile-row-2 {
   font-weight: 200;
   font-size: 16px;
+}
+
+.profile-row-2 > * {
+  width: 25%;
 }
 
 .profile-number {
@@ -129,6 +136,7 @@
   max-width: 850px;
   align-self: center;
   margin: 20px auto;
+  margin-bottom: 50px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;

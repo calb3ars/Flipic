@@ -4,7 +4,7 @@ import Modal from 'react-modal';
 import UserAvatar from '../photo/user_avatar';
 import Timestamp from '../photo/timestamp';
 import Caption from '../photo/caption';
-import Likes from '../photo/likes';
+import LikesContainer from '../photo/likes_container';
 import CommentIndex from '../comments/comment_index';
 import LikeButtonContainer from '../likes/like_button_container';
 import CommentFormContainer from '../comments/comment_form_container';
@@ -12,47 +12,41 @@ import CommentFormContainer from '../comments/comment_form_container';
 class PhotoView extends React.Component {
   render() {
     const photo = this.props.photo;
-    return(
-      <div  className="view-photo-container photo-container">
-        <ul className="photo-content">
+      return(
+        <div  className="view-photo-container photo-container">
+          <ul className="view-photo-content photo-content">
 
-          <li className="">
-            <img className="view-photo photo-image" src={`${photo.url}`} />
-          </li>
-          <li>
-            <li className="user-avatar-container">
-              <div className="photo-header">
-                <UserAvatar photo={photo} />
-                <Timestamp photo={photo}/>
+            <li className="view-photo-container photo-image-container">
+              <img className="view-photo-image photo-image" src={`${photo.url}`} />
+            </li>
+            <li>
+              <div className="view-photo-user-avatar-container user-avatar-container">
+                <div className="view-photo-photo-header photo-header">
+                  <UserAvatar className="view-photo-user-avatar" photo={photo} />
+                  <Timestamp className="view-photo-timestamp" photo={photo}/>
+                </div>
+              </div>
+
+              <div className="view-photo-photo-info photo-info">
+                <ul>
+                  <Caption className="view-photo-caption" photo={photo} />
+                  <LikesContainer className="view-photo-likes" photo={photo} />
+                  <li className="view-photo-comment-container comment-container">
+                    <CommentIndex
+                      className="view-photo-comment-index"
+                      photo={photo} />
+                  </li>
+                </ul>
+              </div>
+
+              <div className="view-photo-comment-like-form comment-like-form">
+                <LikeButtonContainer className="view-photo-like-button-container" photo={photo} />
+                <CommentFormContainer className="view-photo-comment-form-container" photo={photo} />
               </div>
             </li>
-
-
-
-            <li className="photo-info">
-              <ul>
-
-                <Caption photo={photo} />
-
-                <Likes photo={photo} />
-
-              <li  className="comment-container">
-                <CommentIndex
-                  className=""
-                  photo={photo} />
-              </li>
-
-              </ul>
-            </li>
-
-            <div className="comment-like-form">
-              <LikeButtonContainer photo={photo} />
-              <CommentFormContainer photo={photo} />
-            </div>
-          </li>
-        </ul>
-      </div>
-    );
+          </ul>
+        </div>
+      );
   }
 }
 

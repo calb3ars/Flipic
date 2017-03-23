@@ -1,6 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
-import PhotoView from '../photo/photo_view.jsx';
+import PhotoViewContainer from '../photo/photo_view_container';
 
 class UserProfile extends React.Component {
   constructor(props) {
@@ -63,7 +63,8 @@ class UserProfile extends React.Component {
         this.setState({
           photoViewModalOpen: true
         })
-      )}
+      )
+    };
   }
 
   closePhotoViewModal() {
@@ -118,8 +119,8 @@ class UserProfile extends React.Component {
       <Modal contentLabel="Modal"
         isOpen = {this.state.photoViewModalOpen}
         onRequestClose = {this.closePhotoViewModal}
-        photo={this.state.viewPhoto}>
-        <PhotoView photo={this.props.viewPhoto}/>
+        photo={this.props.viewPhoto}>
+        <PhotoViewContainer photo={this.props.photo}/>
       </Modal>
 
       </div>

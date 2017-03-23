@@ -63,7 +63,8 @@ const PhotosReducer = (oldState = null_photos, action) => {
       let commentedPhoto = newCommentPhotos[commentedPhotoIndex];
       commentedPhoto.comments.push(action.comment);
       return Object.assign({}, oldState, {
-        photos: newCommentPhotos
+        photos: newCommentPhotos,
+        selectedPhoto: commentedPhoto
       });
 
     case REMOVE_COMMENT:
