@@ -1,5 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
+import PhotoView from '../photo/photo_view.jsx';
 
 class UserProfile extends React.Component {
   constructor(props) {
@@ -82,6 +83,12 @@ class UserProfile extends React.Component {
         { this.props.profile.photos.map( (photo) => (
           <li key={photo.id}>
             <img src={`${photo.url}`} alt={`${photo.caption}`}/>
+
+            <Modal>
+              <PhotoView photo={photo}/>
+            </Modal>
+
+
           </li>
         ))
 

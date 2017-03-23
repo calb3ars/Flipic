@@ -1,4 +1,6 @@
 # To-Do Fixes
+- 401 unauthorized when signing out from profile page
+
 - Change links for comments user in stream
 
 - add errors to reducers
