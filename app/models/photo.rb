@@ -17,10 +17,15 @@ class Photo < ApplicationRecord
   belongs_to :user
 
   has_many :likes
+  has_many :comments
 
   has_many :user_likes,
     through: :likes,
     source: :user
+
+  has_many :comment_authors,
+    through: :comments,
+    source: :author
 
   attr_reader :timestamp
   attr_accessor :current_user_liked

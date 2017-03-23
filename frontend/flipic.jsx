@@ -9,7 +9,7 @@ import {clearErrors} from './actions/session_actions';
 import { fetchStreamPhotos, fetchPhoto, createPhoto, updatePhoto, deletePhoto } from './actions/photo_actions';
 import { createFollow, deleteFollow } from './actions/follow_actions';
 import { createLike, deleteLike } from './actions/like_actions';
-
+import { createComment, deleteComment } from './actions/comment_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -30,6 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
   window.deleteFollow = deleteFollow;
   window.createLike = createLike;
   window.deleteLike = deleteLike;
+  window.createComment = createComment;
+  window.deleteComment = deleteComment;
 
 
   window.store = store;

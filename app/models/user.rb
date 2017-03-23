@@ -19,6 +19,7 @@ class User < ApplicationRecord
 
   has_many :photos
   has_many :likes
+  has_many :comments
 
   has_many :follower_instances,
     class_name: "Follow",
@@ -43,6 +44,10 @@ class User < ApplicationRecord
   has_many :stream_photos,
     through: :leaders,
     source: :photos
+
+  has_many :commented_photos,
+    through: :comments,
+    source: :photo
 
   after_initialize :ensure_session_token
   attr_reader :password, :leader_count, :follower_count
