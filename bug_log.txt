@@ -121,3 +121,7 @@ ActionController::RoutingError (No route matches [GET] "/[object%20Object]"):
     at LikeButton.deleteLike (http://localhost:3000/assets/bundle.self-0b75e686aa76445c98e47347db15958c486fb203d8b23f0b487d15f655e5cc57.js?body=1:37768:18)
 
     solution: Passing in currentUser from state and setting up toggle of state resolved
+
+12) Stream page taking 800 - 1300 ms to loaded. I see this as an issue since users are usually unwilling to wait for photos to "load".
+
+  Solution: After N + 1 queries removed, still receiving slow load times. Planning to implement infinite scroll to break out the chunks of the stream to increase load time (especially important for large streams)

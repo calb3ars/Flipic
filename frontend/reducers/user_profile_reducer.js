@@ -22,7 +22,8 @@ const UserProfileReducer = (oldState = defaultUser, action) => {
       return Object.merge({}, oldState, { selectedProfilePhoto: [action.photo]});
     case RECEIVE_FOLLOWER:
       return Object.assign({}, oldState, {
-        followToggle: Boolean(action.followId)
+        followToggle: true
+        // remove followId from actions, util and db
       });
     case REMOVE_FOLLOWER:
       return Object.assign({}, oldState, {

@@ -10,10 +10,8 @@ json.comments photo.comments do |comment|
   json.set! comment.id
   json.body comment.body
   json.author do
-    json.extract! comment.author, :username
+    json.extract! comment.author, :username, :id
   end
 end
-
-json.comment_authors photo.comment_authors
 
 json.likeToggle photo.user_likes.map(&:id).include?(current_user.id)

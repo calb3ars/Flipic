@@ -10,6 +10,7 @@ class CommentForm extends React.Component {
 
     this.update = this.update.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.clearForm = this.clearForm.bind(this);
   }
 
   update(field) {
@@ -20,18 +21,19 @@ class CommentForm extends React.Component {
     };
   }
 
+  clearForm() {
+    this.field.value = '';
+  }
+
   handleSubmit(e) {
     e.preventDefault();
-    this.props.createComment(this.state);
-    this.setState({
-      body:""
-    });
+    this.props.createComment(this.state).then(this.clearForm);
   }
 
   render() {
     return(
       <form className="comment-form" onSubmit={this.handleSubmit}>
-        <input type="string" onChange={this.update('body')} placeholder="Add a comment..."/>
+        <input type="string" ref={ node => this.field = node } onChange={this.update('body')} value={this.state.body} placeholder="Add a comment..."/>
       </form>
     );
   }
