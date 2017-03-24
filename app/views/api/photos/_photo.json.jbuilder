@@ -6,6 +6,7 @@ json.location photo.location
 json.timestamp photo.timestamp
 json.likes_count photo.likes_count
 json.likes photo.likes
+
 json.comments photo.comments do |comment|
   json.id comment.id
   json.body comment.body

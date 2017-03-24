@@ -11,7 +11,8 @@ class UserProfile extends React.Component {
       followingCount: this.props.profile.following_count,
       followToggle: this.props.profile.followToggle,
       following: this.props.following,
-      photoViewModalOpen: false
+      photoViewModalOpen: false,
+      presentingPhoto: null
     };
 
     this.renderEditFollowButton = this.renderEditFollowButton.bind(this);
@@ -62,18 +63,16 @@ class UserProfile extends React.Component {
     const photoCrop = "/upload/c_thumb,h_250,w_250/";
     const photoUrlSplit = photoUrl.split("/upload/");
     const croppedUrl = photoUrlSplit[0] + photoCrop + photoUrlSplit[1];
-    console.log(croppedUrl);
     return croppedUrl;
   }
 
   openPhotoViewModal(id) {
-    return () => {this.props.fetchUserPhoto(id)
-      .then(
-        this.setState({
-          photoViewModalOpen: true
-        })
-      )
-    };
+    return e => {
+    this.setState({
+          photoViewModalOpen: true,
+          presentingPhoto : id
+      })
+    }
   }
 
   closePhotoViewModal() {
@@ -132,7 +131,7 @@ class UserProfile extends React.Component {
         isOpen = {this.state.photoViewModalOpen}
         onRequestClose = {this.closePhotoViewModal}
         photo={this.props.viewPhoto}>
-        <PhotoViewContainer photo={this.props.photo}/>
+        <PhotoViewContainer photoId={this.state.presentingPhoto}/>
       </Modal>
 
       </div>

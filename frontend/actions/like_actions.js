@@ -2,8 +2,8 @@ import * as LikeAPIUtil from '../util/like_api_util';
 
 export const RECEIVE_LIKE = "RECEIVE_LIKE";
 export const REMOVE_LIKE = "REMOVE_LIKE";
-export const RECEIVE_PHOTO_LIKE = "RECEIVE_PHOTO_LIKE";
-export const REMOVE_PHOTO_LIKE = "REMOVE_PHOTO_LIKE";
+export const RECEIVE_USER_LIKE = "RECEIVE_USER_LIKE";
+export const REMOVE_USER_LIKE = "REMOVE_USER_LIKE";
 
 export const receiveLike = like => ({
   type: RECEIVE_LIKE,
@@ -15,13 +15,13 @@ export const removeLike = like => ({
   like
 });
 
-export const receivePhotoLike = like => ({
-  type: RECEIVE_PHOTO_LIKE,
+export const receiveUserLike = like => ({
+  type: RECEIVE_USER_LIKE,
   like
 });
 
-export const removePhotoLike = like => ({
-  type: REMOVE_PHOTO_LIKE,
+export const removeUserLike = like => ({
+  type: REMOVE_USER_LIKE,
   like
 });
 
@@ -35,12 +35,12 @@ export const deleteLike = photoId => dispatch => {
     .then(like => dispatch(removeLike(like)));
 };
 
-export const createPhotoLike = photoId => dispatch => {
-  return LikeAPIUtil.createPhotoLike(photoId)
-    .then(like => dispatch(receivePhotoLike(like)));
+export const createUserLike = photoId => dispatch => {
+  return LikeAPIUtil.createLike(photoId)
+    .then(like => dispatch(receiveUserLike(like)));
 };
 
-export const deletePhotoLike = photoId => dispatch => {
-  return LikeAPIUtil.deletePhotoLike(photoId)
-    .then(like => dispatch(removePhotoLike(like)));
+export const deleteUserLike = photoId => dispatch => {
+  return LikeAPIUtil.deleteLike(photoId)
+    .then(like => dispatch(removeUserLike(like)));
 };

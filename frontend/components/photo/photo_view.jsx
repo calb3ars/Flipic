@@ -14,11 +14,21 @@ class PhotoView extends React.Component {
   constructor(props) {
     super(props)
 
+    this.state = {
+      presentingPhoto : this.props.presentingPhoto
+    }
+
     this.cropPhoto = this.cropPhoto.bind(this);
   }
 
   componentDidMount() {
-    this.props.fetchUserPhoto(this.props.photo)
+    this.props.fetchUserPhoto(this.props.photoId)
+  }
+
+  componentWillReceiveProps(newProps) {
+    if (this.state.presentingPhoto !== newProps.photo) {
+      this.props.fetchUserPhoto(newProps.photo.id)
+    }
   }
 
   cropPhoto(photoUrl) {
@@ -31,6 +41,7 @@ class PhotoView extends React.Component {
 
   render() {
     const photo = this.props.photo;
+
       return(
         <div  className="view-photo-container photo-container">
           <ul className="view-photo-content photo-content">

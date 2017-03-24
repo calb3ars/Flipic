@@ -14,7 +14,8 @@ class PhotoForm extends React.Component {
     this.state= {
       modalOpen: false,
       url: "",
-      caption: ""
+      caption: "",
+      uploadedUrl: ""
     };
 
     this.closeModal = this.closeModal.bind(this);
@@ -71,9 +72,9 @@ class PhotoForm extends React.Component {
   }
 
   handleSubmit(e) {
+    e.preventDefault();
     const url = this.state.url;
     const caption = this.state.caption;
-    e.preventDefault();
     this.props.createPhoto(
       {
         url,

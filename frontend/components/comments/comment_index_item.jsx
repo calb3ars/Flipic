@@ -4,9 +4,6 @@ import { Link } from 'react-router';
 class CommentIndexItem extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {
-      key: this.props.key
-    }
     this.handleDelete = this.handleDelete.bind(this);
   }
 
@@ -19,9 +16,6 @@ class CommentIndexItem extends React.Component {
   }
 
   handleDelete(id) {
-    // if (this.props.params) {
-    //   commentId += 1;
-    // }
     return () => this.props.deleteComment(id);
   }
 
