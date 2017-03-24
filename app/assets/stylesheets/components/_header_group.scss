@@ -55,10 +55,11 @@
 
 .header-button {
   color: $border-gray;
-  border: 1px solid $border-gray;
+  border: 1px solid $search-bar-border;
   background: $flipic-white;
   height: 40px;
   max-width: 150px;
+  min-width: 100px;
   padding: 10px;
   font-size: 14px;
   font-weight: 200;
@@ -67,7 +68,16 @@
   text-align: center;
 }
 
+
 .header_button:hover {
   color: $instagram-red-orange;
   background-color: $session-border-gray;
+}
+
+.discover-icon {
+  display: none;
+}
+
+.following-icon {
+  display: none;
 }
