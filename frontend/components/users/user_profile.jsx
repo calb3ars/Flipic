@@ -21,6 +21,7 @@ class UserProfile extends React.Component {
     this.closePhotoViewModal = this.closePhotoViewModal.bind(this);
 
     this.viewPhoto = this.viewPhoto.bind(this);
+    this.cropPhoto = this.cropPhoto.bind(this);
   }
 
   componentDidMount() {
@@ -46,15 +47,23 @@ class UserProfile extends React.Component {
   renderEditFollowButton() {
     if (this.props.currentUser.id === this.props.profile.id) {
       return(
-        <div className="follow-edit-button edit-hide" onClick="">Edit</div>
+        <button className="follow-edit-button" onClick="">Edit</button>
       );
     } else {
       const following_id = this.props.params.id;
       return (
-          <button className="follow-edit-button follow-button" onClick={this.followToggle}>{ this.props.profile.followToggle === true ? "Following" : "Follow" }
+          <button className="follow-edit-button" onClick={this.followToggle}>{ this.props.profile.followToggle === true ? "Following" : "Follow" }
         </button>
       );
     }
+  }
+
+  cropPhoto(photoUrl) {
+    const photoCrop = "/upload/c_thumb,h_250,w_250/";
+    const photoUrlSplit = photoUrl.split("/upload/");
+    const croppedUrl = photoUrlSplit[0] + photoCrop + photoUrlSplit[1];
+    console.log(croppedUrl);
+    return croppedUrl;
   }
 
   openPhotoViewModal(id) {
@@ -106,19 +115,19 @@ class UserProfile extends React.Component {
       </div>
 
       <ul className="profile-photos">
-        { this.props.profile.photos.map( (photo) => (
+        { this.props.profile.photos.map( (photo) => {
+          return(
           <li key={photo.id}>
-            <img src={`${photo.url}`} alt={`${photo.caption}`} onClick={this.openPhotoViewModal(photo.id)}/>
+            <img src={this.cropPhoto(`${photo.url}`)} alt={`${photo.caption}`} onClick={this.openPhotoViewModal(photo.id)}/>
 
           </li>
-        ))
-
+          )
+        })
         }
       </ul>
 
       <Modal
-        overlayClassName={"modal-overlay"}
-        className={"photo-view-modal modal"}
+
         contentLabel="Modal"
         isOpen = {this.state.photoViewModalOpen}
         onRequestClose = {this.closePhotoViewModal}
