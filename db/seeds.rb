@@ -445,13 +445,6 @@ Photo.create({
 
 Photo.create({
   user_id: 1,
-  url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
-  caption: "Enjoy the journey. The path to the top is full of growth",
-  location: "San Francisco, CA"
-  })
-
-Photo.create({
-  user_id: 1,
   url: "http://res.cloudinary.com/calb3ars/image/upload/v1490083596/todd-diemer-181900_ebv5ep.jpg",
   caption: "If there's a fork in the road, pick it up",
   location: "New York, NY"
@@ -807,13 +800,6 @@ Photo.create({
   caption: "Devil's in the Details",
   location: ""
   })
-
-  Photo.create({
-    user_id: 5,
-    url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
-    caption: "Enjoy the journey. The path to the top is full of growth",
-    location: "San Francisco, CA"
-    })
 
   Photo.create({
     user_id: 5,
