@@ -116,7 +116,9 @@ class UserProfile extends React.Component {
         }
       </ul>
 
-      <Modal contentLabel="Modal"
+      <Modal
+        
+        contentLabel="Modal"
         isOpen = {this.state.photoViewModalOpen}
         onRequestClose = {this.closePhotoViewModal}
         photo={this.props.viewPhoto}>
