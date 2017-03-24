@@ -25,7 +25,7 @@ class PhotoView extends React.Component {
     const photoCrop = "/upload/c_thumb,h_500,w_500/";
     const photoUrlSplit = photoUrl.split("/upload/");
     const croppedUrl = photoUrlSplit[0] + photoCrop + photoUrlSplit[1];
-    console.log(croppedUrl);
+
     return croppedUrl;
   }
 

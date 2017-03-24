@@ -28,6 +28,7 @@
 .view-photo-detail {
   max-width: 500px;
   padding: 0px;
+  padding-left: 20px;
 }
 
 .view-photo-user-avatar-container {}
@@ -49,9 +50,10 @@
 .view-photo-comment-like-form {
   display: flex;
   flex-direction: row;
+  position: relative;
 }
 
-.view-photo-comment-like-form > like-button-container > img {
+.view-photo-comment-like-form > like-button-container {
   width: 48px;
   height: 48px;
 }
