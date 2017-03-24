@@ -40,7 +40,12 @@ const PhotosReducer = (oldState = null_photos, action) => {
     case RECEIVE_LIKE:
       let newLikePhotos = oldState.photos.slice();
       if (newLikePhotos.length === 0) {
-        return oldState;
+        let newState = merge({}, oldState);
+
+        newState.viewPhoto.likeToggle = true;
+        newState.viewPhoto.likes_count = newState.viewPhoto.likes_count += 1;
+        return newState;
+
       }
       let likedPhotoIndex = findObjectIndex(newLikePhotos, "id", action.like.photo_id);
       let likedPhoto = newLikePhotos[likedPhotoIndex];
@@ -53,7 +58,11 @@ const PhotosReducer = (oldState = null_photos, action) => {
     case REMOVE_LIKE:
       let removedLikePhotos = oldState.photos.slice();
       if (removedLikePhotos.length === 0) {
-        return oldState;
+        let newState = merge({}, oldState);
+
+        newState.viewPhoto.likeToggle = false;
+        newState.viewPhoto.likes_count = newState.viewPhoto.likes_count -= 1;
+        return newState;
       }
       let unlikedPhotoIndex = findObjectIndex(removedLikePhotos, "id", action.like.photo_id);
       let unLikedPhoto = removedLikePhotos[unlikedPhotoIndex];
@@ -67,10 +76,8 @@ const PhotosReducer = (oldState = null_photos, action) => {
       let newCommentPhotos = oldState.photos.slice();
       if (newCommentPhotos.length === 0) {
         let newState = merge({}, oldState);
-        console.log(action.comment)
+
         newState.viewPhoto.comments.push(action.comment);
-        console.log(newState)
-        
         return newState;
       }
       let commentedPhotoIndex = findObjectIndex(newCommentPhotos, "id", action.comment.photo_id);
