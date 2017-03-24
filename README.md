@@ -25,6 +25,52 @@ Avoiding N + 1 requests is vital for faster image rendering
   end
 ```
 
+##### Following Users
+As mentioned above, the stream is composed of images gathered from accounts the currentUser is following. When a user visits another user's page, they can click a button that toggles the follow relationship between the currentUser and the other account.
+
+From an application perspective, the database contains a table with "Follow" instances. Each follow instance has a "leader" (the account being followed), and a "follower" (the user who wants to include the other account in their stream). During each session, the currentUser is in the perspective of the "follower" each time a Follow is created. In the controller, the currentUser's id is not passed from the backend as params. Instead, the backend's session current_user is used to pass in the id. Once the "leader's" user_id is passed to the controller, a Follow instance is created. Users can have many followers (from a leader perspective) and many leaders (from a follower perspective) through the follows join table.
+
+When the frontend requests a profile, the json jbuilder checks if the currentUser's leaders includes the account's user_id and sends forward a boolean value with the remaining user profile data.
+
+```Ruby
+class User
+  ...
+has_many :follower_instances,
+  class_name: "Follow",
+  foreign_key: :follower_id
+
+  has_many :followers,
+    through: :leader_instances,
+    source: :follower
+
+has_many :leader_instances,
+  class_name: "Follow",
+  foreign_key: :leader_id
+
+  has_many :leaders,
+    through: :follower_instances,
+    source: :leader
+```
+
+
+
+```Ruby
+class Follow < ApplicationRecord
+  validates :leader_id, uniqueness: { scope: :follower_id }
+
+  belongs_to :leader,
+    class_name: "User",
+    foreign_key: :leader_id
+
+  belongs_to :follower,
+    class_name: "User",
+    foreign_key: :follower_id
+
+  def self.find_follow_by(follower_id, leader_id)
+    self.class.find_by({follower_id: follower_id, leader_id: leader_id})
+  end
+end
+```
 
 ##### Likes
 Users are given the ability to "like" posts to show their approval, much like Facebook likes. When an image is liked, the like counter for that image increases in real-time. Additionally, users can only like a photo once (clicking the heart icon multiple times for a photo will toggle whether the image is liked or not by the current user).
