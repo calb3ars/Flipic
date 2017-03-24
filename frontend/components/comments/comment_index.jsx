@@ -3,7 +3,7 @@ import CommentIndexItemContainer from '../comments/comment_index_item_container'
 import _ from 'lodash';
 
 class CommentIndex extends React.Component {
-  debugger
+
   render() {
     return (
       <ul className="comment-index">

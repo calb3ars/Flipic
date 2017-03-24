@@ -14,6 +14,7 @@ const defaultUser = {
   photos: [],
   followToggle: false,
   presentingPhoto: {
+    id: 1000000,
     user: {},
     comments: []
   }
@@ -48,7 +49,8 @@ const UserProfileReducer = (oldState = defaultUser, action) => {
       });
 
     case RECEIVE_USER_PHOTO:
-      console.log(action.photo)
+
+
       return merge({}, oldState, { presentingPhoto: action.photo});
 
     case RECEIVE_USER_LIKE:
@@ -60,8 +62,12 @@ const UserProfileReducer = (oldState = defaultUser, action) => {
         removedLikeState.presentingPhoto.likeToggle = false;
         removedLikeState.presentingPhoto.likes_count -= 1;
     case RECEIVE_USER_COMMENT:
+
+
       const newCommentState = merge({}, oldState)
-      newCommentState.presentingPhoto.comments.concat([action.comment])
+      newCommentState.presentingPhoto.comments.concat(action.comment)
+
+
       return newCommentState;
     case REMOVE_USER_COMMENT:
       const removedCommentState = merge({}, oldState)

@@ -10,6 +10,9 @@ Users are presented with a continuous stream of images, each containing the uplo
 
 A second view within the user account page allows a user to view their individual images in presentation mode.
 
+
+Fetching of the images from the database.
+Avoiding N + 1 requests is vital for faster image rendering
 ```Ruby
   def index
     if (current_user.followers.length > 2)
@@ -21,8 +24,7 @@ A second view within the user account page allows a user to view their individua
     @photos = current_user_liked(@filtered_photos)
   end
 ```
-Fetching of the images from the database.
-Avoiding N + 1 requests is vital for faster image rendering
+
 
 ##### Likes
 Users are given the ability to "like" posts to show their approval, much like Facebook likes. When an image is liked, the like counter for that image increases in real-time. Additionally, users can only like a photo once (clicking the heart icon multiple times for a photo will toggle whether the image is liked or not by the current user).
@@ -39,9 +41,6 @@ The database contains a likes table which holds an image_id, user_id (of the use
 
 
 ### Future Development
-
-##### Comment Folding
-If an image has more than 3 comments, the newest three comments are shown and the total comment count is rendered.
 
 ##### Direct Messaging
 Users will be able to message each other using private messaging. Users can initiate a message conversation from the other user's account page or from their following users page.

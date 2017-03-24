@@ -15,18 +15,20 @@ class PhotoView extends React.Component {
     super(props)
 
     this.state = {
-      presentingPhoto : this.props.presentingPhoto
+      presentingPhoto : this.props.presentingPhoto || 999999999
     }
 
     this.cropPhoto = this.cropPhoto.bind(this);
   }
 
   componentDidMount() {
+
     this.props.fetchUserPhoto(this.props.photoId)
   }
 
   componentWillReceiveProps(newProps) {
-    if (this.state.presentingPhoto !== newProps.photo) {
+
+    if (this.state.presentingPhoto.id !== newProps.photo.id) {
       this.props.fetchUserPhoto(newProps.photo.id)
     }
   }

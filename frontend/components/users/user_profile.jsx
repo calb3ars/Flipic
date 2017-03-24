@@ -60,6 +60,8 @@ class UserProfile extends React.Component {
   }
 
   cropPhoto(photoUrl) {
+
+
     const photoCrop = "/upload/c_thumb,h_250,w_250/";
     const photoUrlSplit = photoUrl.split("/upload/");
     const croppedUrl = photoUrlSplit[0] + photoCrop + photoUrlSplit[1];

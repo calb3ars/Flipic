@@ -4,10 +4,14 @@ import { Link } from 'react-router';
 class CommentIndexItem extends React.Component {
   constructor(props) {
     super(props)
+    this.state = {
+      key: 99999999
+    }
     this.handleDelete = this.handleDelete.bind(this);
   }
 
   componentWillReceiveProps(newProps) {
+    
     if (this.state.key !== newProps.key) {
       this.setState({
         key: newProps.key
@@ -24,7 +28,7 @@ class CommentIndexItem extends React.Component {
     const photo = this.props.photo;
 
     return (
-      <ul className="comment" key={comment.id}>
+      <ul className="comment" >
         <li className="comment-username-body">
           <div className="comment-username">
             <Link to={`/users/${comment.author.id}`}>
