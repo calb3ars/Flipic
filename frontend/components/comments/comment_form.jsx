@@ -13,13 +13,13 @@ class CommentForm extends React.Component {
     this.clearForm = this.clearForm.bind(this);
   }
 
-  componentWillReceiveProps(newProps) {
-    if (this.props.photo.id === undefined) {
-      this.setState({
-        photo_id: newProps.photo.id
-      })
-    }
-  }
+  // componentWillReceiveProps(newProps) {
+  //   if (this.props.photo.id === undefined) {
+  //     this.setState({
+  //       photo_id: newProps.photo.id
+  //     })
+  //   }
+  // }
 
   update(field) {
     return (e) => {
