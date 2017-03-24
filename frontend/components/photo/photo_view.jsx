@@ -10,6 +10,25 @@ import LikeButtonContainer from '../likes/like_button_container';
 import CommentFormContainer from '../comments/comment_form_container';
 
 class PhotoView extends React.Component {
+
+  constructor(props) {
+    super(props)
+
+    this.cropPhoto = this.cropPhoto.bind(this);
+  }
+
+  componentDidMount() {
+    this.props.fetchUserPhoto(this.props.photo)
+  }
+
+  cropPhoto(photoUrl) {
+    const photoCrop = "/upload/c_thumb,h_500,w_500/";
+    const photoUrlSplit = photoUrl.split("/upload/");
+    const croppedUrl = photoUrlSplit[0] + photoCrop + photoUrlSplit[1];
+    console.log(croppedUrl);
+    return croppedUrl;
+  }
+
   render() {
     const photo = this.props.photo;
       return(
@@ -17,7 +36,7 @@ class PhotoView extends React.Component {
           <ul className="view-photo-content photo-content">
 
             <li className="view-photo-image-container photo-image-container">
-              <img className="view-photo-image photo-image" src={`${photo.url}`} />
+              <img className="view-photo-image photo-image" src={this.cropPhoto(`${photo.url}`)} />
             </li>
             <li className="view-photo-detail">
               <div className="view-photo-user-avatar-container user-avatar-container">
