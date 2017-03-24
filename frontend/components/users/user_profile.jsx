@@ -46,12 +46,12 @@ class UserProfile extends React.Component {
   renderEditFollowButton() {
     if (this.props.currentUser.id === this.props.profile.id) {
       return(
-        <button className="follow-edit-button" onClick="">Edit</button>
+        <div className="follow-edit-button edit-hide" onClick="">Edit</div>
       );
     } else {
       const following_id = this.props.params.id;
       return (
-          <button className="follow-edit-button" onClick={this.followToggle}>{ this.props.profile.followToggle === true ? "Following" : "Follow" }
+          <button className="follow-edit-button follow-button" onClick={this.followToggle}>{ this.props.profile.followToggle === true ? "Following" : "Follow" }
         </button>
       );
     }
@@ -117,7 +117,8 @@ class UserProfile extends React.Component {
       </ul>
 
       <Modal
-        
+        overlayClassName={"modal-overlay"}
+        className={"photo-view-modal modal"}
         contentLabel="Modal"
         isOpen = {this.state.photoViewModalOpen}
         onRequestClose = {this.closePhotoViewModal}

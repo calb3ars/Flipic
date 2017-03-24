@@ -9,7 +9,7 @@
 }
 
 .user-profile {
-  width: 40%;
+  width: 50%;
   margin: 70px auto;
   margin-bottom: 30px;
   display: flex;
@@ -22,6 +22,7 @@
   height: 100%;
   width: 25%;
   min-width: 150px;
+  margin-right: 20px;
 }
 
 .profile-image {
@@ -47,7 +48,7 @@
   align-items: flex-start;
   // justify: center;
   // align-items: center;
-  width: 600px;
+  width: 100%;
   margin-bottom: 20px;
   align-items: center;
   justify: center;
@@ -69,18 +70,37 @@
   margin: 0px 5px;
   padding: 5px;
   // margin-right: -20px;
-  border: 1px solid $search-bar-border;
   border-radius: 3px;
   margin-right: 150px;
   max-width: 100px;
 }
 
+.follow-button {
+  border: 1px solid $search-bar-border;
+}
+
 .follow-edit-button {
-  height: 20px;
+  height: 40px;
   font-size: 14px;
   font-weight: 600;
   text-transform: capitalize;
+  width: 100px;
 }
+
+.follow-edit-button:active {
+  background-color: $instagram-blue;
+  color: $flipic-white
+}
+
+.edit-hide {
+  height: 0px;
+  width: 0px;
+  display:none;
+  position: fixed;
+  left: 999999;
+  border: 0px solid white;
+}
+
 
 .icon-button {
   height: 40px;
@@ -110,6 +130,7 @@
 .profile-row-2 {
   font-weight: 200;
   font-size: 16px;
+  justify-content: space-between;
 }
 
 .profile-row-2 > * {
@@ -129,13 +150,14 @@
   font-size: 20px;
   font-weight: 200;
   color: $login-tagline;
+  line-height: 1.5em;
 }
 
 .profile-photos {
   width: 70%;
   max-width: 850px;
   align-self: center;
-  margin: 20px auto;
+  margin: -9px auto;
   margin-bottom: 50px;
   display: flex;
   flex-direction: row;
@@ -147,4 +169,30 @@
   width: 250px;
   height: 250px;
   margin: 12px;
+}
+
+@media only screen and (max-width: 950px) {
+    .user-profile {
+        width: 80%;
+        min-width: 400px;
+        flex-direction:column;
+    }
+    .profile-row-1 {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .follow-edit-button {
+      margin-left: 70%;
+    }
+
+    .profile-photos {
+      width: 100%;
+    }
+
+    .profile-photos > li {
+      width: 400px;
+      height: 400px;
+      margin: 12px;
+    }
 }
