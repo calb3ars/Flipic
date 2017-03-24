@@ -3,11 +3,23 @@
   flex-direction: row;
 }
 
-.view-photo-content {}
 
-.view-photo-container {}
+.view-photo-content {
+  display: flex;
+  flex-direction: row;
+}
 
-.view-photo-image {}
+.view-photo-image-container {}
+
+.view-photo-image {
+  max-height: 900px;
+  max-width: 900px;
+}
+
+.view-photo-detail {
+  width: 100px;
+  padding: 0 50px;
+}
 
 .view-photo-user-avatar-container {}
 

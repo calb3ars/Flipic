@@ -16,10 +16,10 @@ class PhotoView extends React.Component {
         <div  className="view-photo-container photo-container">
           <ul className="view-photo-content photo-content">
 
-            <li className="view-photo-container photo-image-container">
+            <li className="view-photo-image-container photo-image-container">
               <img className="view-photo-image photo-image" src={`${photo.url}`} />
             </li>
-            <li>
+            <li className="view-photo-detail">
               <div className="view-photo-user-avatar-container user-avatar-container">
                 <div className="view-photo-photo-header photo-header">
                   <UserAvatar className="view-photo-user-avatar" photo={photo} />

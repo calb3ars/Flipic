@@ -8,7 +8,11 @@ import PhotoView from './photo_view';
 const mapStateToProps = ({ profile, session, stream }, ownProps) => {
   return {
   user: session.currentUser,
-  photo: ownProps.photo
+  photo: ownProps.photo || {
+    user: {},
+    likes_count: 0,
+    comments: []
+  }
 }
 };
 

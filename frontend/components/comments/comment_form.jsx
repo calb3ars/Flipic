@@ -13,6 +13,14 @@ class CommentForm extends React.Component {
     this.clearForm = this.clearForm.bind(this);
   }
 
+  componentWillReceiveProps(newProps) {
+    if (this.props.photo.id === undefined) {
+      this.setState({
+        photo_id: newProps.photo.id
+      })
+    }
+  }
+
   update(field) {
     return (e) => {
       this.setState({
@@ -22,7 +30,9 @@ class CommentForm extends React.Component {
   }
 
   clearForm() {
-    this.field.value = '';
+    this.setState({
+      body: ""
+    })
   }
 
   handleSubmit(e) {
@@ -31,9 +41,10 @@ class CommentForm extends React.Component {
   }
 
   render() {
+    console.log(this.props.photo.id)
     return(
       <form className="comment-form" onSubmit={this.handleSubmit}>
-        <input type="string" ref={ node => this.field = node } onChange={this.update('body')} value={this.state.body} placeholder="Add a comment..."/>
+        <input type="string" onChange={this.update('body')} value={this.state.body} placeholder="Add a comment..."/>
       </form>
     );
   }

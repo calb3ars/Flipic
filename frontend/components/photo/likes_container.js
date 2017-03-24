@@ -2,8 +2,8 @@ import { connect } from 'react-redux';
 import Likes from './likes';
 import { createLike, deleteLike } from '../../actions/like_actions';
 
-const mapStateToProps = ({stream}) => ({
-  photo: stream.viewPhoto
+const mapStateToProps = ({stream}, ownProps) => ({
+  photo: stream.viewPhoto || ownProps.photo
 });
 
 const mapDispatchToProps = (dispatch) => ({
