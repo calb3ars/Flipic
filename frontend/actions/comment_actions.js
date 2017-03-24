@@ -18,20 +18,16 @@ export const removeComment = (comment) => ({
   comment
 });
 
-export const removePhotoComment = (comment) => ({
-  type: REMOVE_PHOTO_COMMENT,
-  comment
-});
-
 export const receiveUserComment = (comment) => ({
   type: RECEIVE_USER_COMMENT,
   comment
-})
+});
 
 export const removeUserComment = (comment) => ({
   type: REMOVE_USER_COMMENT,
   comment
-})
+});
+
 
 export const createComment = comment => dispatch => (
   CommentAPIUtil.createComment(comment)

@@ -14,10 +14,6 @@ class PhotoView extends React.Component {
   constructor(props) {
     super(props)
 
-    this.state = {
-      presentingPhoto : this.props.presentingPhoto || 999999999
-    }
-
     this.cropPhoto = this.cropPhoto.bind(this);
   }
 
@@ -27,8 +23,9 @@ class PhotoView extends React.Component {
   }
 
   componentWillReceiveProps(newProps) {
+    debugger
+    if (this.props.photo.id !== newProps.photo.id) {
 
-    if (this.state.presentingPhoto.id !== newProps.photo.id) {
       this.props.fetchUserPhoto(newProps.photo.id)
     }
   }

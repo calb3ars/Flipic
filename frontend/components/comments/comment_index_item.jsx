@@ -7,11 +7,11 @@ class CommentIndexItem extends React.Component {
     this.state = {
       key: 99999999
     }
-    this.handleDelete = this.handleDelete.bind(this);
+    // this.handleDelete = this.handleDelete.bind(this);
   }
 
   componentWillReceiveProps(newProps) {
-    
+
     if (this.state.key !== newProps.key) {
       this.setState({
         key: newProps.key
@@ -19,8 +19,9 @@ class CommentIndexItem extends React.Component {
     }
   }
 
-  handleDelete(id) {
-    return () => this.props.deleteComment(id);
+  handleDelete(id, e) {
+    e.preventDefault();
+    this.props.deleteComment(id);
   }
 
   render() {
@@ -43,7 +44,7 @@ class CommentIndexItem extends React.Component {
         {
           this.props.currentUser &&
           (this.props.currentUser.id === comment.author.id) ? (
-            <button className="comment-delete" onClick={this.handleDelete(comment.id)}>X</button>
+            <button className="comment-delete" onClick={this.handleDelete.bind(this, comment.id)}>X</button>
           ) : (
             <div className="comment-delete"></div>
           )
