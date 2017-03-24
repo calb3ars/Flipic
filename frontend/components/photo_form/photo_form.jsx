@@ -1,5 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
+import {hashHistory} from 'react-router';
 
 import Dropzone from 'react-dropzone';
 import request from 'superagent';
@@ -80,6 +81,11 @@ class PhotoForm extends React.Component {
       }
     );
     this.closeModal();
+    this.setState({
+      url: "",
+      caption: ""
+    });
+    hashHistory.push(`/users/${currentUser.id}`);
   }
 
   render() {

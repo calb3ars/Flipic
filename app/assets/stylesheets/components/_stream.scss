@@ -103,6 +103,14 @@
 
 .comment-delete {
   align-self: flex-end;
+  position: relative;
+  top: -4px;
+  left: 40%;
+  color: white;
+}
+
+.comment-delete:active {
+  color: $instagram-maroon;
 }
 
 .comment-like-form {

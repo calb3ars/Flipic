@@ -445,13 +445,6 @@ Photo.create({
 
 Photo.create({
   user_id: 1,
-  url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
-  caption: "Enjoy the journey. The path to the top is full of growth",
-  location: "San Francisco, CA"
-  })
-
-Photo.create({
-  user_id: 1,
   url: "http://res.cloudinary.com/calb3ars/image/upload/v1490083596/todd-diemer-181900_ebv5ep.jpg",
   caption: "If there's a fork in the road, pick it up",
   location: "New York, NY"
@@ -807,13 +800,6 @@ Photo.create({
   caption: "Devil's in the Details",
   location: ""
   })
-
-  Photo.create({
-    user_id: 5,
-    url: "http://s.ngm.com/2015/09/hkakabo-razi-climb/img/hkakabo-razi-opener-615.jpg",
-    caption: "Enjoy the journey. The path to the top is full of growth",
-    location: "San Francisco, CA"
-    })
 
   Photo.create({
     user_id: 5,
@@ -1653,4 +1639,1054 @@ Like.create({
 Like.create({
   photo_id: 35,
   user_id: 6
+  })
+
+Like.create({
+  photo_id: 1,
+  user_id: 7
+  })
+
+Like.create({
+  photo_id: 2,
+  user_id: 7
+  })
+
+Like.create({
+  photo_id: 3,
+  user_id: 7
+  })
+
+Like.create({
+  photo_id: 4,
+  user_id: 7
+  })
+
+Like.create({
+  photo_id: 5,
+  user_id: 7
+  })
+
+Like.create({
+  photo_id: 6,
+  user_id: 7
+  })
+
+Like.create({
+  photo_id: 7,
+  user_id: 7
+  })
+
+Like.create({
+  photo_id: 8,
+  user_id: 7
+  })
+
+Like.create({
+  photo_id: 9,
+  user_id: 7
+  })
+
+Like.create({
+  photo_id: 10,
+  user_id: 7
+  })
+
+Like.create({
+  photo_id: 11,
+  user_id: 7
+  })
+
+Like.create({
+  photo_id: 12,
+  user_id: 7
+  })
+
+Like.create({
+  photo_id: 13,
+  user_id: 7
+  })
+
+Like.create({
+  photo_id: 14,
+  user_id: 7
+  })
+
+Like.create({
+  photo_id: 15,
+  user_id: 7
+  })
+
+Like.create({
+  photo_id: 16,
+  user_id: 7
+  })
+
+Like.create({
+  photo_id: 17,
+  user_id: 7
+  })
+
+Like.create({
+  photo_id: 18,
+  user_id: 7
+  })
+
+Like.create({
+  photo_id: 19,
+  user_id: 7
+  })
+
+Like.create({
+  photo_id: 20,
+  user_id: 7
+  })
+
+Like.create({
+  photo_id: 21,
+  user_id: 7
+  })
+
+Like.create({
+  photo_id: 22,
+  user_id: 7
+  })
+
+Like.create({
+  photo_id: 23,
+  user_id: 7
+  })
+
+Like.create({
+  photo_id: 24,
+  user_id: 7
+  })
+
+Like.create({
+  photo_id: 25,
+  user_id: 7
+  })
+
+Like.create({
+  photo_id: 26,
+  user_id: 7
+  })
+
+Like.create({
+  photo_id: 27,
+  user_id: 7
+  })
+
+Like.create({
+  photo_id: 28,
+  user_id: 7
+  })
+
+Like.create({
+  photo_id: 29,
+  user_id: 7
+  })
+
+Like.create({
+  photo_id: 30,
+  user_id: 7
+  })
+
+Like.create({
+  photo_id: 31,
+  user_id: 7
+  })
+
+Like.create({
+  photo_id: 32,
+  user_id: 7
+  })
+
+Like.create({
+  photo_id: 33,
+  user_id: 7
+  })
+
+Like.create({
+  photo_id: 34,
+  user_id: 7
+  })
+
+Like.create({
+  photo_id: 35,
+  user_id: 7
+  })
+
+Like.create({
+  photo_id: 1,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 2,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 3,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 4,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 5,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 6,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 7,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 8,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 9,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 10,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 11,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 12,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 13,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 14,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 15,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 16,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 17,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 18,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 19,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 20,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 21,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 22,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 23,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 24,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 25,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 26,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 27,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 28,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 29,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 30,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 31,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 32,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 33,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 34,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 35,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 1,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 2,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 3,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 4,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 5,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 6,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 7,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 8,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 9,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 10,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 11,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 12,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 13,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 14,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 15,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 16,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 17,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 18,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 19,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 20,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 21,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 22,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 23,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 24,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 25,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 26,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 27,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 28,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 29,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 30,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 31,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 32,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 33,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 34,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 35,
+  user_id: 8
+  })
+
+Like.create({
+  photo_id: 1,
+  user_id: 9
+  })
+
+Like.create({
+  photo_id: 2,
+  user_id: 9
+  })
+
+Like.create({
+  photo_id: 3,
+  user_id: 9
+  })
+
+Like.create({
+  photo_id: 4,
+  user_id: 9
+  })
+
+Like.create({
+  photo_id: 5,
+  user_id: 9
+  })
+
+Like.create({
+  photo_id: 6,
+  user_id: 9
+  })
+
+Like.create({
+  photo_id: 7,
+  user_id: 9
+  })
+
+Like.create({
+  photo_id: 8,
+  user_id: 9
+  })
+
+Like.create({
+  photo_id: 9,
+  user_id: 9
+  })
+
+Like.create({
+  photo_id: 10,
+  user_id: 9
+  })
+
+Like.create({
+  photo_id: 11,
+  user_id: 9
+  })
+
+Like.create({
+  photo_id: 12,
+  user_id: 9
+  })
+
+Like.create({
+  photo_id: 13,
+  user_id: 9
+  })
+
+Like.create({
+  photo_id: 14,
+  user_id: 9
+  })
+
+Like.create({
+  photo_id: 15,
+  user_id: 9
+  })
+
+Like.create({
+  photo_id: 16,
+  user_id: 9
+  })
+
+Like.create({
+  photo_id: 17,
+  user_id: 9
+  })
+
+Like.create({
+  photo_id: 18,
+  user_id: 9
+  })
+
+Like.create({
+  photo_id: 19,
+  user_id: 9
+  })
+
+Like.create({
+  photo_id: 20,
+  user_id: 9
+  })
+
+Like.create({
+  photo_id: 21,
+  user_id: 9
+  })
+
+Like.create({
+  photo_id: 22,
+  user_id: 9
+  })
+
+Like.create({
+  photo_id: 23,
+  user_id: 9
+  })
+
+Like.create({
+  photo_id: 24,
+  user_id: 9
+  })
+
+Like.create({
+  photo_id: 25,
+  user_id: 9
+  })
+
+Like.create({
+  photo_id: 26,
+  user_id: 9
+  })
+
+Like.create({
+  photo_id: 27,
+  user_id: 9
+  })
+
+Like.create({
+  photo_id: 28,
+  user_id: 9
+  })
+
+Like.create({
+  photo_id: 29,
+  user_id: 9
+  })
+
+Like.create({
+  photo_id: 30,
+  user_id: 9
+  })
+
+Like.create({
+  photo_id: 31,
+  user_id: 9
+  })
+
+Like.create({
+  photo_id: 32,
+  user_id: 9
+  })
+
+Like.create({
+  photo_id: 33,
+  user_id: 9
+  })
+
+Like.create({
+  photo_id: 34,
+  user_id: 9
+  })
+
+Like.create({
+  photo_id: 35,
+  user_id: 9
+  })
+
+Like.create({
+  photo_id: 1,
+  user_id: 10
+  })
+
+Like.create({
+  photo_id: 2,
+  user_id: 10
+  })
+
+Like.create({
+  photo_id: 3,
+  user_id: 10
+  })
+
+Like.create({
+  photo_id: 4,
+  user_id: 10
+  })
+
+Like.create({
+  photo_id: 5,
+  user_id: 10
+  })
+
+Like.create({
+  photo_id: 6,
+  user_id: 10
+  })
+
+Like.create({
+  photo_id: 7,
+  user_id: 10
+  })
+
+Like.create({
+  photo_id: 8,
+  user_id: 10
+  })
+
+Like.create({
+  photo_id: 9,
+  user_id: 10
+  })
+
+Like.create({
+  photo_id: 10,
+  user_id: 10
+  })
+
+Like.create({
+  photo_id: 11,
+  user_id: 10
+  })
+
+Like.create({
+  photo_id: 12,
+  user_id: 10
+  })
+
+Like.create({
+  photo_id: 13,
+  user_id: 10
+  })
+
+Like.create({
+  photo_id: 14,
+  user_id: 10
+  })
+
+Like.create({
+  photo_id: 15,
+  user_id: 10
+  })
+
+Like.create({
+  photo_id: 16,
+  user_id: 10
+  })
+
+Like.create({
+  photo_id: 17,
+  user_id: 10
+  })
+
+Like.create({
+  photo_id: 18,
+  user_id: 10
+  })
+
+Like.create({
+  photo_id: 19,
+  user_id: 10
+  })
+
+Like.create({
+  photo_id: 20,
+  user_id: 10
+  })
+
+Like.create({
+  photo_id: 21,
+  user_id: 10
+  })
+
+Like.create({
+  photo_id: 22,
+  user_id: 10
+  })
+
+Like.create({
+  photo_id: 23,
+  user_id: 10
+  })
+
+Like.create({
+  photo_id: 24,
+  user_id: 10
+  })
+
+Like.create({
+  photo_id: 25,
+  user_id: 10
+  })
+
+Like.create({
+  photo_id: 26,
+  user_id: 10
+  })
+
+Like.create({
+  photo_id: 27,
+  user_id: 10
+  })
+
+Like.create({
+  photo_id: 28,
+  user_id: 10
+  })
+
+Like.create({
+  photo_id: 29,
+  user_id: 10
+  })
+
+Like.create({
+  photo_id: 30,
+  user_id: 10
+  })
+
+Like.create({
+  photo_id: 31,
+  user_id: 10
+  })
+
+Like.create({
+  photo_id: 32,
+  user_id: 10
+  })
+
+Like.create({
+  photo_id: 33,
+  user_id: 10
+  })
+
+Like.create({
+  photo_id: 34,
+  user_id: 10
+  })
+
+Like.create({
+  photo_id: 35,
+  user_id: 10
+  })
+
+Like.create({
+  photo_id: 1,
+  user_id: 11
+  })
+
+Like.create({
+  photo_id: 2,
+  user_id: 11
+  })
+
+Like.create({
+  photo_id: 3,
+  user_id: 11
+  })
+
+Like.create({
+  photo_id: 4,
+  user_id: 11
+  })
+
+Like.create({
+  photo_id: 5,
+  user_id: 11
+  })
+
+Like.create({
+  photo_id: 6,
+  user_id: 11
+  })
+
+Like.create({
+  photo_id: 7,
+  user_id: 11
+  })
+
+Like.create({
+  photo_id: 8,
+  user_id: 11
+  })
+
+Like.create({
+  photo_id: 9,
+  user_id: 11
+  })
+
+Like.create({
+  photo_id: 10,
+  user_id: 11
+  })
+
+Like.create({
+  photo_id: 11,
+  user_id: 11
+  })
+
+Like.create({
+  photo_id: 12,
+  user_id: 11
+  })
+
+Like.create({
+  photo_id: 13,
+  user_id: 11
+  })
+
+Like.create({
+  photo_id: 14,
+  user_id: 11
+  })
+
+Like.create({
+  photo_id: 15,
+  user_id: 11
+  })
+
+Like.create({
+  photo_id: 16,
+  user_id: 11
+  })
+
+Like.create({
+  photo_id: 17,
+  user_id: 11
+  })
+
+Like.create({
+  photo_id: 18,
+  user_id: 11
+  })
+
+Like.create({
+  photo_id: 19,
+  user_id: 11
+  })
+
+Like.create({
+  photo_id: 20,
+  user_id: 11
+  })
+
+Like.create({
+  photo_id: 21,
+  user_id: 11
+  })
+
+Like.create({
+  photo_id: 22,
+  user_id: 11
+  })
+
+Like.create({
+  photo_id: 23,
+  user_id: 11
+  })
+
+Like.create({
+  photo_id: 24,
+  user_id: 11
+  })
+
+Like.create({
+  photo_id: 25,
+  user_id: 11
+  })
+
+Like.create({
+  photo_id: 26,
+  user_id: 11
+  })
+
+Like.create({
+  photo_id: 27,
+  user_id: 11
+  })
+
+Like.create({
+  photo_id: 28,
+  user_id: 11
+  })
+
+Like.create({
+  photo_id: 29,
+  user_id: 11
+  })
+
+Like.create({
+  photo_id: 30,
+  user_id: 11
+  })
+
+Like.create({
+  photo_id: 31,
+  user_id: 11
+  })
+
+Like.create({
+  photo_id: 32,
+  user_id: 11
+  })
+
+Like.create({
+  photo_id: 33,
+  user_id: 11
+  })
+
+Like.create({
+  photo_id: 34,
+  user_id: 11
+  })
+
+Like.create({
+  photo_id: 35,
+  user_id: 11
   })
