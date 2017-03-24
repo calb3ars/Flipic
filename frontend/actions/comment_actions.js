@@ -26,7 +26,7 @@ export const createComment = comment => dispatch => (
 );
 
 export const deleteComment = commentId => dispatch => {
-  debugger
+  
   return CommentAPIUtil.deleteComment(commentId)
     .then(comment => dispatch(removeComment(comment)))
       .then(comment => dispatch(removePhotoComment(comment)))

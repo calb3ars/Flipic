@@ -87,7 +87,7 @@ const UserProfileReducer = (oldState = defaultUser, action) => {
 
     case REMOVE_COMMENT:
       let deletedCommentPhotos = oldState.photos.slice();
-      debugger
+      
       if (deletedCommentPhotos.length === 0) {
         return oldState;
       }

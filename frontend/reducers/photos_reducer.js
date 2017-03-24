@@ -70,13 +70,13 @@ const PhotosReducer = (oldState = null_photos, action) => {
 
     case REMOVE_PHOTO_COMMENT:
       let newState = merge({}, oldState);
-      debugger
+      
       let removedCommentId = findObjectIndex(newState.viewPhoto.comments, "id", action.comment.id);
-      debugger
+      
       let removedComment = newState.viewPhoto.comments[removedComment];
-      debugger
+      
       newState.viewPhoto.comments.splice(removedComment, 1);
-      debugger
+      
       return newState;
 
     case RECEIVE_COMMENT:
