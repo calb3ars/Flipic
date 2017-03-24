@@ -12,7 +12,8 @@ const defaultUser = {
   followingCount: 0,
   profile_image:'',
   photos: [],
-  followToggle: false
+  followToggle: false,
+  presentingPhoto: {}
 };
 
 const findObjectIndex = (array, attr, value) => {
@@ -87,7 +88,7 @@ const UserProfileReducer = (oldState = defaultUser, action) => {
 
     case REMOVE_COMMENT:
       let deletedCommentPhotos = oldState.photos.slice();
-      
+      debugger
       if (deletedCommentPhotos.length === 0) {
         return oldState;
       }
