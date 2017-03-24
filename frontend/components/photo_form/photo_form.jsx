@@ -92,10 +92,14 @@ class PhotoForm extends React.Component {
 
         <Modal
           contentLabel="Modal"
+          overlayClassName={"modal-overlay"}
+          className={"photo-upload-form modal"}
+
+
           isOpen = {this.state.modalOpen}
           onRequestClose={this.closeModal}
         >
-          <form onSubmit={this.handleSubmit}>
+          <form className="photo-upload-form" onSubmit={this.handleSubmit}>
             <input
               type="hidden"
               value={this.state.url}
@@ -108,8 +112,8 @@ class PhotoForm extends React.Component {
                 className="image-form-dropzone"
                 onDrop={this.onImageDrop.bind(this)}
               >
-              <div>
-                { this.state.url === '' ? <p>Drop an image or click to select a file to upload.</p> :
+              <div className="dropzone-text">
+                { this.state.url === '' ? <p>Drop an image <br /><br />or click to select a file to upload.</p> :
                   <div>
                     <img src={this.state.url} />
                   </div>}
@@ -118,19 +122,22 @@ class PhotoForm extends React.Component {
             </div>
             <br />
             <br />
-
-            <input
-              type="text"
-              placeholder="Witty caption goes here..."
-              value={this.state.caption}
-              onChange={this.update("caption")}
-            />
-            <br />
-            <br />
-            <input
-            type="submit"
-            value="Upload"
-            />
+            <div className="photo-upload-detail">
+              <input
+                type="text"
+                className="photo-upload-caption"
+                placeholder="Witty caption goes here..."
+                value={this.state.caption}
+                onChange={this.update("caption")}
+              />
+              <br />
+              <br />
+              <input
+              type="submit"
+              value="Upload"
+              className="photo-upload-button"
+              />
+            </div>
 
           </form>
         </Modal>

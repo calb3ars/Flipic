@@ -10,10 +10,10 @@ const personalGreeting = (currentUser, logout) => (
     <PhotoFormContainer />
 
     <div to="" className="header-icon-container">
-      <img className="header-icon icon" src="http://res.cloudinary.com/calb3ars/image/upload/v1490072576/compass_rtf9rr.svg" alt="discover"/>
-      <img className="header-icon icon" src="http://res.cloudinary.com/calb3ars/image/upload/v1490072576/heart_bvqek2.svg" alt="following"/>
+      <img className="header-icon discover-icon" src="http://res.cloudinary.com/calb3ars/image/upload/v1490072576/compass_rtf9rr.svg" alt="discover"/>
+      <img className="header-icon following-icon" src="http://res.cloudinary.com/calb3ars/image/upload/v1490072576/heart_bvqek2.svg" alt="following"/>
       <Link to={`users/${currentUser.id}`}>
-        <img className="header-icon icon" src="http://res.cloudinary.com/calb3ars/image/upload/v1490072576/user_lvb0uf.svg" alt="account"/>
+        <img className="header-icon account-icon" src="http://res.cloudinary.com/calb3ars/image/upload/v1490072576/user_lvb0uf.svg" alt="account"/>
       </Link>
       <Link to={`/login`} className="header-button" onClick={logout}>
         Log Out

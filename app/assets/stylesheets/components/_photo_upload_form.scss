@@ -1,0 +1,87 @@
+.photo-upload-form {
+  position                   : absolute;
+  top                        : 40px;
+  left                       : 40px;
+  right                      : 40px;
+  bottom                     : 40px;
+  border                     : 1px solid #ccc;
+  background                 : #fff;
+  overflow                   : auto;
+  WebkitOverflowScrolling    : touch;
+  borderRadius               : 4px;
+  outline                    : none;
+  padding                    : 10px auto;
+  display: flex;
+  flex-direction: row;
+  justify: center;
+  align-items: center;
+}
+
+.modal-overlay {
+  position          : fixed;
+  top               : 0;
+  left              : 0;
+  right             : 0;
+  bottom            : 0;
+  backgroundColor   : rgba(255, 255, 255, 0.8);
+}
+
+.photo-upload-form {
+  font-weight: 200;
+  width: 80%;
+  margin: 20px auto;
+  height: 85%;
+  display: flex;
+  flex-direction: row;
+  border: 0px solid $flipic-white;
+  padding: 0px auto
+}
+
+.dropzone-preview {
+  height: 500px;
+  width: 500px;
+  padding-top: 20px;;
+  // text-align: center;
+  // justify: center;
+  background-color: $session-border-gray;
+  border-radius: 2px;
+  border: 1px solid $instagram-purple-violet;
+}
+
+.dropzone-preview:hover {
+  border: 1px solid $instagram-red-orange;
+}
+
+
+.dropzone-text {
+  width: 80%;
+  margin: 40% auto;
+  text-wrap: normal;
+  text-align: center;
+  vertical-align: middle
+}
+
+.photo-upload-caption {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid $instagram-maroon;
+}
+
+.photo-upload-detail {
+  margin-left: 50px;
+}
+
+.photo-upload-caption {
+  min-width: 400px;
+}
+
+.photo-upload-button {
+  padding: 5px 10px;
+  border: 1px solid $instagram-maroon;
+  border-radius: 2px;
+}
+
+.photo-upload-button:hover {
+  background-color: $instagram-blue;
+  color: $flipic-white;
+}

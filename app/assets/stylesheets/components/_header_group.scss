@@ -58,9 +58,16 @@
   border: 1px solid $border-gray;
   background: $flipic-white;
   height: 40px;
-  width: 200px;
+  max-width: 150px;
   padding: 10px;
   font-size: 14px;
   font-weight: 200;
+  margin-left: 20px;
+  border-radius: 2px;
+  text-align: center;
+}
 
+.header_button:hover {
+  color: $instagram-red-orange;
+  background-color: $session-border-gray;
 }
