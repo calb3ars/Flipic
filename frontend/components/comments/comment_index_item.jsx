@@ -9,6 +9,9 @@ class CommentIndexItem extends React.Component {
 
 
   handleDelete(commentId) {
+    if (this.props.params) {
+      commentId += 1;
+    }
     return () => this.props.deleteComment(commentId);
   }
 

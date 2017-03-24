@@ -3,6 +3,10 @@
 .view-photo-container {
   display: flex;
   flex-direction: row;
+  height: 400px;
+  overflow: hidden;
+  padding-bottom: 0px;
+  border: 0px solid $flipic-white;
 }
 
 
@@ -14,12 +18,12 @@
 .view-photo-image-container {}
 
 .view-photo-image {
-  max-height: 400px;
-  max-width: 400px;
+  min-height: 400px;
+  min-width: 400px;
 }
 
 .view-photo-detail {
-  width: 600px;
+  max-width: 450px;
   padding: 0px;
 }
 
@@ -30,6 +34,21 @@
 
 .view-photo-photo-info {}
 
-.view-photo-comment-container {}
+.view-photo-photo-info > ul {
+  height: 225px;
+  // overflow: hidden;
+}
 
-.view-photo-comment-like-form {}
+.view-photo-comment-container {
+  width: 80%;
+}
+
+.view-photo-comment-like-form {
+  display: flex;
+  flex-direction: row;
+}
+
+.view-photo-comment-like-form > like-button-container > img {
+  width: 48px;
+  height: 48px;
+}

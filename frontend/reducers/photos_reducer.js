@@ -1,6 +1,6 @@
 import { RECEIVE_STREAM_PHOTOS, RECEIVE_PHOTO, RECEIVE_USER_PHOTO, REMOVE_PHOTO } from '../actions/photo_actions';
 import { RECEIVE_LIKE, REMOVE_LIKE } from '../actions/like_actions';
-import { RECEIVE_COMMENT, REMOVE_COMMENT } from '../actions/comment_actions';
+import { RECEIVE_COMMENT, REMOVE_COMMENT, REMOVE_PHOTO_COMMENT } from '../actions/comment_actions';
 import merge  from 'lodash/merge';
 
 const null_photos = {
@@ -58,11 +58,7 @@ const PhotosReducer = (oldState = null_photos, action) => {
     case REMOVE_LIKE:
       let removedLikePhotos = oldState.photos.slice();
       if (removedLikePhotos.length === 0) {
-        let newState = merge({}, oldState);
-
-        newState.viewPhoto.likeToggle = false;
-        newState.viewPhoto.likes_count = newState.viewPhoto.likes_count -= 1;
-        return newState;
+        return oldState;
       }
       let unlikedPhotoIndex = findObjectIndex(removedLikePhotos, "id", action.like.photo_id);
       let unLikedPhoto = removedLikePhotos[unlikedPhotoIndex];
@@ -72,11 +68,21 @@ const PhotosReducer = (oldState = null_photos, action) => {
         photos: removedLikePhotos
       });
 
+    case REMOVE_PHOTO_COMMENT:
+      let newState = merge({}, oldState);
+      debugger
+      let removedCommentId = findObjectIndex(newState.viewPhoto.comments, "id", action.comment.id);
+      debugger
+      let removedComment = newState.viewPhoto.comments[removedComment];
+      debugger
+      newState.viewPhoto.comments.splice(removedComment, 1);
+      debugger
+      return newState;
+
     case RECEIVE_COMMENT:
       let newCommentPhotos = oldState.photos.slice();
       if (newCommentPhotos.length === 0) {
         let newState = merge({}, oldState);
-
         newState.viewPhoto.comments.push(action.comment);
         return newState;
       }
@@ -91,7 +97,7 @@ const PhotosReducer = (oldState = null_photos, action) => {
 
     case REMOVE_COMMENT:
       let deletedCommentPhotos = oldState.photos.slice();
-      if (deletedCommentPhotos.length === 0) {
+      if (oldState.photos.length === 0) {
         return oldState;
       }
       let deletedCommentPhotoIndex = findObjectIndex(deletedCommentPhotos, "id", action.comment.photo_id);

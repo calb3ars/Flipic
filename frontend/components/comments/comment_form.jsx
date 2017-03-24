@@ -41,7 +41,6 @@ class CommentForm extends React.Component {
   }
 
   render() {
-    console.log(this.props.photo.id)
     return(
       <form className="comment-form" onSubmit={this.handleSubmit}>
         <input type="string" onChange={this.update('body')} value={this.state.body} placeholder="Add a comment..."/>
