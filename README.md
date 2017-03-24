@@ -1,5 +1,6 @@
 # Flipic
-[Flipic Live App](https://flipic.herokuapp.com/ "Flipic Live")<br /><br />
+[Flipic Live Domain App](http://www.flipic.io/)
+[Flipic Heroku App](https://flipic.herokuapp.com/ "Flipic Live")<br /><br />
 Flipic is a full-stack web application inspired by Instagram. It features a Ruby on Rails backend with a PostgreSQL database, and React.js with a Redux framework on the frontend. In order to highlight the colors and action of the photos, the UI design is minimal with accents to indicate actions and features.
 
 ![Demo login](http://res.cloudinary.com/calb3ars/image/upload/c_scale,w_600/v1490385294/Screen_Shot_2017-03-24_at_12.54.30_PM_oapdik.png)
