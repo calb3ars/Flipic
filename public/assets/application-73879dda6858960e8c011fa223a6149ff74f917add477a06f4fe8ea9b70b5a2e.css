@@ -288,13 +288,139 @@ with a class attribute containing 'col-' */
 /* line 56, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_header_group.scss */
 .header-button {
   color: #000;
-  border: 1px solid #000;
+  border: 1px solid #dbdbdb;
   background: #fff;
   height: 40px;
-  width: 200px;
+  max-width: 150px;
+  min-width: 100px;
   padding: 10px;
   font-size: 14px;
   font-weight: 200;
+  margin-left: 20px;
+  border-radius: 2px;
+  text-align: center;
+}
+
+/* line 72, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_header_group.scss */
+.header_button:hover {
+  color: #e95950;
+  background-color: #dbdbdb;
+}
+
+/* line 77, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_header_group.scss */
+.discover-icon {
+  display: none;
+}
+
+/* line 81, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_header_group.scss */
+.following-icon {
+  display: none;
+}
+
+/* line 1, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_photo_upload_form.scss */
+.photo-upload-form {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  right: 40px;
+  bottom: 40px;
+  border: 1px solid #ccc;
+  background: #fff;
+  overflow: auto;
+  webkit-overflow-scrolling: touch;
+  border-radius: 4px;
+  outline: none;
+  padding: 10px auto;
+  display: flex;
+  flex-direction: row;
+  justify: center;
+  align-items: center;
+  height: 80%;
+}
+
+/* line 21, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_photo_upload_form.scss */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(230, 230, 230, 0.8);
+}
+
+/* line 30, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_photo_upload_form.scss */
+.ReactModal__Body--open {
+  overflow: hidden;
+}
+
+/* line 34, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_photo_upload_form.scss */
+.photo-upload-form {
+  font-weight: 200;
+  width: 800px;
+  height: 500px;
+  margin: 0px auto;
+  margin-top: -30px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: row;
+  border: 0px solid #fff;
+  padding: 0px auto;
+  overflow: hidden;
+}
+
+/* line 48, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_photo_upload_form.scss */
+.dropzone-preview {
+  height: 400px;
+  width: 400px;
+  padding-top: 20px;
+  background-color: #dbdbdb;
+  border-radius: 2px;
+  border: 1px solid #8a3ab9;
+}
+
+/* line 59, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_photo_upload_form.scss */
+.dropzone-preview:hover {
+  border: 1px solid #e95950;
+}
+
+/* line 64, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_photo_upload_form.scss */
+.dropzone-text {
+  width: 80%;
+  margin: 40% auto;
+  text-wrap: normal;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* line 72, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_photo_upload_form.scss */
+.photo-upload-caption {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #cd486b;
+}
+
+/* line 78, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_photo_upload_form.scss */
+.photo-upload-detail {
+  margin-left: 50px;
+}
+
+/* line 82, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_photo_upload_form.scss */
+.photo-upload-caption {
+  min-width: 250px;
+  max-width: 350px;
+}
+
+/* line 88, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_photo_upload_form.scss */
+.photo-upload-button {
+  padding: 5px 10px;
+  border: 1px solid #cd486b;
+  border-radius: 2px;
+}
+
+/* line 94, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_photo_upload_form.scss */
+.photo-upload-button:hover {
+  background-color: #4c68d7;
+  color: #fff;
 }
 
 /* line 1, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_session_form.scss */
@@ -476,14 +602,19 @@ body {
 }
 
 /* line 48, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_stream.scss */
-.user-avatar > img {
+.photo-header-location {
+  font-weight: 200;
+}
+
+/* line 52, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_stream.scss */
+.user-avatar-pic {
   height: 40px;
   width: 40px;
   border-radius: 50%;
   margin-right: 10px;
 }
 
-/* line 55, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_stream.scss */
+/* line 59, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_stream.scss */
 .timestamp {
   align-self: center;
   font-size: 14px;
@@ -492,40 +623,61 @@ body {
   color: #999;
 }
 
-/* line 63, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_stream.scss */
+/* line 67, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_stream.scss */
 .stream-photo {
   max-height: 500px;
 }
 
-/* line 67, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_stream.scss */
+/* line 71, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_stream.scss */
 .photo-info {
   padding: 15px 20px;
   font-weight: 200;
 }
 
-/* line 72, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_stream.scss */
+/* line 76, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_stream.scss */
 .photo-info-bold {
   font-weight: 400;
 }
 
-/* line 76, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_stream.scss */
+/* line 80, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_stream.scss */
 .photo-info > ul > li {
   margin: 5px 0px;
 }
 
-/* line 80, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_stream.scss */
+/* line 84, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_stream.scss */
 .comment {
   display: flex;
   flex-direction: row;
   margin-top: 5px;
+  align-items: center;
 }
 
-/* line 86, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_stream.scss */
+/* line 91, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_stream.scss */
+.comment-username-body {
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start;
+}
+
+/* line 97, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_stream.scss */
 .comment-username {
   margin-right: 5px;
 }
 
-/* line 93, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_stream.scss */
+/* line 104, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_stream.scss */
+.comment-delete {
+  align-self: flex-end;
+  position: relative;
+  top: -4px;
+  color: #000;
+}
+
+/* line 111, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_stream.scss */
+.comment-delete:active {
+  color: #cd486b;
+}
+
+/* line 115, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_stream.scss */
 .comment-like-form {
   margin: 0px auto;
   padding-top: 15px;
@@ -538,17 +690,17 @@ body {
   font-weight: 200;
 }
 
-/* line 105, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_stream.scss */
+/* line 127, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_stream.scss */
 .comment-form {
   min-width: 450px;
 }
 
-/* line 109, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_stream.scss */
+/* line 131, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_stream.scss */
 .comment-form > input {
   width: 100%;
 }
 
-/* line 113, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_stream.scss */
+/* line 135, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_stream.scss */
 .profile-ellipsis-stream {
   font-size: 9px;
 }
@@ -566,22 +718,24 @@ body {
 
 /* line 11, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_user_profile.scss */
 .user-profile {
-  width: 40%;
-  margin: 75px auto;
+  width: 50%;
+  margin: 70px auto;
+  margin-bottom: 30px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
-/* line 20, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_user_profile.scss */
+/* line 21, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_user_profile.scss */
 .profile-image-container {
   height: 100%;
   width: 25%;
-  min-width: 100px;
+  min-width: 150px;
+  margin-right: 20px;
 }
 
-/* line 26, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_user_profile.scss */
+/* line 28, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_user_profile.scss */
 .profile-image {
   height: 150px;
   width: 150px;
@@ -589,61 +743,78 @@ body {
   border: 1px solid #dbdbdb;
 }
 
-/* line 33, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_user_profile.scss */
-.profile-image:hover {
-  border: 1px solid #8a3ab9;
-}
-
-/* line 37, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_user_profile.scss */
+/* line 39, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_user_profile.scss */
 .profile-details {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  margin-left: 12%;
+  width: 75%;
 }
 
-/* line 44, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_user_profile.scss */
+/* line 45, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_user_profile.scss */
 .profile-row {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  width: 600px;
+  width: 100%;
   margin-bottom: 20px;
   align-items: center;
   justify: center;
 }
 
-/* line 56, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_user_profile.scss */
-.profile-row > * {
-  width: 25%;
+/* line 57, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_user_profile.scss */
+.profile-row-1 {
+  display: flex;
+  justify-content: space-between;
 }
 
-/* line 60, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_user_profile.scss */
+/* line 63, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_user_profile.scss */
 .profile-username {
   font-size: 36px;
   font-weight: 200;
   margin-right: 10px;
 }
 
-/* line 66, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_user_profile.scss */
+/* line 69, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_user_profile.scss */
 .profile-edit-follow-button {
   margin: 0px 5px;
   padding: 5px;
-  border: 1px solid #dbdbdb;
   border-radius: 3px;
-  text-align: center;
+  margin-right: 150px;
   max-width: 100px;
 }
 
-/* line 76, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_user_profile.scss */
+/* line 78, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_user_profile.scss */
+.follow-button {
+  border: 1px solid #dbdbdb;
+}
+
+/* line 82, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_user_profile.scss */
 .follow-edit-button {
-  height: 20px;
+  height: 40px;
   font-size: 14px;
   font-weight: 600;
   text-transform: capitalize;
+  width: 100px;
+  border: 1px solid #dbdbdb;
 }
 
-/* line 83, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_user_profile.scss */
+/* line 91, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_user_profile.scss */
+.follow-edit-button:active {
+  background-color: #4c68d7;
+  color: #fff;
+}
+
+/* line 96, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_user_profile.scss */
+.edit-hide {
+  height: 0px;
+  width: 0px;
+  display: none;
+  position: fixed;
+  left: 999999;
+  border: 0px solid white;
+}
+
+/* line 106, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_user_profile.scss */
 .icon-button {
   height: 40px;
   width: 100px;
@@ -652,7 +823,7 @@ body {
   font-weight: 200;
 }
 
-/* line 91, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_user_profile.scss */
+/* line 114, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_user_profile.scss */
 .profile-ellipsis {
   display: flex;
   flex-direction: row;
@@ -660,51 +831,152 @@ body {
   align-items: center;
 }
 
-/* line 102, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_user_profile.scss */
+/* line 125, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_user_profile.scss */
 .ellipsis {
+  display: none;
   color: #000;
   font-size: 7px;
 }
 
-/* line 107, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_user_profile.scss */
+/* line 131, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_user_profile.scss */
 .profile-row-2 {
   font-weight: 200;
   font-size: 16px;
+  justify-content: space-between;
 }
 
-/* line 112, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_user_profile.scss */
+/* line 137, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_user_profile.scss */
+.profile-row-2 > * {
+  width: 25%;
+}
+
+/* line 141, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_user_profile.scss */
 .profile-number {
   font-weight: 600;
 }
 
-/* line 116, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_user_profile.scss */
+/* line 145, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_user_profile.scss */
 .profile-posts {
   margin-right: -50px;
 }
 
-/* line 120, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_user_profile.scss */
+/* line 149, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_user_profile.scss */
 .tagline {
   font-family: "Montserrat", sans-serif;
   font-size: 20px;
   font-weight: 200;
   color: #999;
+  line-height: 1.5em;
 }
 
-/* line 127, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_user_profile.scss */
+/* line 157, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_user_profile.scss */
 .profile-photos {
   width: 70%;
   max-width: 850px;
   align-self: center;
-  margin: 20px auto;
+  margin: -9px auto;
+  margin-bottom: 50px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   flex-wrap: wrap;
 }
 
-/* line 137, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_user_profile.scss */
+/* line 168, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_user_profile.scss */
 .profile-photos > li {
   width: 250px;
   height: 250px;
   margin: 12px;
+}
+
+@media only screen and (max-width: 950px) {
+  /* line 176, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_user_profile.scss */
+  .user-profile {
+    width: 80%;
+    min-width: 400px;
+    flex-direction: column;
+  }
+
+  /* line 181, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_user_profile.scss */
+  .profile-row-1 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* line 186, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_user_profile.scss */
+  .follow-edit-button {
+    margin-left: 70%;
+  }
+
+  /* line 190, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_user_profile.scss */
+  .profile-photos {
+    width: 100%;
+  }
+
+  /* line 194, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_user_profile.scss */
+  .profile-photos > li {
+    width: 400px;
+    height: 400px;
+    margin: 12px;
+  }
+}
+/* line 1, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_view_photo.scss */
+.view-photo-container {
+  display: flex;
+  flex-direction: row;
+  height: 500px;
+  width: 1000px;
+  margin: -30px auto;
+  padding-top: 40px;
+  overflow: hidden;
+  padding-bottom: 0px;
+  border: 0px solid #fff;
+}
+
+/* line 14, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_view_photo.scss */
+.view-photo-content {
+  display: flex;
+  flex-direction: row;
+}
+
+/* line 19, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_view_photo.scss */
+.view-photo-image-container {
+  margin-left: 30px;
+}
+
+/* line 23, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_view_photo.scss */
+.view-photo-image {
+  height: 500px;
+  width: 500px;
+}
+
+/* line 28, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_view_photo.scss */
+.view-photo-detail {
+  max-width: 500px;
+  padding: 0px;
+  padding-left: 20px;
+}
+
+/* line 41, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_view_photo.scss */
+.view-photo-photo-info > ul {
+  height: 225px;
+}
+
+/* line 46, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_view_photo.scss */
+.view-photo-comment-container {
+  width: 100%;
+}
+
+/* line 50, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_view_photo.scss */
+.view-photo-comment-like-form {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+/* line 56, /Users/andrew/Desktop/Flipic/app/assets/stylesheets/components/_view_photo.scss */
+.view-photo-comment-like-form > like-button-container {
+  width: 48px;
+  height: 48px;
 }
