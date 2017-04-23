@@ -4,8 +4,11 @@ import {hashHistory} from 'react-router';
 
 import Dropzone from 'react-dropzone';
 import request from 'superagent';
-const CLOUDINARY_UPLOAD_PRESET = 'Flipic_image_upload';
-const CLOUDINARY_UPLOAD_URL = 'https://api.cloudinary.com/v1_1/calb3ars/image/upload';
+// const CLOUDINARY_UPLOAD_PRESET = 'Flipic_image_upload';
+const CLOUDINARY_UPLOAD_PRESET = 'Photo Uploads';
+// const CLOUDINARY_UPLOAD_URL = 'https://api.cloudinary.com/v1_1/calb3ars/image/upload';
+const CLOUDINARY_UPLOAD_URL = 'https://api.cloudinary.com/v1_1/flipic/image/upload';
+
 
 class PhotoForm extends React.Component {
   constructor(props) {
@@ -19,7 +22,6 @@ class PhotoForm extends React.Component {
 
     this.closeModal = this.closeModal.bind(this);
     this.openModal = this.openModal.bind(this);
-
     this.update = this.update.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -85,7 +87,7 @@ class PhotoForm extends React.Component {
       url: "",
       caption: ""
     });
-    hashHistory.push(`/users/${currentUser.id}`);
+    // hashHistory.push(`/users/${currentUser.id}`);
   }
 
   render() {
