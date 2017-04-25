@@ -4,8 +4,8 @@ import {hashHistory} from 'react-router';
 
 import Dropzone from 'react-dropzone';
 import request from 'superagent';
-const CLOUDINARY_UPLOAD_PRESET = 'Flipic_image_upload';
-const CLOUDINARY_UPLOAD_URL = 'https://api.cloudinary.com/v1_1/calb3ars/image/upload';
+const CLOUDINARY_UPLOAD_PRESET = 'Photo Upload';
+const CLOUDINARY_UPLOAD_URL = '	https://api.cloudinary.com/v1_1/flipic/image/upload';
 
 class PhotoForm extends React.Component {
   constructor(props) {
