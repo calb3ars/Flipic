@@ -99,16 +99,18 @@
 }
 
 .comment-body {
+  max-width: 800px;
 }
 
 .comment-delete {
   align-self: flex-end;
   position: relative;
+  // left: 10px;
   top: -4px;
-  color: $border-gray;
+  color: #ddd;
 }
 
-.comment-delete:active {
+.comment-delete:hover {
   color: $instagram-maroon;
 }
 
@@ -126,6 +128,7 @@
 
 .comment-form {
   min-width: 450px;
+  margin-left: 5px;
 }
 
 .comment-form > input {
