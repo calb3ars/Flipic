@@ -23,7 +23,6 @@ class PhotoView extends React.Component {
   }
 
   componentWillReceiveProps(newProps) {
-    debugger
     if (this.props.photo.id !== newProps.photo.id) {
 
       this.props.fetchUserPhoto(newProps.photo.id)
